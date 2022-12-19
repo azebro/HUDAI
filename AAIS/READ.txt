@@ -1,0 +1,209 @@
+
+INSTRUCTIONS FOR LOADING AND RUNNING THE ‘STUDENT’ CPS 
+TOOLS ENVIRONMENT
+
+The requirements specification is in file ‘spec.msl’ and
+contains about 15 per cent of the non-atomic axioms in the
+full CPS, and represents a simplification of the criteria of
+aircraft separation in the North Atlantic contained in 
+the full CPS. 
+
+If you do not understand any of the instructions,
+email me or ask during the practicals.
+
+
+/************ INSTRUCTIONS ****************************/
+
+After editing "spec.msl"  (the requirements specification),
+OR if this is your first session, do the following.
+
+STEP 1: TRANSLATION
+
+This explains how to use the tools to translate the 
+msl files "spec.msl" and "test.msl" into Prolog
+files  "spec.pl" and "tests.pl". Perform the following:
+
+1. edit the file "config.pl"
+2. change
+
+cf_translate_spec_into_prolog(                   no).
+cf_translate_tests_into_prolog(                  no).
+
+into
+
+cf_translate_spec_into_prolog(                   yes).
+cf_translate_tests_into_prolog(                  yes).
+
+3. save the file
+4. type "sicstus" in a shell tool in your cps directory
+5. type "[boot]."
+6. type "start."
+
+Look in your cps directory and you will see new files
+"spec.pl", "tests.pl".
+Each axiom in "spec.msl" has been changed, in order, to 
+clauses in the prolog file ("spec.pl").
+Using the fact that the translator translates axioms one
+at a time, check that the translations look reasonable. 
+
+STEP 2: RUNNING BATCH TESTS
+
+Next, you can run a set of batch tests. This will run 
+"spec.pl" with tests taken from "tests.pl". Every flight
+profile in "tests.pl" will be compared with the previous
+N profiles. If you require N=10, then perform the following:
+
+1. edit the file "config.pl"
+2. change
+
+cf_run_tests(clearance, explanation, no).
+cf_clear_with_last(       10).
+
+into
+
+cf_run_tests(clearance, explanation, yes).
+cf_clear_with_last(       10).
+
+3. ALWAYS REMEMBER TO SET ALL OTHER OPTIONS BACK
+TO "no" WHEN CHANGING "config.pl"
+4. save the file "config.pl"
+5. type "sicstus" in a shell tool in your cps directory
+6. type "[boot]."
+7. type "start."
+
+If there are conflicts detected, then these are "false
+positive" since the test profiles are all generated
+from ATC logs, and the "spec.pl" with its main predicate:
+"profiles_are_in_oceanic_conflict" should fail on each. 
+After you run steps 1-7 above, file "oracle.tmp" will be created
+with the conflicting Segments, ready to be
+input to theory revision. The file results_tests/main_results
+will contain all the conflicts from the test batch. To
+find out how conflicts were recorded, issue the unix command in
+a shell tool in your cps directory:
+
+grep 'conflict(' results_tests/main_results | wc -l
+
+or alternatively you can count them in "oracle.tmp".
+
+
+STEP 3: ENVELOPING THE CPS AND THE TESTS
+
+Before running blame assignment and theory revision, you have 
+to envelope the logic clauses in "spec.pl" and "tests.pl"
+so that the meta-interpreter will work. Whenever you change 
+the file "spec.msl", you have to re-generate "spec.pl" and then
+re-generate the enveloped form this way.
+
+The enveloper takes all the clauses in a prolog program
+and makes each of them into a fact clause named "clause_impress".  
+This is so that the  meta-interpreter in blame assignment
+can run the "spec.pl" program using the "clause_impress" facts and 
+collect the proof trees (traces) of the "false positives" as it goes.
+Perform the following:
+
+1. edit the file "config.pl"
+2. change
+
+cf_translate_spec_exec_form_into_enveloped_form(no).
+cf_translate_tests_exec_form_into_enveloped_form(no).
+
+into
+
+translate_spec_exec_form_into_enveloped_form(yes).
+cf_translate_tests_exec_form_into_enveloped_form(yes).
+
+3. ALWAYS REMEMBER TO SET ALL OTHER OPTIONS BACK
+TO "no" WHEN CHANGING "config.pl"
+4. save the file "config.pl"
+5. type "sicstus" in a shell tool in your cps directory
+6. type "[boot]."
+7. type "start."
+
+The enveloped files created are "test.env" and "spec.env".
+Note that if you change "spec.msl" only you do not
+have to re-envelope "tests.pl".
+
+
+STEP 4: THEORY REVISION
+
+Next, you can try theory revision by changing the appropriate
+"no" to "yes" in "config.pl". The TR function inputs the ".pl"
+files, the ".env" files and an oracle in file "oracle.pl".
+A useful oracle is produced in oracle.tmp from batch testing-
+this contains facts of the form:
+
+instance_of_concept(segments_are_in_oceanic_conflict(A,B),fail)
+
+where A and B are segments of two profiles that were found to
+be in conflict. Since these segments are from the ATC log in
+"tests.pl", they should not be in conflict hence the "fail" value
+in the clause above. When Blame runs this clause, it will 
+therefore class it as a false positive, as 
+segments_are_in_oceanic_conflict(A,B) should fail but it succeeds.
+
+
+Perform the following:
+
+0. change he name of oracle.tmp to oracle.pl
+1. edit the file "config.pl"
+2. change
+
+cf_THEORY_REVISION(                              no).
+
+into
+
+cf_THEORY_REVISION(                              yes).
+
+3. ALWAYS REMEMBER TO SET ALL OTHER OPTIONS BACK
+TO "no" WHEN CHANGING "config.pl"
+4. save the file "config.pl"
+5. type "sicstus" in a shell tool in your cps directory
+6. type "[boot]."
+7. type "start."
+
+In the Windows version you will need to perform the equivelent of:
+
+cat tools/pred_decs.pl spec.pl spec.env tests.env tests.pl > temp_file.pl
+
+The result of the blame algorithm, and 
+the theory revision, will be in file "trace".
+
+STEP 5: EXAMINING AND CONTROLLING THE TRACE
+
+You can control WHICH rules are changed or investigated by
+the cps by changing the fact:
+
+revisable_clauses([ ]).
+
+in file "spec.env". Put the numbers of the rules you want investigating,
+e.g.
+
+revisable_clauses([3,4 ]).
+
+will direct the cps to investigate rules 3 and 4 only.
+
+-----------------------------------------------------
+
+LAYOUT OF TRACE
+
+>> [potential(2,94),potential(3,61),potential(4,33) ..
+
+This is the result of the blame assignment. potential(2,94) means that
+clause 2 has potential 94 of being faulty.
+
+NB on changed rules:
+
+>        limitvar(2),
+>        (   (   not__(fl(D)is_at_or_above fl(290))
+>            ;   not__(fl(D)is_at_or_below fl(410))
+>            )
+>        ;   not__((number(I),number(0),I>=0))
+>        ;   not__((number(I),number(1000),I=<1000))
+>        ), !.
+
+--   ";" means or
+--  ignore "limitvar(_)"  predicates
+--  ignore "number(_)" predicates
+
+

@@ -1,0 +1,956 @@
+/* 
+
+Code for assigning blame to rules which succeed during an attempt to
+prove a negative instance i.e. blame assignment code for FALSE
+POSITIVES.
+
+UPDATED 4/98 by TLM to acculmulate pots.
+
+NB now includes UTILITIES  
+
+Algorithm
+---------
+
+1 For each instance
+
+	generate a generalised proof tree
+	form list of unshielded rules which does not include facts
+	form list of IDs for these rules
+	remove duplicates from this list
+
+2 Append together all the uniqued ID-lists for the instances and sort
+the resulting list into ascending order.
+
+3 Remove duplicates from the appended list, annotating it with counts.
+
+NB Duplicate rules are identified using the ID.
+
+NB clause_impress/4 facts are assumed to exist prior to execution of
+the code in this file.
+
+NB The code uses the utilities in
+
+/projects/impress/tools/impress_tools/theory_rev/mmw_tr_utils.pl
+
+and in /projects/impress/tools/impress_tools/assign/blame_ass/tr/blame_utils.pl
+
+
+*/
+
+
+/********************************************************************/
+
+
+/* this version expands out negated terms */
+/* 
+ Code to generate a generalised proof tree - the code under analysis
+can include negated literals
+
+NB clause_impress/4 facts are assumed to exist prior to execution of
+the code in this file.
+
+*/
+
+/* further alteration - obtain numerical tree - 20/4/97  MMW */
+
+/* Predicate for obtaining numerical trees is called xgen_trees */
+
+/*Code has been re-organised by mmw - August 1997 */
+
+
+
+/*
+	   blame_assign_f_pos(List_of_instances,Blame_assignment)
+
+Currently, this is the top level blame assignment procedure.
+
+test with
+
+blame_assign_f_pos([kill(john,john), patricide(john,father(john))],
+Answer).
+
+*/
+
+blame_assign_f_pos(List_of_instances,Blame_assignment):-
+ 
+        f_pos_get_rules(List_of_instances,[],0,Blame_assignment).
+
+%                              v      v      ^
+combine_rules_with_acc_rules(Hrules,Big_Pots,New_Rules) :-
+        qsort(Hrules, Sorted_L),
+        rule_counter(Sorted_L,Pots),
+        combine_potentials(Pots,Big_Pots,New_Rules).
+
+/* combine_rules_with_acc_rules([1,1,1,2,6,8],[potential(1,7),potential(2,2)],..
+    */
+
+/* invariant - potentials are in acsending order of rule nos */
+combine_potentials([],L,L) :- !.
+combine_potentials(L,[],L) :- !. 
+combine_potentials([potential(H,N)|R],[potential(H1,N1)|S],
+                                      [potential(H,N2)|RestPots]) :-
+        H = H1,
+        N2 is N1 + N,
+        combine_potentials(R,S,RestPots),!.
+combine_potentials([potential(H,N)|R],[potential(H1,N1)|S],
+                                      [potential(H1,N1)|RestPots]) :-
+        H > H1,
+        combine_potentials([potential(H,N)|R],S,RestPots),!.
+combine_potentials([potential(H,N)|R],[potential(H1,N1)|S],
+                                      [potential(H,N)|RestPots]) :-
+        H < H1,
+        combine_potentials(R,[potential(H1,N1)|S],RestPots),!.
+
+ 
+/********************************************************************/
+ 
+f_pos_get_rules([],Acc,_,Acc).
+f_pos_get_rules([H|T], Rules,NN,Acc_rules):-
+        NN1 is NN +1,
+        tell(user),nl,nl,
+        write('** Working on example ** '), write(NN1),
+        nl,nl,
+        get_list_of_rules_used_in_proof(H, Hrules),
+
+        combine_rules_with_acc_rules(Hrules,Rules,New_Rules), 
+
+        nl, write(' score up to now is: '),nl,write(New_Rules),
+ 
+        tell(user),nl,nl,
+        write('** Finished with ** '), write(NN1),
+        nl,nl,
+ 
+        f_pos_get_rules(T, New_Rules,NN1,Acc_rules),!.
+
+ 
+/* occasionally get_list_of_rules_used_in_proof fails .. */
+ 
+f_pos_get_rules([H|T], Rules,NN,Acc_rules):-
+        NN1 is NN +1,
+        tell(user),nl,nl,
+        write('** Skipping  ** '), write(NN1),
+        nl,nl,
+        f_pos_get_rules(T, Rules,NN1,Acc_rules),!.
+
+
+/********************************************************************/
+
+/* test with
+get_list_of_rules_used_in_proof(kill(john,john),List_of_rules).
+*/
+
+get_list_of_rules_used_in_proof(Instance,Unique_list_of_rule_IDs):-
+
+	generalise_instance(Instance,Gen_Instance),
+          write('Instance:'), nl, nl,
+        write(Instance), nl, nl,
+       tell(user),nl,
+         write(' Generalised Instance..'),nl,
+	gen_trees(Instance,Gen_Instance,_,Gen_proof),
+        write(' Generalised Tree..'),nl,
+        form_rules(Gen_proof,L),
+        write(' Rules Formed.. '),nl,
+	form_list_of_rule_IDs(L,List_of_rule_IDs),
+	remove_dups(List_of_rule_IDs,Unique_list_of_rule_IDs),
+        write('Unique list of rule_IDs:' ), nl, nl,
+        write(Unique_list_of_rule_IDs ), nl, nl.
+
+
+/********************************************************************/
+
+/* The purpose of this rule is to generate the generalised version of
+an instance needed for the call to gen_trees.
+*/
+
+generalise_instance(X,GenX):-
+	
+	functor(X,F,N),
+	functor(GenX,F,N).
+
+/********************************************************************/
+
+/* The procedure form_rules(P,L) inputs a proof tree,P, and outputs a
+list,L, of lists, where each sublist represents a rule used in the
+proof. The sublists for rules take the form
+
+	 [Rule_ID, Head_of_rule, Subgoal_1, Subgoal_2.... ]
+
+NB Facts used in the proof are not included in the L.
+
+Here is some test data.
+
+form_rules([1,[a,[2,a1]]], [[1,a,a1]]).
+form_rules([5,[b,[6,[b1,[7,b1i]]]]], [[5,b,b1], [6,b1,b1i]]).
+form_rules([8,[c,[9,c1]],10,[d,[11,d1]]],
+           [[8,c,c1],[10,d,d1]]).
+form_rules([12,e], []). 
+form_rules([12,e,13,f], [] ). 
+form_rules([10,[d,[11,d1]],12,e,13,f],
+           [[10,d,d1]]).
+form_rules([14,[h,[12,e,13,f]]], [[14,h,e,f]]).
+form_rules([15,[i,[12,e,13,f,10,[d,[11,d1]]]]],
+           [[15,i,e,f,d],[10,d,d1]] ).
+form_rules([17,[k,[12,e,10,[d,[11,d1]],13,f]]],
+           [[17, k, e, d, f],[10,d,d1]] ).
+*/
+
+form_rules([], []).
+
+form_rules([N, X], []):-integer(N),  % facts are not returned
+			\+ is_list(X).
+
+form_rules([N, [H, L] | T], Rules):-
+
+	integer(N),
+	\+ is_list(H),
+	is_list(L),
+	get_subgoals(L, Lsubgoals),
+	form_rules(L, Lrules),
+	form_rules(T, Trules),
+	append([[N, H | Lsubgoals]], Lrules, Rules1),
+	append(Rules1, Trules, Rules).
+
+	
+form_rules([H|T], Rules):-
+
+	is_list(H),
+	form_rules(H, Hrules),
+	form_rules(T, Trules),
+	append(Hrules, Trules, Rules).
+
+form_rules([N, H|T], Rules):-
+
+	integer(N),
+	\+ is_list(H),
+	form_rules([N, H], Hrules),
+	form_rules(T, Trules),
+	append(Hrules, Trules, Rules).
+
+/********************************************************************/
+
+/* test with
+
+get_subgoals([2,a1], [a1]).
+get_subgoals([6,[b1,[7,b1i]]], [b1]).
+get_subgoals([12,e,13,f], [e, f]).
+get_subgoals([12,e,13,f,10,[d,[11,d1]]], [e, f, d]).
+
+*/
+
+get_subgoals([], []).
+
+get_subgoals([N, A], [A]):-	integer(N),
+				\+ is_list(A).
+
+get_subgoals([N, [X|_] | T], [X | TSGs]):- 
+	
+	integer(N),
+	get_subgoals(T, TSGs).
+
+get_subgoals([N, H | T], [H | TSGs]) :-	integer(N),
+					\+ is_list(H), 
+					get_subgoals(T, TSGs).
+
+/********************************************************************/
+
+
+
+/********************************************************************/
+
+/* nb extra argument in xgen_trees
+  gen_trees/4
+The procedure gen_trees(X,Gen_X,Proof,Gen_proof) generates a proof
+tree and a generalised proof tree. Both trees include clause IDs.
+
+xgen_trees/5
+The procedure xgen_trees(X,Gen_X,Proof,Gen_proof, GenIds) generates a proof
+tree,  generalised proof tree and a tree of Ids.
+ */
+
+
+
+/********************************************************************/
+
+/* gen_trees/4
+The procedure 
+gen_trees( +Expr, :Gen_Expr, ?P, ?GenP).
+
+generates a proof tree and a generalised proof tree. Both trees
+include clause IDs. 
+
+ Expr can take the form:
+
+Case 1  Atom+: a positive literal;
+
+Case 2 (Expr, Expr+): conjunction;
+
+Case 3 (Expr ; Expr+): disjunction;
+
+Cases (4a - 6)   not(Expr): negated expression.
+
+
+xgen_trees/5
+The procedure xgen_trees( +Expr, :Gen_Expr, ?P, ?GenP, ?GenIds) 
+generates a proof tree,  generalised proof tree and a tree of Ids.
+
+For example:
+
+rich2(A) :- not__(poor(A)).
+month_sal(steve, 3000).    
+
+poor(A, 1) :- month_sal(A, X), Y is 12*X, Y < 20000 .
+poor(A, 2) :- month_sal(A, X), Y is 12*X, Y < 24000 .
+poor(A, 3) :- month_sal(A, X), Y is 12*X, Y < 36000 .
+
+Given query:
+-? gen_trees(rich2(steve), rich2(X), P, GenP).
+
+unexpanded negation:
+
+P 
+= [27,[rich2(steve),[-(28),[not__(poor(steve,2)),[0,not__(36000<24000)]],-(34),[not__(poor(steve,3)),
+  [0,not__(36000<36000)]],-(35),[not__(poor(steve,1)),[0,not__(36000<20000)]]]]],
+GenP = [27,[rich2(X),[-(28),[not__(poor(X,_A)),[0,not__(_B<24000)]],-(34),[not__(poor(X,_A)),
+  [0,not__(_C<36000)]],-(35),[not__(poor(X,_A)),[0,not__(_D<20000)]]]]] ? 
+
+expanded negation:
+result from new code - extra tree:
+
+P = [27,[rich2(steve),[-28,[not__(poor(steve,2)),[0,not__(36000<24000)]],-34,[not__(poor(steve,3)),
+  [0,not__(36000<36000)]],-35,[not__(poor(steve,1)),[0,not__(36000<20000)]]]]],
+GenP = [27,[rich2(X),[-28,[not__(poor(X,2)),[0,not__(_A<24000)]],-34,[not__(poor(X,3)),
+[0,not__(_B<36000)]],-35,[not__(poor(X,1)),[0,not__(_C<20000)]]]]] ?
+
+*/
+
+/***************************
+
+Converts predicate with 5 arguments to the usual EBG predicate - 4
+arguments.
+
+******************************************/
+gen_trees(Expr, Gen_Expr, P, GenP) :- xgen_trees(Expr, Gen_Expr, P, GenP, _). 
+
+
+/**********************************************
+Cases 1- 4 are examined first:
+******
+
+Case 1. Expr a positive literal:
+Processing depends on whether Expr matches the head of a shielded, or
+unshielded predicate.
+
+*******************************************************************/
+
+
+xgen_trees(Head, Gen_head, [Clause_ID_no, Proof], [Clause_ID_no,
+Gen_proof],  GenIds ) :- 
+            literal(Head),
+    %%       \+(Head = not__(_)),\+(Head = ground_not__(_)), 
+        clause_impress(Gen_head, Gen_body, Clause_ID_no, Shield_status),
+        copy_term( (Gen_head:-Gen_body), (Head:-Body) ),
+        Body,
+                     %% Body is called to check that it succeeds.
+                     %% This is necessary because Head may match the
+                     %% head of a Prolog procedure rather than just
+                     %% a single rule. If Body fails then Prolog will
+                     %% backtrack to the other rules in the procedure.
+        !,
+        ((Shield_status = shielded,  GenIds =  [Clause_ID_no], 
+              Proof = Head, Gen_proof =  Gen_head)
+            ;
+         (Shield_status = unshielded,  GenIds =  [Clause_ID_no, Body_Ids],
+          tell(user), nl, write(Clause_ID_no),nl,told,
+          process_body(Shield_status, Head, Gen_head, Body, Gen_body,
+                                  Proof, Gen_proof,   Body_Ids))).
+
+/********************************************************************/
+
+
+process_body(unshielded, Head, Gen_head, Body, Gen_body,
+                        Proof, Gen_proof, GenIds):-
+%        tell(user),   nl, 
+%        write('Case 1 - processing non negative body'), nl,
+%        told,
+        xgen_trees(Body, Gen_body, Body_proof, Gen_body_proof,  GenIds),
+        append([Head],[Body_proof], Proof),
+        append([Gen_head], [Gen_body_proof], Gen_proof).
+
+/* Head is built-in */
+/* built-in predicates are given an ID of 0.*/
+
+
+xgen_trees(A, Gen_A, [0, A], [0, Gen_A], [0]) :-        
+        built_in(A),
+%        tell(user),   nl, 
+%        write('Case 1 - processing built-in'), nl,
+%        write(A),nl,
+%        told,
+        !,
+        A.      
+
+/* Head matches with a fact */
+
+xgen_trees(Head,Gen_head,[Clause_ID_no, Head],[Clause_ID_no,
+Gen_head], [Clause_ID_no]):-
+            literal(Head),
+%%          \+(Head = not__(_)),  \+(Head = ground_not__(_)), 
+        clause_impress(Head,true,Clause_ID_no,_),
+%        tell(user),   nl, 
+%        write('Case 1 - processing fact'), nl,
+%        told,
+        !.
+
+/* Case 2 - conjunction of two expressions */
+
+xgen_trees((A, B), (Gen_A, Gen_B), Proof, Gen_proof,GenIds) :-
+        !,
+%        tell(user),   nl, 
+%        write('Case 2 - processing conjunction'), nl,
+%        told,
+        xgen_trees(A, Gen_A, A_Proof, Gen_A_Proof, Gen_A_Ids),
+        xgen_trees(B, Gen_B, B_Proof, Gen_B_Proof, Gen_B_Ids),
+        append(A_Proof, B_Proof, Proof),
+        append(Gen_A_Proof, Gen_B_Proof, Gen_proof),
+               append(Gen_A_Ids, Gen_B_Ids, GenIds) .
+
+/* Case 3 - disjunction of two expressions using ' ; ' */
+
+xgen_trees((A ; _), (Gen_A ; _), Proof, Gen_proof, GenIds) :-
+%        tell(user),   nl, 
+%        write('Case 3 - processing disjunction'), nl,
+%        told,
+        xgen_trees(A, Gen_A, Proof, Gen_proof, GenIds),
+        !.
+ 
+xgen_trees((_ ; A), (_ ; Gen_A), Proof, Gen_proof, GenIds) :-
+        !,
+        xgen_trees(A, Gen_A, Proof, Gen_proof,GenIds).
+
+/* for traditional EBG `not(Expr)' is treated as a 
+`built-in' predicate, viz. Case 4 
+*/
+
+/************
+Cases 4a -6. not(Expr)
+*/
+
+/* case 4a not(Literal)
+
+unfolds queries of the type not__(A) where A :- B into
+not__(B). All  clauses A which match with Literal are
+considerered. Thus the code generates a set of clause ids whose head
+has the same predicate name as the input clause. 
+*/
+
+xgen_trees(not__(A), not__(Gen_A) , Set_of_Heads, Set_of_GenHeads, GenIds) :-
+            literal(A),
+%%      \+(A = not__(_)),    
+
+     tell(user),    nl,
+      write('unfolding and collection of head matches - case 4a'),
+      nl,     told,
+      copy_term(Gen_A, Copy_Gen_A),
+
+/* see below for examples of this use of setof */
+
+      setof(N,
+       G_B^ clause_impress( Copy_Gen_A, G_B, N , unshielded) ,
+                                 Set_of_Ids),
+
+      tell(user),    nl,
+      write( Set_of_Ids),
+      nl,     told,
+      gen_conjoined_set( not__(A), Gen_A, Set_of_Ids, Set_of_Heads, 
+                            Set_of_GenHeads, GenIds).
+
+/* example: setof There are 2 options, the first of which is the most
+general.
+
+
+rule 28 poor(A, 24000) :- month_sal(A, X), Y is 12*X, Y < 24000 .
+rule 34 poor(A, 36000) :- month_sal(A, X), Y is 12*X, Y < 36000 
+
+Query:
+setof(N, X^(A^(B^(clause_impress(poor(A,X),B,N, unshielded)))), S).
+
+gives answer
+
+S = [28,34] ? ;
+
+
+rule 28 poor(A, 24000) :- month_sal(A, X), Y is 12*X, Y < 24000 .
+rule 34 poor(A, 36000) :- month_sal(A, X), Y is 12*X, Y < 36000 
+
+Query:
+setof(N, X^(A^(B^(clause_impress(poor(A,X),B,N, unshielded)))), S).
+
+gives answer
+
+S = [28,34] ? ;
+
+*/
+
+/* base case -generates conjoined set of proofs */ 
+
+gen_conjoined_set(_, _, [], [], [], []).
+
+gen_conjoined_set(not__(A), Gen_A, [Id  | Rest],
+                  [NegId,[not__(Copy_A), Proof]| RestProofs], 
+                  [NegId, [not__(Copy_Gen_A), Gen_proof]|RestGenProofs],
+                  [NegId, [GenIds]|RestGenIds]) :-
+
+            NegId is -Id,
+                tell(user), nl, write( NegId),nl,told,
+ 
+            copy_term(A, Copy_A),
+            copy_term(Gen_A, Copy_Gen_A),
+            clause_impress(Copy_Gen_A, _, Id, unshielded),
+       %%  subsumes(Copy_Gen_A,Gen_A), 
+       %%need to unify the above without changing Gen_A
+            rename(Gen_A, Copy_Gen_A),
+            clause_impress(Copy_Gen_A, Gen_B, Id, unshielded),
+                        tell(user), nl, write( Id),nl,told,
+              copy_term((Copy_Gen_A:-Gen_B), (Copy_A:-B) ),
+          
+           \+(B),      
+   
+       xgen_trees(not__(B), not__(Gen_B) , Proof, Gen_proof,GenIds),
+       gen_conjoined_set(not__(A), Gen_A,  Rest, RestProofs, 
+                       RestGenProofs, RestGenIds) .
+ 
+/* case 4a not(Literal) where literal is shielded */
+
+xgen_trees(not__(A), not__(Gen_A) ,   [Neg_Clause_Id, not__(A)],
+[Neg_Clause_Id, not__(Gen_A)], [Neg_Clause_Id]) :-        
+             literal(A),
+                \+(A),     
+           clause_impress(Gen_A, _,  Clause_Id, shielded),
+         tell(user),
+       nl, write('case 4a, A shielded -- no unfolding '), nl,   
+        told,
+        Neg_Clause_Id is -Clause_Id.
+
+/* case 4a not(Literal) where literal is built in */
+
+xgen_trees(not__(A), not__(Gen_A), 
+         [0, not__(A)], [0, not__(Gen_A)] , [0]) :-        
+        built_in(A),
+        !,
+        \+(A).      
+
+ 
+/* check for predicates which are never true -- undefined */
+
+xgen_trees(not__(Head) ,not__(Gen_head),[Neg_Clause_ID_no,
+               not__(Head)],[Neg_Clause_ID_no, not__(Gen_head)], 
+                            [Neg_Clause_ID_no]):-
+            literal(Head),
+            \+(Head),
+     ( (clause_impress(Gen_head, fail, Clause_ID_no,_),     tell(user),
+        nl, write('negative fact, undefined predicate - Case 4a'), nl,
+                   write( Head ),nl,
+
+        told,
+        Neg_Clause_ID_no is -Clause_ID_no)
+        ;
+       (clause_impress(Gen_head, true, _, _),  %%  another value succeeds 
+       \+(clause_impress(Head, true, _, _)),  %%  but this value fails 
+      tell(user),   nl, write(' predicate fact untrue - Case 4a'), nl,
+                   write( Head ),nl,
+
+        told,
+        Neg_Clause_ID_no is -660
+          )
+        ;
+         (\+(clause_impress(Gen_head,_, _, _)),  %%  no definition
+      tell(user),   nl, write('***NEW undefined predicate *** - Case 4a'), nl,
+                   write(Gen_head  ),nl,
+                   write(Head  ),nl,
+
+        told,
+        Neg_Clause_ID_no is -666)
+          ),
+        !.
+
+
+/*  case 4a not(Literal) where literal is negative */
+
+xgen_trees(not__(A), not__(Gen_A) ,  Proof,  Gen_proof, GenIds) :-
+        (A = not__(B)), (Gen_A =  not__(Gen_B)),     tell(user),
+        nl, write('Case 4a, not not A = A: '), nl, 
+        write(A), nl, 
+        told,
+        xgen_trees(B, Gen_B ,  Proof,  Gen_proof, GenIds).
+
+
+
+
+
+/*********
+
+Case 5 Expr is a negated conjunction: this is expanded  into a
+disjunction
+
+*********/
+
+xgen_trees(not__((A , _)), not__((Gen_A ,_) ), Proof, Gen_proof,GenIds) :-
+        not__(A),
+        tell(user),
+        nl, write('Case 5, expanding negated conjunction'), nl,
+         nl, write('first arm succeeds'), nl,
+        told,
+        xgen_trees(not__(A), not__(Gen_A), Proof, Gen_proof, GenIds),
+        !.
+
+
+xgen_trees(not__((A , B)), not__((Gen_A , Gen_B)), Proof, Gen_proof, GenIds) :-
+        A, not__(B),     tell(user),
+        nl, write('Case 5, expanding negated conjunction'), nl,
+        nl, write('first arm fails, second arm succeeds'), nl,
+        told,
+        xgen_trees( A, Gen_A , A_Proof, Gen_A_proof, Gen_A_Ids),
+        xgen_trees(not__(B), not__(Gen_B), Neg_B_Proof,
+                   Neg_B_Gen_proof,Gen_B_Ids),
+ /* proof of A is appended to that of not__(B) */
+        append(A_Proof, Neg_B_Proof, Proof),
+        append(Gen_A_proof, Neg_B_Gen_proof, Gen_proof),
+               append(Gen_A_Ids, Gen_B_Ids, GenIds), 
+        !.
+
+/*******
+ Case 6 expands a negated disjunction into a conjunction
+
+*******/
+
+xgen_trees(not__((A ; B)), not__((Gen_A ; Gen_B)), Proof, Gen_proof,GenIds) :-
+                not__(A), 
+                not__(B),     tell(user),
+               nl, write('Case 6, expanding disjunction'), nl,
+                 told,
+                xgen_trees(not__(A), not__(Gen_A), A_Proof,
+                                Gen_A_Proof,Gen_A_Ids ),
+                xgen_trees(not__(B), not__(Gen_B), B_Proof,
+                                Gen_B_Proof,  Gen_B_Ids ),
+                append(A_Proof, B_Proof, Proof),
+                append(Gen_A_Proof, Gen_B_Proof, Gen_proof),
+                      append(Gen_A_Ids, Gen_B_Ids, GenIds),
+                !.
+
+/* ground-ness check */
+
+/* ground_not__ goals are checked - that they are ground. Otherwise
+this type of negation is treated as with not__ Goals
+*/
+xgen_trees(ground_not__(Head), ground_not__( Gen_head),
+              Proof, GenProof, GenIds) :-
+       ( ground(Head);
+          (tell(user),nl,
+           write('calling not/1 with nonground argument:'), nl,
+           write(Head), nl, told)),
+     
+         xgen_trees(not__(Head), not__( Gen_head),Proof, GenProof, GenIds),
+        !.
+
+
+/* predicate which generates generalised goal */
+
+copy(Old,New):- assert('$marker'(Old)), 
+                retract('$marker'(New)).
+
+/********************************************************************/
+
+
+/* rename(:X, :Y).
+
+See pages 167-174 Sterling and Shapiro .
+(NB Sicstus library(terms) might also be useful.)
+
+The assumption is that X  is more general than Y. The code renames 
+variables from Y to  match with X.   
+*/
+rename(X,Y) :- var(X), var(Y),  X=Y.
+rename(X,Y) :- nonvar(X),nonvar(Y),constant(X),constant(Y), X=Y.
+rename(X,Y) :- nonvar(Y), var(X).
+rename(X,Y) :- nonvar(X),nonvar(Y),compound(X),compound(Y),
+     
+               term_rename(X, Y).  
+
+   term_rename(X, Y) :- functor(X,F,N), functor(Y,F,N), rename_args(N,X,Y).
+   rename_args(N,X,Y) :- N > 0, rename_arg(N, X, Y), N1 is N-1, 
+       rename_args(N1,X,Y). 
+
+   rename_args(0,X,Y).
+   
+   rename_arg(N, X, Y ):- 
+      arg(N, X, ArgX), arg(N, Y, ArgY), rename(ArgX,ArgY).
+
+
+
+ constant(X) :- atom(X);number(X).
+
+/********************************************************************/
+
+flatten_list([],[]).
+
+flatten_list([H|T],[H|Flattened_tail]):-
+        \+ list(H),
+        flatten_list(T,Flattened_tail).
+
+flatten_list([H|T],F):-
+        flatten_list(H,Flattened_head),
+        flatten_list(T,Flattened_tail),
+        append(Flattened_head,Flattened_tail,F).
+
+
+
+/*
+ flatten_list_of_atomics(List,Flattened_list) accepts a list of
+ ATOMIC elements, List, and flattens it to form a list,
+ Flattened_list. 
+
+ Test Data
+
+  flatten_list_of_atomics([[2]],X).
+  flatten_list_of_atomics([[a]],X).
+  flatten_list_of_atomics([[[[a]]]],X).
+  flatten_list_of_atomics([a,[b,[c],d],e,[f]],X).
+  flatten_list_of_atomics([a,[a]],X).
+
+  NB flatten_list_of_atomics([[a(b)]],X). fails
+ 
+ C.B. 16/10/96
+
+*/
+
+flatten_list_of_atomics([],[]).
+
+flatten_list_of_atomics([H|T],[H|Flattened_tail]):-
+        atomic(H),
+        flatten_list_of_atomics(T,Flattened_tail).
+
+flatten_list_of_atomics([H|T],F):-
+        flatten_list_of_atomics(H,Flattened_head),
+        flatten_list_of_atomics(T,Flattened_tail),
+        append(Flattened_head,Flattened_tail,F).
+
+/*********************************************/
+
+literal(A) :- \+(A = (_,_)),
+               \+( A = (_;_)), 
+               \+(A = not__(_)), 
+                \+(A = ground_not__(_)).
+
+ 
+built_in(call(_)).
+
+built_in(!).
+built_in(number(_)).
+built_in(_=_).
+built_in(_<_).
+built_in(_>_).
+built_in(_ is _).
+built_in(_=.._).
+built_in(write(_)).
+built_in(nl).
+built_in(_ == _).
+built_in(_ =< _).
+built_in(_ >= _).
+%%built_in(not__(_)).
+built_in(\+(_)).
+%%built_in(ground_not__(_)).
+
+/******************************************************
+now in utils
+
+append([],L,L).
+append([H|T],L,[H|Z]) :- append(T,L,Z).
+
+***************************************/
+
+/* form_list_of_rule_IDs(L, List_of_rule_IDs) accepts a list, L, of
+lists, where each sublist represents a rule. The sublists for rules
+take the form
+
+         [Rule_ID, Head_of_rule, Subgoal_1, Subgoal_2.... ]
+
+The procedure outputs a list of the IDs for the rules.
+
+Tests...
+form_list_of_rule_IDs([[8,c,c1],[10,d,d1]], [8, 10]).
+
+
+ */
+form_list_of_rule_IDs([],[]).
+
+form_list_of_rule_IDs([ [H|_] | T2], [H|T2_IDs]):-
+        form_list_of_rule_IDs(T2, T2_IDs).
+
+/********************************************************************/
+
+/* rule_counter([1,1,1,1,2,3,1,1,1, 2], 
+         [potential(1,7),
+          potential(2,2),
+          potential(3,1)
+         ]).
+*/
+
+rule_counter([],[]).
+
+rule_counter([H|T],[potential(H,N)|Rest]):-
+
+        del(H,T,L),
+        count(H,T,NT),
+        N is NT + 1,
+        rule_counter(L,Rest).
+
+/********************************************************************/
+
+split_rules(Rules, PosRules, NegRules) :-
+
+findall(NRl, (member(potential(Rl,_), Rules), Rl < 0, NRl is -Rl), NegRules),
+
+findall(PRl, (member(potential(PRl,_), Rules), PRl > 0), PosRules).
+
+
+                           /* utilities */
+
+list([_|_]).
+
+/**********************************************
+
+append([],L,L).
+append([H|T],L,[H|Z]) :- append(T,L,Z).
+
+*******************************************/
+/* This version of remove_dups retains original order of list but is
+inefficient */
+
+/*test
+remove_dups([a,a,a,a,b,c,a,a,a, b], X).
+
+X = [a,b,c] ? 
+
+remove_dups([1,1,1,1,2,3,1,1,1, 2], X).
+ 
+X = [1,2,3] ? 
+
+*/
+% 
+% remove_dups([X|Xs], [X|Ys]) :-  del(X, Xs, Xs1),
+%           % remove_dups( Xs1,  Ys).
+
+% r% emove_dups([], []).
+
+/********************************************************************/
+
+/* del(X, Y, Z) deletes all occurences of X from Y yielding Z */
+% del( X, [X|Xs], Ys) :- del( X, Xs, Ys).
+% 
+% del( Z, [X|Xs], [X|Ys]) :- \+(X  = Z), 
+%       
+%                         del( Z, Xs, Ys).
+% 
+% del( _, [], []).
+
+/********************************************************************/
+
+/* count(Item, List, Count) counts the number of occurrences of Item
+in the List.
+
+count(1, [1,1,1,1,2,3,1,1,1, 2], 7).
+count(2, [1,1,1,1,2,3,1,1,1, 2], 2).
+
+ */
+
+% count(_,[],0).
+% 
+% count(H,[H|T],N):- 
+%         count(H,T,NT),
+%         N is NT + 1.
+% 
+% count(X,[H|T],N):- 
+%         \+(X=H),
+%         count(X,T,N).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% partition(Divider, List1, List2, List3)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% partition(Divider, [H | T], [H | S1], S2):-
+% 
+%     H =< Divider,
+% 
+%     partition(Divider, T, S1, S2).
+% 
+% partition(Divider, [H | T], S1, [H | S2]):-
+% 
+%     H > Divider,
+% 
+%     partition(Divider, T, S1, S2).
+% 
+% partition(_, [], [], []).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% qsort(List1, List2)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% q% sort( [], [] ).
+% 
+% qsort( [H | T], Slist ):-
+% 
+%  %    partition( H, T, L1, L2 ),
+% 
+%     qsort( L1, Slist1 ),
+% 
+%     qsort( L2, Slist2 ),
+% 
+%     append( Slist1, [H | Slist2], Slist ).
+% 
+/* built ins from Lees prog 
+ 
+built_in(call(_)).
+ 
+built_in(!).
+built_in(number(_)).
+built_in(_=_).
+built_in(_<_).
+built_in(_>_).
+built_in(_ is _).
+built_in(_=.._).
+built_in(write(_)).
+built_in(nl).
+built_in(_ == _).
+built_in(_ =< _).
+built_in(_ >= _).
+*/
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% list_length
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% list_length([], 0).
+% list_length([_|Tail], N):- list_length(Tail, N1), N is 1 + N1.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% set_difference
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%set_difference([a, b, c, c, a], [a, b, d], [c, c]).
+%set_difference([A, B, C, C, A], [A, B, D], [C, C]).
+
+% set_difference(X, [], X).
+% 
+% set_difference(A, [H | T], Diff):-
+%  del(H, A, B),
+%  set_difference(B, T, Diff).
+

@@ -1,0 +1,7 @@
+
+mkdir results_tests
+cp /local/public/cas517/cps/tests.msl .
+cp /local/public/cas517/cps/spec.msl .
+cp /local/public/cas517/cps/queries.msl .
+cp /local/public/cas517/cps/config.pl .
+cp /local/public/cas517/cps/boot.pl .

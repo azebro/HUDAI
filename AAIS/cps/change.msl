@@ -1,0 +1,31 @@
+
+"     [Flight_level1 = the_min_entry_Flight_level_of(Segment1)
+       &
+       Flight_level2 = the_max_entry_Flight_level_of(Segment2)
+       &
+       (Flight_level1 is_at_or_above Flight_level2)
+       &
+      [ (Flight_level1 is_above  FL 290)
+          &
+           [  not (Flight_level1 is_at_or_above
+             FL 330)
+           or
+              not  (Flight_level1 is_at_or_below
+             FL 410)
+           or
+              not  (Flight_level2 is_at_or_above
+              FL 330)
+           or
+              not  (Flight_level2 is_at_or_below
+              FL 410)
+            ] ]
+      ]
+      =>
+      [(Segment1 and Segment2
+      are_in_vertical_oceanic_conflict)
+        <=>
+        the_Val_in_feet_of(Flight_level1)  -
+        the_Val_in_feet_of(Flight_level2)
+        <
+               2000      ]".
+

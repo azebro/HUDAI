@@ -1,0 +1,423 @@
+
+executable_file= spec.pl
+enveloped_executable= spec.env
+oracle= oracle.pl
+tests_executable= tests.pl
+tests_enveloped= tests.env
+
+NO of False Positive: 94
+
+NO of False Negative: 0
+
+NO of True Positive: 0
+
+NO of True Negative: 0
+
+
+1 **NEW LEVEL** 0.0
+
+
+[potential(2,94),potential(3,61),potential(4,33),potential(5,94),potential(6,94),potential(7,94),potential(9,94),potential(10,94),potential(12,94),potential(13,33),potential(14,94),potential(16,94),potential(18,94),potential(21,94),potential(22,94),potential(23,94),potential(24,94),potential(25,94),potential(26,94),potential(27,94),potential(28,91),potential(30,3),potential(33,91),potential(35,3),potential(39,94)]
+
+these are negative clauses involving limits:
+[]
+
+these are positive clauses involving limits:
+[3,4,5,7,10,12,13,14,23,24,25]
+
+First the negative clauses then the positive clauses will be revised
+
+these are the REVISABLE positive clauses involving limits:
+[3,4]
+
+these are the REVISABLE negative clauses involving limits:
+[]
+
+
+STARTING THEORY REVISION
+
+Revising Rule 3
+
+Original Rule: 
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        D is_at_or_above F,
+        the_Val_in_feet_of(D, G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000, !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        F is_above D,
+        the_Val_in_feet_of(F, G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+
+Rule 3 has been changed using CHANGE REGION operator
+ accuracy is  64.8936170212766 per cent
+FP_len: 33 FN_len: 0
+TP_len: 0 TN_len: 61
+
+ NEW RULE IS 
+
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        limitvar(1),
+        (   not__(fl(D)is_at_or_above fl(290))
+        ;   not__(fl(D)is_at_or_below fl(410))
+        ),
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000,
+        limitvar(2),
+        (   (   not__(fl(D)is_at_or_above fl(290))
+            ;   not__(fl(D)is_at_or_below fl(410))
+            )
+        ;   not__((number(I),number(0),I>=0))
+        ;   not__((number(I),number(1000),I=<1000))
+        ), !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        F is_above D,
+        the_Val_in_feet_of(F, G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+Rule 
+3 has been changed using CHANGE PREDICATE operator
+ accuracy is  0.0 per cent
+FP_len: 94 FN_len: 0
+TP_len: 0 TN_len: 0
+
+ NEW RULE IS 
+
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000, !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        F is_above D,
+        the_Val_in_feet_of(F, G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+
+%%%%%%%Accuracy using change region = 64.8936170212766
+
+%%%%%%%Accuracy using change predicate = 0.0
+
+%%%%%%%Mode = change_region
+
+Revising Rule 4
+
+Original Rule: 
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000, !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        F is_above D,
+        the_Val_in_feet_of(F, G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+
+Rule 4 has been changed using CHANGE REGION operator
+ accuracy is  35.1063829787234 per cent
+FP_len: 61 FN_len: 0
+TP_len: 0 TN_len: 33
+
+ NEW RULE IS 
+
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        fl(F)=E,
+        fl(F)is_above D,
+        limitvar(1),
+        (   not__(fl(F)is_at_or_above fl(290))
+        ;   not__(fl(F)is_at_or_below fl(370))
+        ),
+        the_Val_in_feet_of(fl(F), G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000,
+        limitvar(2),
+        (   (   not__(fl(F)is_at_or_above fl(290))
+            ;   not__(fl(F)is_at_or_below fl(370))
+            )
+        ;   not__((number(I),number(1000),I>=1000))
+        ;   not__((number(I),number(1000),I=<1000))
+        ), !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+Rule 
+4 has been changed using CHANGE PREDICATE operator
+ accuracy is  0.0 per cent
+FP_len: 94 FN_len: 0
+TP_len: 0 TN_len: 0
+
+ NEW RULE IS 
+
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        fl(F)=E,
+        fl(F)is_above D,
+        the_Val_in_feet_of(fl(F), G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+
+%%%%%%%Accuracy using change region = 35.1063829787234
+
+%%%%%%%Accuracy using change predicate = 0.0
+
+%%%%%%%Mode = change_region
+
+Revision is a change_region
+
+NO of False Positive: 33
+
+NO of False Negative: 0
+
+NO of True Positive: 0
+
+NO of True Negative: 61
+
+
+2 **NEW LEVEL** 64.8936170212766
+
+
+[potential(2,33),potential(4,33),potential(5,33),potential(6,33),potential(7,33),potential(9,33),potential(10,33),potential(12,33),potential(13,33),potential(14,33),potential(16,33),potential(18,33),potential(21,33),potential(22,33),potential(23,33),potential(24,33),potential(25,33),potential(26,33),potential(27,33),potential(28,33),potential(33,33),potential(39,33)]
+
+these are negative clauses involving limits:
+[]
+
+these are positive clauses involving limits:
+[4,5,7,10,12,13,14,23,24,25]
+
+First the negative clauses then the positive clauses will be revised
+
+these are the REVISABLE positive clauses involving limits:
+[4]
+
+these are the REVISABLE negative clauses involving limits:
+[]
+
+
+STARTING THEORY REVISION
+
+Revising Rule 4
+
+Original Rule: 
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        limitvar(1),
+        (   not__(fl(D)is_at_or_above fl(290))
+        ;   not__(fl(D)is_at_or_below fl(410))
+        ),
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000,
+        limitvar(2),
+        (   (   not__(fl(D)is_at_or_above fl(290))
+            ;   not__(fl(D)is_at_or_below fl(410))
+            )
+        ;   not__((number(I),number(0),I>=0))
+        ;   not__((number(I),number(1000),I=<1000))
+        ), !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        fl(F)=E,
+        fl(F)is_above D,
+        the_Val_in_feet_of(fl(F), G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+
+
+
+
+Rule 4 has been changed using CHANGE REGION operator
+ accuracy is  100.0 per cent
+FP_len: 0 FN_len: 0
+TP_len: 0 TN_len: 94
+
+ NEW RULE IS 
+
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        fl(F)=E,
+        fl(F)is_above D,
+        limitvar(1),
+        (   not__(fl(F)is_at_or_above fl(290))
+        ;   not__(fl(F)is_at_or_below fl(370))
+        ),
+        the_Val_in_feet_of(fl(F), G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000,
+        limitvar(2),
+        (   (   not__(fl(F)is_at_or_above fl(290))
+            ;   not__(fl(F)is_at_or_below fl(370))
+            )
+        ;   not__((number(I),number(1000),I>=1000))
+        ;   not__((number(I),number(1000),I=<1000))
+        ), !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        limitvar(1),
+        (   not__(fl(D)is_at_or_above fl(290))
+        ;   not__(fl(D)is_at_or_below fl(410))
+        ),
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000,
+        limitvar(2),
+        (   (   not__(fl(D)is_at_or_above fl(290))
+            ;   not__(fl(D)is_at_or_below fl(410))
+            )
+        ;   not__((number(I),number(0),I>=0))
+        ;   not__((number(I),number(1000),I=<1000))
+        ), !.
+
+
+
+Rule 
+4 has been changed using CHANGE PREDICATE operator
+ accuracy is  64.8936170212766 per cent
+FP_len: 33 FN_len: 0
+TP_len: 0 TN_len: 61
+
+ NEW RULE IS 
+
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        D=C,
+        the_max_entry_Flight_level_of(B, E),
+        fl(F)=E,
+        fl(F)is_above D,
+        the_Val_in_feet_of(fl(F), G),
+        the_Val_in_feet_of(D, H),
+        I is G-H,
+        I<2000, !.
+are_in_vertical_oceanic_conflict(A, B) :-
+        the_min_entry_Flight_level_of(A, C),
+        fl(D)=C,
+        the_max_entry_Flight_level_of(B, E),
+        F=E,
+        fl(D)is_at_or_above F,
+        limitvar(1),
+        (   not__(fl(D)is_at_or_above fl(290))
+        ;   not__(fl(D)is_at_or_below fl(410))
+        ),
+        the_Val_in_feet_of(fl(D), G),
+        the_Val_in_feet_of(F, H),
+        I is G-H,
+        I<2000,
+        limitvar(2),
+        (   (   not__(fl(D)is_at_or_above fl(290))
+            ;   not__(fl(D)is_at_or_below fl(410))
+            )
+        ;   not__((number(I),number(0),I>=0))
+        ;   not__((number(I),number(1000),I=<1000))
+        ), !.
+
+
+
+
+%%%%%%%Accuracy using change region = 100.0
+
+%%%%%%%Accuracy using change predicate = 64.8936170212766
+
+%%%%%%%Mode = change_region
+
+Revision is a change_region

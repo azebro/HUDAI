@@ -1,0 +1,971 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  basicTimeStep 16
+  FPS 30
+  contactProperties [
+    ContactProperties {
+      material1 "rubber"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.8755312681384047 0.3960223347548386 0.27678747964328826 1.3473822301663039
+  position 2.1879383561629995 6.761364708513153 0.11122068494832403
+  ambientOcclusionRadius 1
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  texture "empty_office"
+  luminosity 100
+  castShadows FALSE
+}
+RectangleArena {
+  translation -0.0386904 0 -0.00237524
+  floorSize 5 6
+  floorTileSize 2 2
+  floorAppearance Parquetry {
+  }
+}
+PottedTree {
+  translation 0.242744 2.22044e-15 1.8817
+}
+BunchOfSunFlowers {
+  translation -1.48325 -1.9984e-15 0.792074
+}
+BunchOfSunFlowers {
+  translation 1.96963 2.44249e-15 -0.471997
+  rotation 0 1 0 0.785398
+  name "bunch of sunflowers(1)"
+}
+Sofa {
+  translation -1.96598 -1.26565e-14 -1.94864
+}
+Robot {
+  translation 0.311406 0.04 -2.38029
+  rotation 0 -1 0 1.5824296938995748
+  children [
+    Emitter {
+      translation -0.15 0 -0.1
+      rotation 0 1 0 -1.5707996938995747
+      children [
+        Solid {
+          rotation 1 0 0 1.5707996938995747
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "mobile_emitter"
+      type "infra-red"
+      range 1
+      maxRange 1
+    }
+    Receiver {
+      translation -0.15 0 0.1
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Solid {
+          rotation 1 0 0 1.5707996938995747
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.666667 0
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "mobile_receiver"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.1 0 0.4
+      rotation 0 1 0 -1.5707996938995747
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "front_left"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation -0.15 0 0.34
+      rotation 0 1 0 -3.141592653589793
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "right_2"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation -0.15 0 0.19
+      rotation 0 1 0 -3.141592653589793
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "right_1"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation -0.15 0 0
+      rotation 0 1 0 -3.141592653589793
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "right_3"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation -0.15 0 -0.15
+      rotation 0 1 0 -3.141592653589793
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "right_4"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation 0.15 0 -0.15
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "left_4"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation 0.15 0 0
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "left_3"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation 0.15 0 0.15
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "left_2"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation 0.15 0 0.35
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "left_1"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation -0.1 0 0.4
+      rotation 0 1 0 -1.5707996938995747
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.02 0.02 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "front_right"
+      numberOfRays 2
+    }
+    DistanceSensor {
+      translation -0.07 -0.017 0.3
+      rotation 0 0 1 4.750600306100425
+      children [
+        Solid {
+          children [
+            DEF SENSOR Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_right"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.07 -0.017 0.3
+      rotation 0 0 1 4.7506
+      children [
+        Solid {
+          children [
+            USE SENSOR
+          ]
+        }
+      ]
+      name "sensor_left"
+      type "infra-red"
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.666667 0 0
+        emissiveColor 0.666667 0 0
+      }
+      geometry Box {
+        size 0.3 0.04 0.8
+      }
+    }
+    DEF Front_Left_Steer_Wheel HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.16 0 0.25
+      }
+      device [
+        RotationalMotor {
+          name "fl_steer"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16 0 0.25
+        rotation 0 0 1 1.57
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 -1 0
+            }
+            device [
+              RotationalMotor {
+                name "fl_motor"
+              }
+            ]
+            endPoint Solid {
+              rotation 0 -1 0 0
+              children [
+                DEF WHEEL Shape {
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.04
+                  }
+                }
+              ]
+              contactMaterial "rubber"
+              boundingObject USE WHEEL
+              physics Physics {
+              }
+            }
+          }
+        ]
+        boundingObject Sphere {
+          radius 0.01
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF Front_Right_Steer_Wheel HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.16 0 0.25
+      }
+      device [
+        RotationalMotor {
+          name "fr_steer"
+        }
+      ]
+      endPoint Solid {
+        translation -0.16 0 0.25
+        rotation 0 0 1 1.57
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 -1 0
+            }
+            device [
+              RotationalMotor {
+                name "fr_motor"
+              }
+            ]
+            endPoint Solid {
+              rotation 0 -1 0 0
+              children [
+                USE WHEEL
+              ]
+              boundingObject USE WHEEL
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "front_right_wheel"
+        boundingObject Sphere {
+          radius 0.01
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF Rear_Left_Steer_Wheel HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.16 0 -0.25
+      }
+      device [
+        RotationalMotor {
+          name "left_steer"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16 0 -0.25
+        children [
+          DEF Rear_LeftWheel HingeJoint {
+            jointParameters HingeJointParameters {
+              suspensionAxis 0 1 0
+            }
+            device [
+              RotationalMotor {
+                name "rl_motor"
+              }
+            ]
+            endPoint Solid {
+              rotation 0 0 1 1.57
+              children [
+                DEF WHEEL Shape {
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.04
+                  }
+                }
+              ]
+              name "left_steer"
+              boundingObject DEF WHEEL Shape {
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.04
+                }
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "rl_Wheel"
+        boundingObject Sphere {
+          radius 0.01
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF Rear_Right_Steer_Wheel HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.16 0 -0.25
+      }
+      device [
+        RotationalMotor {
+          name "right_steer"
+        }
+      ]
+      endPoint Solid {
+        translation -0.16 0 -0.25
+        rotation -1.9626122691970235e-17 -1.9626122691970235e-17 1 1.5707996938995747
+        children [
+          DEF Rear_RightWheel HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 -1 0
+            }
+            device [
+              RotationalMotor {
+                name "rr_motor"
+              }
+            ]
+            endPoint Solid {
+              rotation 0 -1 0 0
+              children [
+                DEF WHEEL Shape {
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.04
+                  }
+                }
+              ]
+              name "right_steer"
+              boundingObject DEF WHEEL Shape {
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.04
+                }
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "rr_wheel"
+        boundingObject Sphere {
+          radius 0.01
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF Arm HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0 0.1 0
+        suspensionAxis 0 0 1
+      }
+      device [
+        RotationalMotor {
+          name "arm_base_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.1 0
+        children [
+          SliderJoint {
+            jointParameters JointParameters {
+            }
+            device [
+              LinearMotor {
+                name "arm_water_motor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 0.07 0
+              rotation 0 1 0 1.5707996938995747
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                      url [
+                        "textures/carpet.jpg"
+                      ]
+                    }
+                  }
+                  geometry Box {
+                    size 0.5 0.02 0.02
+                  }
+                }
+              ]
+            }
+          }
+          Shape {
+            appearance PBRAppearance {
+              baseColorMap ImageTexture {
+                url [
+                  "textures/steel_floor.jpg"
+                ]
+              }
+            }
+            geometry Cylinder {
+              height 0.2
+              radius 0.05
+            }
+          }
+        ]
+        name "arm_base"
+        boundingObject Cylinder {
+          height 0.1
+          radius 0.05
+        }
+      }
+    }
+  ]
+  name "WaterDelivery"
+  contactMaterial "bot"
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "water_controller"
+}
+Robot {
+  translation 0.335509 5.9952e-15 -2.88832
+  children [
+    Solid {
+      children [
+        Receiver {
+          translation 0.1 0.1 0.1
+          children [
+            Solid {
+              rotation 1 0 0 1.5707996938995747
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.05
+                  }
+                }
+              ]
+            }
+          ]
+          name "base_receiver"
+          type "infra-red"
+        }
+        Emitter {
+          translation -0.1 0.1 0.1
+          children [
+            Solid {
+              rotation 1 0 0 1.5707996938995747
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.05
+                  }
+                }
+              ]
+            }
+          ]
+          name "base_emitter"
+          type "infra-red"
+          range 1
+          maxRange 1
+          aperture 1.5708
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0.666667 0
+          }
+          geometry Box {
+            size 0.4 0.5 0.2
+          }
+        }
+      ]
+    }
+  ]
+  controller "base_controller"
+}
+Solid {
+  translation -1.13077 0.25 -0.7
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/desktop_wood.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 0.5 0.1
+      }
+    }
+  ]
+  name "solid(12)"
+  boundingObject Box {
+    size 0.5 0.5 0.2
+  }
+  physics Physics {
+    centerOfMass [
+      0 0 0
+    ]
+  }
+}
+Solid {
+  translation 1.11578 -3.35842e-15 1.26394
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.8
+      }
+    }
+  ]
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 0.848741 -3.35842e-15 1.91633
+  rotation 0 1 0 -0.7854003061004253
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.8
+      }
+    }
+  ]
+  name "solid(10)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 1.39183 -3.35842e-15 0.60838
+  rotation 0 1 0 -0.7854003061004253
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.8
+      }
+    }
+  ]
+  name "solid(9)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -0.882177 -3.33067e-15 1.95554
+  rotation 0 1 0 -2.2252996938995744
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.8
+      }
+    }
+  ]
+  name "solid(8)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -0.000353444 -2.91988e-14 2.18495
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.001 1.2
+      }
+    }
+  ]
+  name "solid(3)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1.18123 -2.91988e-14 1.14868
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.1 0.001 1.2
+      }
+    }
+  ]
+  name "solid(7)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1.18011 1.9984e-15 0.0497442
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.1 0.002 1
+      }
+    }
+  ]
+  name "solid(2)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 1.67435 1.55431e-15 -1.15923
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 1.2
+      }
+    }
+  ]
+  name "solid(11)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 1.35909 2.22043e-16 -2.07002
+  rotation 0 1 0 0.7853996938995746
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.08 0.002 0.91
+      }
+    }
+  ]
+  name "solid(14)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 0.290946 4.66293e-15 -2.39671
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 1.63
+      }
+    }
+  ]
+  name "solid(15)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -0.851251 4.21884e-15 -1.97519
+  rotation 0 1 0 2.4870996938995744
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 1.19
+      }
+    }
+  ]
+  name "solid(16)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 1.67504 2.44249e-15 -0.142279
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 1
+      }
+    }
+  ]
+  name "solid(13)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 0.0783673 -6.21725e-15 -2.41138
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.4
+      }
+    }
+  ]
+  name "solid(1)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 1.6796 -6.21725e-15 -0.575194
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.4
+      }
+    }
+  ]
+  name "solid(18)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1.19108 -7.10543e-15 0.896435
+  rotation 0 1 0 1.5707996938995747
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.07 0.002 0.4
+      }
+    }
+  ]
+  name "solid(17)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 0.369701 3.55271e-15 2.18646
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.06 0.002 0.3
+      }
+    }
+  ]
+  name "solid(5)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1.1767 -1.77636e-15 -0.996101
+  children [
+    Shape {
+      appearance PBRAppearance {
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.1 0.002 1.1
+      }
+    }
+  ]
+  name "solid(4)"
+  recognitionColors [
+    1 0 0
+  ]
+}

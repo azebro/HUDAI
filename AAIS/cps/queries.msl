@@ -1,0 +1,6 @@
+
+query('This is a test', true, "65 N ; 030 W = 65 N ; 030 W" ).
+
+query('Ax 2.1.1 Text', false, "65 N ; 031 W = 65 N ; 030 W" ).
+
+query('Ax 2.1.1 Text',true, "(Segment1 of profile_AFR004_1 and Segment2 of profile_AAL37_1 are_in_oceanic_conflict)").

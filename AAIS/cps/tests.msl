@@ -1,0 +1,1506 @@
+"the_Aircraft_on(profile_KLM745_1) = KLM745".
+
+"the_Type_of(KLM745) = B74F".
+
+"(KLM745 meets_mnps)".
+
+"(the_Segment(profile_KLM745_1, 53 N ; 015 W ; FL 280 ; FL 280 ; 10 45 GMT day 0, 54 N ; 020 W ; FL 280 ; FL 280 ; 11 08 GMT day 0, 0.86) belongs_to profile_KLM745_1)".
+
+"(the_Segment(profile_KLM745_1, 54 N ; 020 W ; FL 280 ; FL 280 ; 11 08 GMT day 0, 56 N ; 030 W ; FL 280 ; FL 280 ; 11 54 GMT day 0, 0.86) belongs_to profile_KLM745_1)".
+
+"(the_Segment(profile_KLM745_1, 56 N ; 030 W ; FL 280 ; FL 280 ; 11 54 GMT day 0, 57 N ; 040 W ; FL 280 ; FL 280 ; 12 38 GMT day 0, 0.86) belongs_to profile_KLM745_1)".
+
+"(the_Segment(profile_KLM745_1, 57 N ; 040 W ; FL 280 ; FL 280 ; 12 38 GMT day 0, 56 N ; 050 W ; FL 280 ; FL 280 ; 13 21 GMT day 0, 0.86) belongs_to profile_KLM745_1)".
+
+"the_Aircraft_on(profile_DLH450_1) = DLH450".
+
+"the_Type_of(DLH450) = B74F".
+
+"(DLH450 meets_mnps)".
+
+"(the_Segment(profile_DLH450_1, 56 N ; 010 W ; FL 330 ; FL 330 ; 10 40 GMT day 0, 59 N ; 020 W ; FL 330 ; FL 330 ; 11 28 GMT day 0, 0.86) belongs_to profile_DLH450_1)".
+
+"(the_Segment(profile_DLH450_1, 59 N ; 020 W ; FL 330 ; FL 330 ; 11 28 GMT day 0, 62 N ; 030 W ; FL 330 ; FL 330 ; 12 10 GMT day 0, 0.86) belongs_to profile_DLH450_1)".
+
+"(the_Segment(profile_DLH450_1, 62 N ; 030 W ; FL 330 ; FL 330 ; 12 10 GMT day 0, 63 N ; 040 W ; FL 330 ; FL 330 ; 12 44 GMT day 0, 0.86) belongs_to profile_DLH450_1)".
+
+"(the_Segment(profile_DLH450_1, 63 N ; 040 W ; FL 330 ; FL 330 ; 12 44 GMT day 0, 63 N ; 050 W ; FL 330 ; FL 330 ; 13 18 GMT day 0, 0.86) belongs_to profile_DLH450_1)".
+
+"(the_Segment(profile_DLH450_1, 63 N ; 050 W ; FL 330 ; FL 330 ; 13 18 GMT day 0, 62 N ; 60 W ; FL 330 ; FL 330 ; 13 53 GMT day 0, 0.86) belongs_to profile_DLH450_1)".
+
+"the_Aircraft_on(profile_DAL11_1) = DAL11".
+
+"the_Type_of(DAL11) = MD11".
+
+"(DAL11 meets_mnps)".
+
+"(the_Segment(profile_DAL11_1, 54 N ; 015 W ; FL 330 ; FL 330 ; 10 43 GMT day 0, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 08 GMT day 0, 0.83) belongs_to profile_DAL11_1)".
+
+"(the_Segment(profile_DAL11_1, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 08 GMT day 0, 57 N ; 030 W ; FL 330 ; FL 330 ; 11 55 GMT day 0, 0.83) belongs_to profile_DAL11_1)".
+
+"(the_Segment(profile_DAL11_1, 57 N ; 030 W ; FL 330 ; FL 330 ; 11 55 GMT day 0, 58 N ; 040 W ; FL 330 ; FL 330 ; 12 40 GMT day 0, 0.83) belongs_to profile_DAL11_1)".
+
+"(the_Segment(profile_DAL11_1, 58 N ; 040 W ; FL 330 ; FL 330 ; 12 40 GMT day 0, 57 N ; 050 W ; FL 330 ; FL 330 ; 13 24 GMT day 0, 0.83) belongs_to profile_DAL11_1)".
+
+"the_Aircraft_on(profile_DAL39_1) = DAL39".
+
+"the_Type_of(DAL39) = L101".
+
+"(DAL39 meets_mnps)".
+
+"(the_Segment(profile_DAL39_1, 54 N ; 015 W ; FL 310 ; FL 310 ; 10 45 GMT day 0, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 08 GMT day 0, 0.83) belongs_to profile_DAL39_1)".
+
+"(the_Segment(profile_DAL39_1, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 08 GMT day 0, 57 N ; 030 W ; FL 310 ; FL 310 ; 11 56 GMT day 0, 0.83) belongs_to profile_DAL39_1)".
+
+"(the_Segment(profile_DAL39_1, 57 N ; 030 W ; FL 310 ; FL 310 ; 11 56 GMT day 0, 58 N ; 040 W ; FL 310 ; FL 310 ; 12 42 GMT day 0, 0.83) belongs_to profile_DAL39_1)".
+
+"(the_Segment(profile_DAL39_1, 58 N ; 040 W ; FL 310 ; FL 310 ; 12 42 GMT day 0, 57 N ; 050 W ; FL 310 ; FL 310 ; 13 25 GMT day 0, 0.83) belongs_to profile_DAL39_1)".
+
+"the_Aircraft_on(profile_DLH444_1) = DLH444".
+
+"the_Type_of(DLH444) = EA34".
+
+"(DLH444 meets_mnps)".
+
+"(the_Segment(profile_DLH444_1, 53 N ; 015 W ; FL 350 ; FL 350 ; 10 42 GMT day 0, 54 N ; 020 W ; FL 350 ; FL 350 ; 11 07 GMT day 0, 0.82) belongs_to profile_DLH444_1)".
+
+"(the_Segment(profile_DLH444_1, 54 N ; 020 W ; FL 350 ; FL 350 ; 11 07 GMT day 0, 56 N ; 030 W ; FL 350 ; FL 350 ; 11 56 GMT day 0, 0.82) belongs_to profile_DLH444_1)".
+
+"(the_Segment(profile_DLH444_1, 56 N ; 030 W ; FL 350 ; FL 350 ; 11 56 GMT day 0, 57 N ; 040 W ; FL 350 ; FL 350 ; 12 42 GMT day 0, 0.82) belongs_to profile_DLH444_1)".
+
+"(the_Segment(profile_DLH444_1, 57 N ; 040 W ; FL 350 ; FL 350 ; 12 42 GMT day 0, 56 N ; 050 W ; FL 350 ; FL 350 ; 13 28 GMT day 0, 0.82) belongs_to profile_DLH444_1)".
+
+"the_Aircraft_on(profile_TSC113_1) = TSC113".
+
+"the_Type_of(TSC113) = B757".
+
+"(TSC113 meets_mnps)".
+
+"(the_Segment(profile_TSC113_1, 52 N ; 015 W ; FL 340 ; FL 340 ; 10 40 GMT day 0, 53 N ; 020 W ; FL 340 ; FL 340 ; 11 05 GMT day 0, 0.80) belongs_to profile_TSC113_1)".
+
+"(the_Segment(profile_TSC113_1, 53 N ; 020 W ; FL 340 ; FL 340 ; 11 05 GMT day 0, 55 N ; 030 W ; FL 340 ; FL 340 ; 11 58 GMT day 0, 0.80) belongs_to profile_TSC113_1)".
+
+"(the_Segment(profile_TSC113_1, 55 N ; 030 W ; FL 340 ; FL 340 ; 11 58 GMT day 0, 56 N ; 040 W ; FL 340 ; FL 340 ; 12 49 GMT day 0, 0.80) belongs_to profile_TSC113_1)".
+
+"(the_Segment(profile_TSC113_1, 56 N ; 040 W ; FL 340 ; FL 340 ; 12 49 GMT day 0, 55 N ; 050 W ; FL 340 ; FL 340 ; 13 39 GMT day 0, 0.80) belongs_to profile_TSC113_1)".
+
+"the_Aircraft_on(profile_AFR594_1) = AFR594".
+
+"the_Type_of(AFR594) = B747".
+
+"(AFR594 meets_mnps)".
+
+"(the_Segment(profile_AFR594_1, 46 00 N ; 008 45 W ; FL 330 ; FL 330 ; 10 45 GMT day 0, 46 N ; 010 W ; FL 340 ; FL 340 ; 10 51 GMT day 0, 0.84) belongs_to profile_AFR594_1)".
+
+"(the_Segment(profile_AFR594_1, 46 N ; 010 W ; FL 340 ; FL 340 ; 10 51 GMT day 0, 45 N ; 020 W ; FL 340 ; FL 340 ; 11 40 GMT day 0, 0.84) belongs_to profile_AFR594_1)".
+
+"(the_Segment(profile_AFR594_1, 45 N ; 020 W ; FL 340 ; FL 340 ; 11 40 GMT day 0, 41 N ; 030 W ; FL 340 ; FL 340 ; 12 38 GMT day 0, 0.84) belongs_to profile_AFR594_1)".
+
+"(the_Segment(profile_AFR594_1, 41 N ; 030 W ; FL 340 ; FL 340 ; 12 38 GMT day 0, 36 N ; 040 W ; FL 340 ; FL 340 ; 13 41 GMT day 0, 0.84) belongs_to profile_AFR594_1)".
+
+"the_Aircraft_on(profile_LKR501_1) = LKR501".
+
+"the_Type_of(LKR501) = DC10".
+
+"(LKR501 meets_mnps)".
+
+"(the_Segment(profile_LKR501_1, 53 N ; 015 W ; FL 310 ; FL 310 ; 10 48 GMT day 0, 54 N ; 020 W ; FL 310 ; FL 310 ; 11 11 GMT day 0, 0.83) belongs_to profile_LKR501_1)".
+
+"(the_Segment(profile_LKR501_1, 54 N ; 020 W ; FL 310 ; FL 310 ; 11 11 GMT day 0, 56 N ; 030 W ; FL 310 ; FL 310 ; 11 59 GMT day 0, 0.83) belongs_to profile_LKR501_1)".
+
+"(the_Segment(profile_LKR501_1, 56 N ; 030 W ; FL 310 ; FL 310 ; 11 59 GMT day 0, 57 N ; 040 W ; FL 310 ; FL 310 ; 12 45 GMT day 0, 0.83) belongs_to profile_LKR501_1)".
+
+"(the_Segment(profile_LKR501_1, 57 N ; 040 W ; FL 310 ; FL 310 ; 12 45 GMT day 0, 56 N ; 050 W ; FL 310 ; FL 310 ; 13 30 GMT day 0, 0.83) belongs_to profile_LKR501_1)".
+
+"the_Aircraft_on(profile_DAL125_1) = DAL125".
+
+"the_Type_of(DAL125) = L101".
+
+"(DAL125 meets_mnps)".
+
+"(the_Segment(profile_DAL125_1, 54 20 N ; 012 00 W ; FL 310 ; FL 310 ; 10 37 GMT day 0, 56 N ; 020 W ; FL 310 ; FL 310 ; 11 15 GMT day 0, 0.83) belongs_to profile_DAL125_1)".
+
+"(the_Segment(profile_DAL125_1, 56 N ; 020 W ; FL 310 ; FL 310 ; 11 15 GMT day 0, 58 N ; 030 W ; FL 310 ; FL 310 ; 12 01 GMT day 0, 0.83) belongs_to profile_DAL125_1)".
+
+"(the_Segment(profile_DAL125_1, 58 N ; 030 W ; FL 310 ; FL 310 ; 12 01 GMT day 0, 59 N ; 040 W ; FL 310 ; FL 310 ; 12 44 GMT day 0, 0.83) belongs_to profile_DAL125_1)".
+
+"(the_Segment(profile_DAL125_1, 59 N ; 040 W ; FL 310 ; FL 310 ; 12 44 GMT day 0, 58 N ; 050 W ; FL 310 ; FL 310 ; 13 25 GMT day 0, 0.83) belongs_to profile_DAL125_1)".
+
+"the_Aircraft_on(profile_KLM621_1) = KLM621".
+
+"the_Type_of(KLM621) = B767".
+
+"(KLM621 meets_mnps)".
+
+"(the_Segment(profile_KLM621_1, 52 N ; 015 W ; FL 330 ; FL 330 ; 10 45 GMT day 0, 53 N ; 020 W ; FL 330 ; FL 330 ; 11 09 GMT day 0, 0.79) belongs_to profile_KLM621_1)".
+
+"(the_Segment(profile_KLM621_1, 53 N ; 020 W ; FL 330 ; FL 330 ; 11 09 GMT day 0, 55 N ; 030 W ; FL 330 ; FL 330 ; 12 02 GMT day 0, 0.79) belongs_to profile_KLM621_1)".
+
+"(the_Segment(profile_KLM621_1, 55 N ; 030 W ; FL 330 ; FL 330 ; 12 02 GMT day 0, 56 N ; 040 W ; FL 330 ; FL 330 ; 12 54 GMT day 0, 0.79) belongs_to profile_KLM621_1)".
+
+"(the_Segment(profile_KLM621_1, 56 N ; 040 W ; FL 330 ; FL 330 ; 12 54 GMT day 0, 55 N ; 050 W ; FL 330 ; FL 330 ; 13 44 GMT day 0, 0.79) belongs_to profile_KLM621_1)".
+
+"the_Aircraft_on(profile_AAL71_1) = AAL71".
+
+"the_Type_of(AAL71) = B767".
+
+"(AAL71 meets_mnps)".
+
+"(the_Segment(profile_AAL71_1, 54 20 N ; 012 00 W ; FL 330 ; FL 330 ; 10 35 GMT day 0, 56 N ; 020 W ; FL 330 ; FL 330 ; 11 14 GMT day 0, 0.80) belongs_to profile_AAL71_1)".
+
+"(the_Segment(profile_AAL71_1, 56 N ; 020 W ; FL 330 ; FL 330 ; 11 14 GMT day 0, 58 N ; 030 W ; FL 330 ; FL 330 ; 12 02 GMT day 0, 0.80) belongs_to profile_AAL71_1)".
+
+"(the_Segment(profile_AAL71_1, 58 N ; 030 W ; FL 330 ; FL 330 ; 12 02 GMT day 0, 59 N ; 040 W ; FL 330 ; FL 330 ; 12 46 GMT day 0, 0.80) belongs_to profile_AAL71_1)".
+
+"(the_Segment(profile_AAL71_1, 59 N ; 040 W ; FL 330 ; FL 330 ; 12 46 GMT day 0, 58 N ; 050 W ; FL 330 ; FL 330 ; 13 29 GMT day 0, 0.80) belongs_to profile_AAL71_1)".
+
+"the_Aircraft_on(profile_DAL119_1) = DAL119".
+
+"the_Type_of(DAL119) = B767".
+
+"(DAL119 meets_mnps)".
+
+"(the_Segment(profile_DAL119_1, 53 N ; 015 W ; FL 360 ; FL 360 ; 10 48 GMT day 0, 54 N ; 020 W ; FL 360 ; FL 360 ; 11 13 GMT day 0, 0.81) belongs_to profile_DAL119_1)".
+
+"(the_Segment(profile_DAL119_1, 54 N ; 020 W ; FL 360 ; FL 360 ; 11 13 GMT day 0, 56 N ; 030 W ; FL 360 ; FL 360 ; 12 03 GMT day 0, 0.81) belongs_to profile_DAL119_1)".
+
+"(the_Segment(profile_DAL119_1, 56 N ; 030 W ; FL 360 ; FL 360 ; 12 03 GMT day 0, 57 N ; 040 W ; FL 360 ; FL 360 ; 12 50 GMT day 0, 0.81) belongs_to profile_DAL119_1)".
+
+"(the_Segment(profile_DAL119_1, 57 N ; 040 W ; FL 360 ; FL 360 ; 12 50 GMT day 0, 56 N ; 050 W ; FL 360 ; FL 360 ; 13 36 GMT day 0, 0.81) belongs_to profile_DAL119_1)".
+
+"the_Aircraft_on(profile_AAL101_1) = AAL101".
+
+"the_Type_of(AAL101) = B767".
+
+"(AAL101 meets_mnps)".
+
+"(the_Segment(profile_AAL101_1, 53 N ; 015 W ; FL 330 ; FL 330 ; 10 46 GMT day 0, 54 N ; 020 W ; FL 330 ; FL 330 ; 11 12 GMT day 0, 0.79) belongs_to profile_AAL101_1)".
+
+"(the_Segment(profile_AAL101_1, 54 N ; 020 W ; FL 330 ; FL 330 ; 11 12 GMT day 0, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 04 GMT day 0, 0.79) belongs_to profile_AAL101_1)".
+
+"(the_Segment(profile_AAL101_1, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 04 GMT day 0, 57 N ; 040 W ; FL 330 ; FL 330 ; 12 52 GMT day 0, 0.79) belongs_to profile_AAL101_1)".
+
+"(the_Segment(profile_AAL101_1, 57 N ; 040 W ; FL 330 ; FL 330 ; 12 52 GMT day 0, 56 N ; 050 W ; FL 330 ; FL 330 ; 13 40 GMT day 0, 0.79) belongs_to profile_AAL101_1)".
+
+"the_Aircraft_on(profile_DLH436_1) = DLH436".
+
+"the_Type_of(DLH436) = EA34".
+
+"(DLH436 meets_mnps)".
+
+"(the_Segment(profile_DLH436_1, 54 20 N ; 012 00 W ; FL 340 ; FL 340 ; 10 39 GMT day 0, 56 N ; 020 W ; FL 340 ; FL 340 ; 11 17 GMT day 0, 0.83) belongs_to profile_DLH436_1)".
+
+"(the_Segment(profile_DLH436_1, 56 N ; 020 W ; FL 340 ; FL 340 ; 11 17 GMT day 0, 58 N ; 030 W ; FL 340 ; FL 340 ; 12 04 GMT day 0, 0.83) belongs_to profile_DLH436_1)".
+
+"(the_Segment(profile_DLH436_1, 58 N ; 030 W ; FL 340 ; FL 340 ; 12 04 GMT day 0, 59 N ; 040 W ; FL 340 ; FL 340 ; 12 46 GMT day 0, 0.83) belongs_to profile_DLH436_1)".
+
+"(the_Segment(profile_DLH436_1, 59 N ; 040 W ; FL 340 ; FL 340 ; 12 46 GMT day 0, 58 N ; 050 W ; FL 340 ; FL 340 ; 13 27 GMT day 0, 0.83) belongs_to profile_DLH436_1)".
+
+"the_Aircraft_on(profile_ULE709_1) = ULE709".
+
+"the_Type_of(ULE709) = B767".
+
+"(ULE709 meets_mnps)".
+
+"(the_Segment(profile_ULE709_1, 53 N ; 015 W ; FL 340 ; FL 340 ; 10 48 GMT day 0, 54 N ; 020 W ; FL 340 ; FL 340 ; 11 14 GMT day 0, 0.80) belongs_to profile_ULE709_1)".
+
+"(the_Segment(profile_ULE709_1, 54 N ; 020 W ; FL 340 ; FL 340 ; 11 14 GMT day 0, 56 N ; 030 W ; FL 340 ; FL 340 ; 12 05 GMT day 0, 0.80) belongs_to profile_ULE709_1)".
+
+"(the_Segment(profile_ULE709_1, 56 N ; 030 W ; FL 340 ; FL 340 ; 12 05 GMT day 0, 57 N ; 040 W ; FL 340 ; FL 340 ; 12 53 GMT day 0, 0.80) belongs_to profile_ULE709_1)".
+
+"(the_Segment(profile_ULE709_1, 57 N ; 040 W ; FL 340 ; FL 340 ; 12 53 GMT day 0, 56 N ; 050 W ; FL 340 ; FL 340 ; 13 39 GMT day 0, 0.80) belongs_to profile_ULE709_1)".
+
+"the_Aircraft_on(profile_AFR222_1) = AFR222".
+
+"the_Type_of(AFR222) = EA34".
+
+"(AFR222 meets_mnps)".
+
+"(the_Segment(profile_AFR222_1, 46 00 N ; 008 45 W ; FL 340 ; FL 340 ; 11 32 GMT day 0, 45 N ; 015 W ; FL 340 ; FL 340 ; 12 05 GMT day 0, 0.81) belongs_to profile_AFR222_1)".
+
+"(the_Segment(profile_AFR222_1, 45 N ; 015 W ; FL 340 ; FL 340 ; 12 05 GMT day 0, 43 N ; 020 W ; FL 340 ; FL 340 ; 12 35 GMT day 0, 0.81) belongs_to profile_AFR222_1)".
+
+"(the_Segment(profile_AFR222_1, 43 N ; 020 W ; FL 340 ; FL 340 ; 12 35 GMT day 0, 40 N ; 030 W ; FL 340 ; FL 340 ; 13 34 GMT day 0, 0.81) belongs_to profile_AFR222_1)".
+
+"the_Aircraft_on(profile_KLM604_1) = KLM604".
+
+"the_Type_of(KLM604) = B747".
+
+"(KLM604 meets_mnps)".
+
+"(the_Segment(profile_KLM604_1, 62 N ; 020 W ; FL 340 ; FL 340 ; 11 51 GMT day 0, 60 N ; 010 W ; FL 340 ; FL 340 ; 12 25 GMT day 0, 0.84) belongs_to profile_KLM604_1)".
+
+"the_Aircraft_on(profile_N252C_1) = N252C".
+
+"the_Type_of(N252C) = G4".
+
+"(N252C meets_mnps)".
+
+"(the_Segment(profile_N252C_1, 55 N ; 010 W ; FL 390 ; FL 390 ; 10 26 GMT day 0, 57 N ; 020 W ; FL 390 ; FL 390 ; 11 18 GMT day 0, 0.80) belongs_to profile_N252C_1)".
+
+"(the_Segment(profile_N252C_1, 57 N ; 020 W ; FL 390 ; FL 390 ; 11 18 GMT day 0, 59 N ; 030 W ; FL 390 ; FL 390 ; 12 07 GMT day 0, 0.80) belongs_to profile_N252C_1)".
+
+"(the_Segment(profile_N252C_1, 59 N ; 030 W ; FL 390 ; FL 390 ; 12 07 GMT day 0, 60 N ; 040 W ; FL 390 ; FL 390 ; 12 49 GMT day 0, 0.80) belongs_to profile_N252C_1)".
+
+"(the_Segment(profile_N252C_1, 60 N ; 040 W ; FL 390 ; FL 390 ; 12 49 GMT day 0, 59 N ; 050 W ; FL 390 ; FL 390 ; 13 31 GMT day 0, 0.80) belongs_to profile_N252C_1)".
+
+"the_Aircraft_on(profile_BAW9612_1) = BAW9612".
+
+"the_Type_of(BAW9612) = B747".
+
+"(BAW9612 meets_mnps)".
+
+"(the_Segment(profile_BAW9612_1, 54 N ; 015 W ; FL 330 ; FL 330 ; 10 56 GMT day 0, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 20 GMT day 0, 0.84) belongs_to profile_BAW9612_1)".
+
+"(the_Segment(profile_BAW9612_1, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 20 GMT day 0, 57 N ; 030 W ; FL 330 ; FL 330 ; 12 08 GMT day 0, 0.84) belongs_to profile_BAW9612_1)".
+
+"(the_Segment(profile_BAW9612_1, 57 N ; 030 W ; FL 330 ; FL 330 ; 12 08 GMT day 0, 58 N ; 040 W ; FL 330 ; FL 330 ; 12 52 GMT day 0, 0.84) belongs_to profile_BAW9612_1)".
+
+"(the_Segment(profile_BAW9612_1, 58 N ; 040 W ; FL 330 ; FL 330 ; 12 52 GMT day 0, 57 N ; 050 W ; FL 330 ; FL 330 ; 13 36 GMT day 0, 0.84) belongs_to profile_BAW9612_1)".
+
+"the_Aircraft_on(profile_BAW9683_1) = BAW9683".
+
+"the_Type_of(BAW9683) = DC10".
+
+"(BAW9683 meets_mnps)".
+
+"(the_Segment(profile_BAW9683_1, 49 N ; 015 W ; FL 280 ; FL 280 ; 11 00 GMT day 0, 48 N ; 020 W ; FL 280 ; FL 280 ; 11 25 GMT day 0, 0.82) belongs_to profile_BAW9683_1)".
+
+"(the_Segment(profile_BAW9683_1, 48 N ; 020 W ; FL 280 ; FL 280 ; 11 25 GMT day 0, 44 N ; 030 W ; FL 280 ; FL 280 ; 12 21 GMT day 0, 0.82) belongs_to profile_BAW9683_1)".
+
+"(the_Segment(profile_BAW9683_1, 44 N ; 030 W ; FL 280 ; FL 280 ; 12 21 GMT day 0, 40 N ; 040 W ; FL 280 ; FL 280 ; 13 22 GMT day 0, 0.82) belongs_to profile_BAW9683_1)".
+
+"(the_Segment(profile_BAW9683_1, 40 N ; 040 W ; FL 280 ; FL 280 ; 13 22 GMT day 0, 36 N ; 050 W ; FL 280 ; FL 280 ; 14 25 GMT day 0, 0.82) belongs_to profile_BAW9683_1)".
+
+"the_Aircraft_on(profile_BAW9671_1) = BAW9671".
+
+"the_Type_of(BAW9671) = DC10".
+
+"(BAW9671 meets_mnps)".
+
+"(the_Segment(profile_BAW9671_1, 54 N ; 015 W ; FL 310 ; FL 310 ; 10 57 GMT day 0, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 21 GMT day 0, 0.82) belongs_to profile_BAW9671_1)".
+
+"(the_Segment(profile_BAW9671_1, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 21 GMT day 0, 57 N ; 030 W ; FL 310 ; FL 310 ; 12 09 GMT day 0, 0.82) belongs_to profile_BAW9671_1)".
+
+"(the_Segment(profile_BAW9671_1, 57 N ; 030 W ; FL 310 ; FL 310 ; 12 09 GMT day 0, 58 N ; 040 W ; FL 310 ; FL 310 ; 12 55 GMT day 0, 0.82) belongs_to profile_BAW9671_1)".
+
+"(the_Segment(profile_BAW9671_1, 58 N ; 040 W ; FL 310 ; FL 310 ; 12 55 GMT day 0, 57 N ; 050 W ; FL 310 ; FL 310 ; 13 40 GMT day 0, 0.82) belongs_to profile_BAW9671_1)".
+
+"the_Aircraft_on(profile_AAL137_1) = AAL137".
+
+"the_Type_of(AAL137) = B767".
+
+"(AAL137 meets_mnps)".
+
+"(the_Segment(profile_AAL137_1, 56 N ; 010 W ; FL 310 ; FL 310 ; 10 35 GMT day 0, 58 N ; 020 W ; FL 310 ; FL 310 ; 11 25 GMT day 0, 0.80) belongs_to profile_AAL137_1)".
+
+"(the_Segment(profile_AAL137_1, 58 N ; 020 W ; FL 310 ; FL 310 ; 11 25 GMT day 0, 61 N ; 030 W ; FL 310 ; FL 310 ; 12 10 GMT day 0, 0.80) belongs_to profile_AAL137_1)".
+
+"(the_Segment(profile_AAL137_1, 61 N ; 030 W ; FL 310 ; FL 310 ; 12 10 GMT day 0, 62 N ; 040 W ; FL 310 ; FL 310 ; 12 49 GMT day 0, 0.80) belongs_to profile_AAL137_1)".
+
+"(the_Segment(profile_AAL137_1, 62 N ; 040 W ; FL 310 ; FL 310 ; 12 49 GMT day 0, 62 N ; 050 W ; FL 310 ; FL 310 ; 13 26 GMT day 0, 0.80) belongs_to profile_AAL137_1)".
+
+"(the_Segment(profile_AAL137_1, 62 N ; 050 W ; FL 310 ; FL 310 ; 13 26 GMT day 0, 60 N ; 60 W ; FL 310 ; FL 310 ; 14 08 GMT day 0, 0.80) belongs_to profile_AAL137_1)".
+
+"the_Aircraft_on(profile_VIR075_1) = VIR075".
+
+"the_Type_of(VIR075) = EA34".
+
+"(VIR075 meets_mnps)".
+
+"(the_Segment(profile_VIR075_1, 54 N ; 015 W ; FL 350 ; FL 350 ; 10 57 GMT day 0, 55 N ; 020 W ; FL 350 ; FL 350 ; 11 22 GMT day 0, 0.82) belongs_to profile_VIR075_1)".
+
+"(the_Segment(profile_VIR075_1, 55 N ; 020 W ; FL 350 ; FL 350 ; 11 22 GMT day 0, 57 N ; 030 W ; FL 350 ; FL 350 ; 12 10 GMT day 0, 0.82) belongs_to profile_VIR075_1)".
+
+"(the_Segment(profile_VIR075_1, 57 N ; 030 W ; FL 350 ; FL 350 ; 12 10 GMT day 0, 58 N ; 040 W ; FL 350 ; FL 350 ; 12 55 GMT day 0, 0.82) belongs_to profile_VIR075_1)".
+
+"(the_Segment(profile_VIR075_1, 58 N ; 040 W ; FL 350 ; FL 350 ; 12 55 GMT day 0, 57 N ; 050 W ; FL 350 ; FL 350 ; 13 39 GMT day 0, 0.82) belongs_to profile_VIR075_1)".
+
+"the_Aircraft_on(profile_BAW285_1) = BAW285".
+
+"the_Type_of(BAW285) = B74F".
+
+"(BAW285 meets_mnps)".
+
+"(the_Segment(profile_BAW285_1, 57 N ; 010 W ; FL 290 ; FL 290 ; 11 14 GMT day 0, 61 N ; 020 W ; FL 290 ; FL 290 ; 12 04 GMT day 0, 0.86) belongs_to profile_BAW285_1)".
+
+"(the_Segment(profile_BAW285_1, 61 N ; 020 W ; FL 290 ; FL 290 ; 12 04 GMT day 0, 66 N ; 030 W ; FL 290 ; FL 290 ; 12 51 GMT day 0, 0.86) belongs_to profile_BAW285_1)".
+
+"(the_Segment(profile_BAW285_1, 66 N ; 030 W ; FL 290 ; FL 290 ; 12 51 GMT day 0, 68 N ; 040 W ; FL 290 ; FL 290 ; 13 24 GMT day 0, 0.86) belongs_to profile_BAW285_1)".
+
+"(the_Segment(profile_BAW285_1, 68 N ; 040 W ; FL 290 ; FL 290 ; 13 24 GMT day 0, 69 N ; 050 W ; FL 290 ; FL 290 ; 13 52 GMT day 0, 0.86) belongs_to profile_BAW285_1)".
+
+"the_Aircraft_on(profile_LTU900_1) = LTU900".
+
+"the_Type_of(LTU900) = B767".
+
+"(LTU900 meets_mnps)".
+
+"(the_Segment(profile_LTU900_1, 49 N ; 015 W ; FL 310 ; FL 310 ; 11 01 GMT day 0, 48 N ; 020 W ; FL 310 ; FL 310 ; 11 27 GMT day 0, 0.81) belongs_to profile_LTU900_1)".
+
+"(the_Segment(profile_LTU900_1, 48 N ; 020 W ; FL 310 ; FL 310 ; 11 27 GMT day 0, 44 N ; 030 W ; FL 310 ; FL 310 ; 12 25 GMT day 0, 0.81) belongs_to profile_LTU900_1)".
+
+"(the_Segment(profile_LTU900_1, 44 N ; 030 W ; FL 310 ; FL 310 ; 12 25 GMT day 0, 40 N ; 040 W ; FL 310 ; FL 310 ; 13 27 GMT day 0, 0.81) belongs_to profile_LTU900_1)".
+
+"(the_Segment(profile_LTU900_1, 40 N ; 040 W ; FL 310 ; FL 310 ; 13 27 GMT day 0, 36 N ; 050 W ; FL 310 ; FL 310 ; 14 32 GMT day 0, 0.81) belongs_to profile_LTU900_1)".
+
+"the_Aircraft_on(profile_SWR126_1) = SWR126".
+
+"the_Type_of(SWR126) = B747".
+
+"(SWR126 meets_mnps)".
+
+"(the_Segment(profile_SWR126_1, 53 N ; 015 W ; FL 350 ; FL 350 ; 11 01 GMT day 0, 54 N ; 020 W ; FL 350 ; FL 350 ; 11 25 GMT day 0, 0.84) belongs_to profile_SWR126_1)".
+
+"(the_Segment(profile_SWR126_1, 54 N ; 020 W ; FL 350 ; FL 350 ; 11 25 GMT day 0, 56 N ; 030 W ; FL 350 ; FL 350 ; 12 12 GMT day 0, 0.84) belongs_to profile_SWR126_1)".
+
+"(the_Segment(profile_SWR126_1, 56 N ; 030 W ; FL 350 ; FL 350 ; 12 12 GMT day 0, 57 N ; 040 W ; FL 350 ; FL 350 ; 12 57 GMT day 0, 0.84) belongs_to profile_SWR126_1)".
+
+"(the_Segment(profile_SWR126_1, 57 N ; 040 W ; FL 350 ; FL 350 ; 12 57 GMT day 0, 56 N ; 050 W ; FL 350 ; FL 350 ; 13 42 GMT day 0, 0.84) belongs_to profile_SWR126_1)".
+
+"the_Aircraft_on(profile_UAL961_1) = UAL961".
+
+"the_Type_of(UAL961) = B777".
+
+"(UAL961 meets_mnps)".
+
+"(the_Segment(profile_UAL961_1, 58 N ; 010 W ; FL 350 ; FL 350 ; 11 40 GMT day 0, 62 N ; 020 W ; FL 350 ; FL 350 ; 12 33 GMT day 0, 0.84) belongs_to profile_UAL961_1)".
+
+"(the_Segment(profile_UAL961_1, 62 N ; 020 W ; FL 350 ; FL 350 ; 12 33 GMT day 0, 65 N ; 030 W ; FL 350 ; FL 350 ; 13 14 GMT day 0, 0.84) belongs_to profile_UAL961_1)".
+
+"(the_Segment(profile_UAL961_1, 65 N ; 030 W ; FL 350 ; FL 350 ; 13 14 GMT day 0, 66 N ; 040 W ; FL 350 ; FL 350 ; 13 46 GMT day 0, 0.84) belongs_to profile_UAL961_1)".
+
+"(the_Segment(profile_UAL961_1, 66 N ; 040 W ; FL 350 ; FL 350 ; 13 46 GMT day 0, 67 N ; 050 W ; FL 350 ; FL 350 ; 14 18 GMT day 0, 0.84) belongs_to profile_UAL961_1)".
+
+"the_Aircraft_on(profile_COA21_1) = COA21".
+
+"the_Type_of(COA21) = DC10".
+
+"(COA21 meets_mnps)".
+
+"(the_Segment(profile_COA21_1, 54 20 N ; 012 00 W ; FL 310 ; FL 310 ; 10 50 GMT day 0, 56 N ; 020 W ; FL 310 ; FL 310 ; 11 28 GMT day 0, 0.83) belongs_to profile_COA21_1)".
+
+"(the_Segment(profile_COA21_1, 56 N ; 020 W ; FL 310 ; FL 310 ; 11 28 GMT day 0, 58 N ; 030 W ; FL 310 ; FL 310 ; 12 14 GMT day 0, 0.83) belongs_to profile_COA21_1)".
+
+"(the_Segment(profile_COA21_1, 58 N ; 030 W ; FL 310 ; FL 310 ; 12 14 GMT day 0, 59 N ; 040 W ; FL 310 ; FL 310 ; 12 57 GMT day 0, 0.83) belongs_to profile_COA21_1)".
+
+"(the_Segment(profile_COA21_1, 59 N ; 040 W ; FL 310 ; FL 310 ; 12 57 GMT day 0, 58 N ; 050 W ; FL 310 ; FL 310 ; 13 38 GMT day 0, 0.83) belongs_to profile_COA21_1)".
+
+"the_Aircraft_on(profile_USA817_1) = USA817".
+
+"the_Type_of(USA817) = B767".
+
+"(USA817 meets_mnps)".
+
+"(the_Segment(profile_USA817_1, 53 N ; 015 W ; FL 360 ; FL 360 ; 11 00 GMT day 0, 54 N ; 020 W ; FL 360 ; FL 360 ; 11 25 GMT day 0, 0.80) belongs_to profile_USA817_1)".
+
+"(the_Segment(profile_USA817_1, 54 N ; 020 W ; FL 360 ; FL 360 ; 11 25 GMT day 0, 56 N ; 030 W ; FL 360 ; FL 360 ; 12 16 GMT day 0, 0.80) belongs_to profile_USA817_1)".
+
+"(the_Segment(profile_USA817_1, 56 N ; 030 W ; FL 360 ; FL 360 ; 12 16 GMT day 0, 57 N ; 040 W ; FL 360 ; FL 360 ; 13 04 GMT day 0, 0.80) belongs_to profile_USA817_1)".
+
+"(the_Segment(profile_USA817_1, 57 N ; 040 W ; FL 360 ; FL 360 ; 13 04 GMT day 0, 56 N ; 050 W ; FL 360 ; FL 360 ; 13 50 GMT day 0, 0.80) belongs_to profile_USA817_1)".
+
+"the_Aircraft_on(profile_AFR004_1) = AFR004".
+
+"the_Type_of(AFR004) = B747".
+
+"(AFR004 meets_mnps)".
+
+"(the_Segment(profile_AFR004_1, 53 N ; 015 W ; FL 310 ; FL 310 ; 11 05 GMT day 0, 54 N ; 020 W ; FL 310 ; FL 310 ; 11 29 GMT day 0, 0.84) belongs_to profile_AFR004_1)".
+
+"(the_Segment(profile_AFR004_1, 54 N ; 020 W ; FL 310 ; FL 310 ; 11 29 GMT day 0, 56 N ; 030 W ; FL 310 ; FL 310 ; 12 17 GMT day 0, 0.84) belongs_to profile_AFR004_1)".
+
+"(the_Segment(profile_AFR004_1, 56 N ; 030 W ; FL 310 ; FL 310 ; 12 17 GMT day 0, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 04 GMT day 0, 0.84) belongs_to profile_AFR004_1)".
+
+"(the_Segment(profile_AFR004_1, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 04 GMT day 0, 56 N ; 050 W ; FL 310 ; FL 310 ; 13 50 GMT day 0, 0.84) belongs_to profile_AFR004_1)".
+
+"the_Aircraft_on(profile_AAL63_1) = AAL63".
+
+"the_Type_of(AAL63) = B767".
+
+"(AAL63 meets_mnps)".
+
+"(the_Segment(profile_AAL63_1, 49 N ; 015 W ; FL 340 ; FL 340 ; 11 06 GMT day 0, 48 N ; 020 W ; FL 340 ; FL 340 ; 11 32 GMT day 0, 0.80) belongs_to profile_AAL63_1)".
+
+"(the_Segment(profile_AAL63_1, 48 N ; 020 W ; FL 340 ; FL 340 ; 11 32 GMT day 0, 44 N ; 030 W ; FL 340 ; FL 340 ; 12 32 GMT day 0, 0.80) belongs_to profile_AAL63_1)".
+
+"(the_Segment(profile_AAL63_1, 44 N ; 030 W ; FL 340 ; FL 340 ; 12 32 GMT day 0, 40 N ; 040 W ; FL 340 ; FL 340 ; 13 35 GMT day 0, 0.80) belongs_to profile_AAL63_1)".
+
+"(the_Segment(profile_AAL63_1, 40 N ; 040 W ; FL 340 ; FL 340 ; 13 35 GMT day 0, 36 N ; 050 W ; FL 340 ; FL 340 ; 14 41 GMT day 0, 0.80) belongs_to profile_AAL63_1)".
+
+"the_Aircraft_on(profile_AIH061_1) = AIH061".
+
+"the_Type_of(AIH061) = B767".
+
+"(AIH061 meets_mnps)".
+
+"(the_Segment(profile_AIH061_1, 54 N ; 015 W ; FL 340 ; FL 340 ; 11 03 GMT day 0, 55 N ; 020 W ; FL 340 ; FL 340 ; 11 28 GMT day 0, 0.80) belongs_to profile_AIH061_1)".
+
+"(the_Segment(profile_AIH061_1, 55 N ; 020 W ; FL 340 ; FL 340 ; 11 28 GMT day 0, 57 N ; 030 W ; FL 340 ; FL 340 ; 12 18 GMT day 0, 0.80) belongs_to profile_AIH061_1)".
+
+"(the_Segment(profile_AIH061_1, 57 N ; 030 W ; FL 340 ; FL 340 ; 12 18 GMT day 0, 58 N ; 040 W ; FL 340 ; FL 340 ; 13 04 GMT day 0, 0.80) belongs_to profile_AIH061_1)".
+
+"(the_Segment(profile_AIH061_1, 58 N ; 040 W ; FL 340 ; FL 340 ; 13 04 GMT day 0, 57 N ; 050 W ; FL 340 ; FL 340 ; 13 50 GMT day 0, 0.80) belongs_to profile_AIH061_1)".
+
+"the_Aircraft_on(profile_AFL344B_1) = AFL344B".
+
+"the_Type_of(AFL344B) = IL62".
+
+"(the_Segment(profile_AFL344B_1, 51 N ; 040 W ; FL 290 ; FL 290 ; 10 52 GMT day 0, 52 N ; 030 W ; FL 290 ; FL 290 ; 11 33 GMT day 0, 0.80) belongs_to profile_AFL344B_1)".
+
+"(the_Segment(profile_AFL344B_1, 52 N ; 030 W ; FL 290 ; FL 290 ; 11 33 GMT day 0, 53 N ; 020 W ; FL 290 ; FL 290 ; 12 16 GMT day 0, 0.80) belongs_to profile_AFL344B_1)".
+
+"(the_Segment(profile_AFL344B_1, 53 N ; 020 W ; FL 290 ; FL 290 ; 12 16 GMT day 0, 53 N ; 015 W ; FL 290 ; FL 290 ; 12 38 GMT day 0, 0.80) belongs_to profile_AFL344B_1)".
+
+"the_Aircraft_on(profile_SWR124_1) = SWR124".
+
+"the_Type_of(SWR124) = MD11".
+
+"(SWR124 meets_mnps)".
+
+"(the_Segment(profile_SWR124_1, 55 N ; 010 W ; FL 330 ; FL 330 ; 10 49 GMT day 0, 57 N ; 020 W ; FL 330 ; FL 330 ; 11 36 GMT day 0, 0.82) belongs_to profile_SWR124_1)".
+
+"(the_Segment(profile_SWR124_1, 57 N ; 020 W ; FL 330 ; FL 330 ; 11 36 GMT day 0, 59 N ; 030 W ; FL 330 ; FL 330 ; 12 21 GMT day 0, 0.82) belongs_to profile_SWR124_1)".
+
+"(the_Segment(profile_SWR124_1, 59 N ; 030 W ; FL 330 ; FL 330 ; 12 21 GMT day 0, 60 N ; 040 W ; FL 330 ; FL 330 ; 13 02 GMT day 0, 0.82) belongs_to profile_SWR124_1)".
+
+"(the_Segment(profile_SWR124_1, 60 N ; 040 W ; FL 330 ; FL 330 ; 13 02 GMT day 0, 59 N ; 050 W ; FL 330 ; FL 330 ; 13 43 GMT day 0, 0.82) belongs_to profile_SWR124_1)".
+
+"the_Aircraft_on(profile_BAW299_1) = BAW299".
+
+"the_Type_of(BAW299) = B747".
+
+"(BAW299 meets_mnps)".
+
+"(the_Segment(profile_BAW299_1, 54 20 N ; 012 00 W ; FL 330 ; FL 330 ; 10 57 GMT day 0, 56 N ; 020 W ; FL 330 ; FL 330 ; 11 34 GMT day 0, 0.84) belongs_to profile_BAW299_1)".
+
+"(the_Segment(profile_BAW299_1, 56 N ; 020 W ; FL 330 ; FL 330 ; 11 34 GMT day 0, 58 N ; 030 W ; FL 330 ; FL 330 ; 12 21 GMT day 0, 0.84) belongs_to profile_BAW299_1)".
+
+"(the_Segment(profile_BAW299_1, 58 N ; 030 W ; FL 330 ; FL 330 ; 12 21 GMT day 0, 59 N ; 040 W ; FL 330 ; FL 330 ; 13 03 GMT day 0, 0.84) belongs_to profile_BAW299_1)".
+
+"(the_Segment(profile_BAW299_1, 59 N ; 040 W ; FL 330 ; FL 330 ; 13 03 GMT day 0, 58 N ; 050 W ; FL 330 ; FL 330 ; 13 44 GMT day 0, 0.84) belongs_to profile_BAW299_1)".
+
+"the_Aircraft_on(profile_AAL51_1) = AAL51".
+
+"the_Type_of(AAL51) = MD11".
+
+"(AAL51 meets_mnps)".
+
+"(the_Segment(profile_AAL51_1, 54 N ; 015 W ; FL 330 ; FL 330 ; 11 09 GMT day 0, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 34 GMT day 0, 0.83) belongs_to profile_AAL51_1)".
+
+"(the_Segment(profile_AAL51_1, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 34 GMT day 0, 57 N ; 030 W ; FL 330 ; FL 330 ; 12 21 GMT day 0, 0.83) belongs_to profile_AAL51_1)".
+
+"(the_Segment(profile_AAL51_1, 57 N ; 030 W ; FL 330 ; FL 330 ; 12 21 GMT day 0, 58 N ; 040 W ; FL 330 ; FL 330 ; 13 06 GMT day 0, 0.83) belongs_to profile_AAL51_1)".
+
+"(the_Segment(profile_AAL51_1, 58 N ; 040 W ; FL 330 ; FL 330 ; 13 06 GMT day 0, 57 N ; 050 W ; FL 330 ; FL 330 ; 13 50 GMT day 0, 0.83) belongs_to profile_AAL51_1)".
+
+"the_Aircraft_on(profile_UAL977_1) = UAL977".
+
+"the_Type_of(UAL977) = B767".
+
+"(UAL977 meets_mnps)".
+
+"(the_Segment(profile_UAL977_1, 53 N ; 015 W ; FL 330 ; FL 330 ; 11 07 GMT day 0, 54 N ; 020 W ; FL 330 ; FL 330 ; 11 33 GMT day 0, 0.81) belongs_to profile_UAL977_1)".
+
+"(the_Segment(profile_UAL977_1, 54 N ; 020 W ; FL 330 ; FL 330 ; 11 33 GMT day 0, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 23 GMT day 0, 0.81) belongs_to profile_UAL977_1)".
+
+"(the_Segment(profile_UAL977_1, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 23 GMT day 0, 57 N ; 040 W ; FL 330 ; FL 330 ; 13 10 GMT day 0, 0.81) belongs_to profile_UAL977_1)".
+
+"(the_Segment(profile_UAL977_1, 57 N ; 040 W ; FL 330 ; FL 330 ; 13 10 GMT day 0, 56 N ; 050 W ; FL 330 ; FL 330 ; 13 56 GMT day 0, 0.81) belongs_to profile_UAL977_1)".
+
+"the_Aircraft_on(profile_KLM601_1) = KLM601".
+
+"the_Type_of(KLM601) = B747".
+
+"(KLM601 meets_mnps)".
+
+"(the_Segment(profile_KLM601_1, 57 N ; 010 W ; FL 280 ; FL 280 ; 11 19 GMT day 0, 60 N ; 020 W ; FL 280 ; FL 280 ; 12 07 GMT day 0, 0.85) belongs_to profile_KLM601_1)".
+
+"(the_Segment(profile_KLM601_1, 60 N ; 020 W ; FL 280 ; FL 280 ; 12 07 GMT day 0, 62 N ; 030 W ; FL 280 ; FL 280 ; 12 45 GMT day 0, 0.85) belongs_to profile_KLM601_1)".
+
+"(the_Segment(profile_KLM601_1, 62 N ; 030 W ; FL 280 ; FL 280 ; 12 45 GMT day 0, 63 N ; 040 W ; FL 280 ; FL 280 ; 13 19 GMT day 0, 0.85) belongs_to profile_KLM601_1)".
+
+"(the_Segment(profile_KLM601_1, 63 N ; 040 W ; FL 280 ; FL 280 ; 13 19 GMT day 0, 63 N ; 050 W ; FL 280 ; FL 280 ; 13 53 GMT day 0, 0.85) belongs_to profile_KLM601_1)".
+
+"(the_Segment(profile_KLM601_1, 63 N ; 050 W ; FL 280 ; FL 280 ; 13 53 GMT day 0, 62 N ; 60 W ; FL 280 ; FL 280 ; 14 28 GMT day 0, 0.85) belongs_to profile_KLM601_1)".
+
+"the_Aircraft_on(profile_AAL37_1) = AAL37".
+
+"the_Type_of(AAL37) = B767".
+
+"(AAL37 meets_mnps)".
+
+"(the_Segment(profile_AAL37_1, 54 20 N ; 012 00 W ; FL 350 ; FL 350 ; 10 55 GMT day 0, 56 N ; 020 W ; FL 350 ; FL 350 ; 11 35 GMT day 0, 0.80) belongs_to profile_AAL37_1)".
+
+"(the_Segment(profile_AAL37_1, 56 N ; 020 W ; FL 350 ; FL 350 ; 11 35 GMT day 0, 58 N ; 030 W ; FL 350 ; FL 350 ; 12 24 GMT day 0, 0.80) belongs_to profile_AAL37_1)".
+
+"(the_Segment(profile_AAL37_1, 58 N ; 030 W ; FL 350 ; FL 350 ; 12 24 GMT day 0, 59 N ; 040 W ; FL 350 ; FL 350 ; 13 08 GMT day 0, 0.80) belongs_to profile_AAL37_1)".
+
+"(the_Segment(profile_AAL37_1, 59 N ; 040 W ; FL 350 ; FL 350 ; 13 08 GMT day 0, 58 N ; 050 W ; FL 350 ; FL 350 ; 13 51 GMT day 0, 0.80) belongs_to profile_AAL37_1)".
+
+"the_Aircraft_on(profile_AAL23_1) = AAL23".
+
+"the_Type_of(AAL23) = B767".
+
+"(AAL23 meets_mnps)".
+
+"(the_Segment(profile_AAL23_1, 54 20 N ; 012 00 W ; FL 360 ; FL 360 ; 10 56 GMT day 0, 56 N ; 020 W ; FL 360 ; FL 360 ; 11 36 GMT day 0, 0.80) belongs_to profile_AAL23_1)".
+
+"(the_Segment(profile_AAL23_1, 56 N ; 020 W ; FL 360 ; FL 360 ; 11 36 GMT day 0, 58 N ; 030 W ; FL 360 ; FL 360 ; 12 25 GMT day 0, 0.80) belongs_to profile_AAL23_1)".
+
+"(the_Segment(profile_AAL23_1, 58 N ; 030 W ; FL 360 ; FL 360 ; 12 25 GMT day 0, 59 N ; 040 W ; FL 360 ; FL 360 ; 13 09 GMT day 0, 0.80) belongs_to profile_AAL23_1)".
+
+"(the_Segment(profile_AAL23_1, 59 N ; 040 W ; FL 360 ; FL 360 ; 13 09 GMT day 0, 58 N ; 050 W ; FL 360 ; FL 360 ; 13 52 GMT day 0, 0.80) belongs_to profile_AAL23_1)".
+
+"the_Aircraft_on(profile_DLH8174_1) = DLH8174".
+
+"the_Type_of(DLH8174) = B747".
+
+"(DLH8174 meets_mnps)".
+
+"(the_Segment(profile_DLH8174_1, 54 N ; 015 W ; FL 310 ; FL 310 ; 11 15 GMT day 0, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 38 GMT day 0, 0.84) belongs_to profile_DLH8174_1)".
+
+"(the_Segment(profile_DLH8174_1, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 38 GMT day 0, 57 N ; 030 W ; FL 310 ; FL 310 ; 12 26 GMT day 0, 0.84) belongs_to profile_DLH8174_1)".
+
+"(the_Segment(profile_DLH8174_1, 57 N ; 030 W ; FL 310 ; FL 310 ; 12 26 GMT day 0, 58 N ; 040 W ; FL 310 ; FL 310 ; 13 11 GMT day 0, 0.84) belongs_to profile_DLH8174_1)".
+
+"(the_Segment(profile_DLH8174_1, 58 N ; 040 W ; FL 310 ; FL 310 ; 13 11 GMT day 0, 57 N ; 050 W ; FL 310 ; FL 310 ; 13 54 GMT day 0, 0.84) belongs_to profile_DLH8174_1)".
+
+"the_Aircraft_on(profile_AFL315_1) = AFL315".
+
+"the_Type_of(AFL315) = B767".
+
+"(AFL315 meets_mnps)".
+
+"(the_Segment(profile_AFL315_1, 54 N ; 015 W ; FL 350 ; FL 350 ; 11 12 GMT day 0, 55 N ; 020 W ; FL 350 ; FL 350 ; 11 37 GMT day 0, 0.81) belongs_to profile_AFL315_1)".
+
+"(the_Segment(profile_AFL315_1, 55 N ; 020 W ; FL 350 ; FL 350 ; 11 37 GMT day 0, 57 N ; 030 W ; FL 350 ; FL 350 ; 12 26 GMT day 0, 0.81) belongs_to profile_AFL315_1)".
+
+"(the_Segment(profile_AFL315_1, 57 N ; 030 W ; FL 350 ; FL 350 ; 12 26 GMT day 0, 58 N ; 040 W ; FL 350 ; FL 350 ; 13 11 GMT day 0, 0.81) belongs_to profile_AFL315_1)".
+
+"(the_Segment(profile_AFL315_1, 58 N ; 040 W ; FL 350 ; FL 350 ; 13 11 GMT day 0, 57 N ; 050 W ; FL 350 ; FL 350 ; 13 56 GMT day 0, 0.81) belongs_to profile_AFL315_1)".
+
+"the_Aircraft_on(profile_VIR019_1) = VIR019".
+
+"the_Type_of(VIR019) = B74F".
+
+"(VIR019 meets_mnps)".
+
+"(the_Segment(profile_VIR019_1, 56 N ; 010 W ; FL 330 ; FL 330 ; 11 22 GMT day 0, 60 N ; 020 W ; FL 330 ; FL 330 ; 12 13 GMT day 0, 0.86) belongs_to profile_VIR019_1)".
+
+"(the_Segment(profile_VIR019_1, 60 N ; 020 W ; FL 330 ; FL 330 ; 12 13 GMT day 0, 63 N ; 030 W ; FL 330 ; FL 330 ; 12 55 GMT day 0, 0.86) belongs_to profile_VIR019_1)".
+
+"(the_Segment(profile_VIR019_1, 63 N ; 030 W ; FL 330 ; FL 330 ; 12 55 GMT day 0, 65 N ; 040 W ; FL 330 ; FL 330 ; 13 29 GMT day 0, 0.86) belongs_to profile_VIR019_1)".
+
+"(the_Segment(profile_VIR019_1, 65 N ; 040 W ; FL 330 ; FL 330 ; 13 29 GMT day 0, 66 N ; 050 W ; FL 330 ; FL 330 ; 14 01 GMT day 0, 0.86) belongs_to profile_VIR019_1)".
+
+"(the_Segment(profile_VIR019_1, 66 N ; 050 W ; FL 330 ; FL 330 ; 14 01 GMT day 0, 66 N ; 60 W ; FL 330 ; FL 330 ; 14 32 GMT day 0, 0.86) belongs_to profile_VIR019_1)".
+
+"the_Aircraft_on(profile_BAW2253_1) = BAW2253".
+
+"the_Type_of(BAW2253) = B747".
+
+"(BAW2253 meets_mnps)".
+
+"(the_Segment(profile_BAW2253_1, 49 N ; 015 W ; FL 340 ; FL 340 ; 11 36 GMT day 0, 47 N ; 020 W ; FL 340 ; FL 340 ; 12 03 GMT day 0, 0.84) belongs_to profile_BAW2253_1)".
+
+"(the_Segment(profile_BAW2253_1, 47 N ; 020 W ; FL 340 ; FL 340 ; 12 03 GMT day 0, 45 N ; 024 W ; FL 340 ; FL 340 ; 12 27 GMT day 0, 0.84) belongs_to profile_BAW2253_1)".
+
+"(the_Segment(profile_BAW2253_1, 45 N ; 024 W ; FL 340 ; FL 340 ; 12 27 GMT day 0, 42 N ; 030 W ; FL 340 ; FL 340 ; 13 03 GMT day 0, 0.84) belongs_to profile_BAW2253_1)".
+
+"(the_Segment(profile_BAW2253_1, 42 N ; 030 W ; FL 340 ; FL 340 ; 13 03 GMT day 0, 36 N ; 040 W ; FL 340 ; FL 340 ; 14 10 GMT day 0, 0.84) belongs_to profile_BAW2253_1)".
+
+"the_Aircraft_on(profile_CKT77_1) = CKT77".
+
+"the_Type_of(CKT77) = B767".
+
+"(CKT77 meets_mnps)".
+
+"(the_Segment(profile_CKT77_1, 48 47 N ; 012 00 W ; FL 340 ; FL 340 ; 11 12 GMT day 0, 45 N ; 020 W ; FL 340 ; FL 340 ; 12 03 GMT day 0, 0.80) belongs_to profile_CKT77_1)".
+
+"(the_Segment(profile_CKT77_1, 45 N ; 020 W ; FL 340 ; FL 340 ; 12 03 GMT day 0, 40 N ; 030 W ; FL 340 ; FL 340 ; 13 07 GMT day 0, 0.80) belongs_to profile_CKT77_1)".
+
+"the_Aircraft_on(profile_KLM665_1) = KLM665".
+
+"the_Type_of(KLM665) = B747".
+
+"(KLM665 meets_mnps)".
+
+"(the_Segment(profile_KLM665_1, 57 N ; 010 W ; FL 310 ; FL 310 ; 11 23 GMT day 0, 60 N ; 020 W ; FL 310 ; FL 310 ; 12 11 GMT day 0, 0.85) belongs_to profile_KLM665_1)".
+
+"(the_Segment(profile_KLM665_1, 60 N ; 020 W ; FL 310 ; FL 310 ; 12 11 GMT day 0, 62 N ; 030 W ; FL 310 ; FL 310 ; 12 50 GMT day 0, 0.85) belongs_to profile_KLM665_1)".
+
+"(the_Segment(profile_KLM665_1, 62 N ; 030 W ; FL 310 ; FL 310 ; 12 50 GMT day 0, 62 N ; 040 W ; FL 310 ; FL 310 ; 13 25 GMT day 0, 0.85) belongs_to profile_KLM665_1)".
+
+"(the_Segment(profile_KLM665_1, 62 N ; 040 W ; FL 310 ; FL 310 ; 13 25 GMT day 0, 61 N ; 050 W ; FL 310 ; FL 310 ; 14 02 GMT day 0, 0.85) belongs_to profile_KLM665_1)".
+
+"the_Aircraft_on(profile_SAS941_1) = SAS941".
+
+"the_Type_of(SAS941) = B767".
+
+"(SAS941 meets_mnps)".
+
+"(the_Segment(profile_SAS941_1, 57 N ; 010 W ; FL 310 ; FL 310 ; 10 59 GMT day 0, 59 N ; 020 W ; FL 310 ; FL 310 ; 11 47 GMT day 0, 0.82) belongs_to profile_SAS941_1)".
+
+"(the_Segment(profile_SAS941_1, 59 N ; 020 W ; FL 310 ; FL 310 ; 11 47 GMT day 0, 61 N ; 030 W ; FL 310 ; FL 310 ; 12 29 GMT day 0, 0.82) belongs_to profile_SAS941_1)".
+
+"(the_Segment(profile_SAS941_1, 61 N ; 030 W ; FL 310 ; FL 310 ; 12 29 GMT day 0, 61 N ; 040 W ; FL 310 ; FL 310 ; 13 06 GMT day 0, 0.82) belongs_to profile_SAS941_1)".
+
+"(the_Segment(profile_SAS941_1, 61 N ; 040 W ; FL 310 ; FL 310 ; 13 06 GMT day 0, 60 N ; 050 W ; FL 310 ; FL 310 ; 13 46 GMT day 0, 0.82) belongs_to profile_SAS941_1)".
+
+"the_Aircraft_on(profile_VIR005_1) = VIR005".
+
+"the_Type_of(VIR005) = B747".
+
+"(VIR005 meets_mnps)".
+
+"(the_Segment(profile_VIR005_1, 49 N ; 015 W ; FL 310 ; FL 310 ; 11 22 GMT day 0, 48 N ; 020 W ; FL 310 ; FL 310 ; 11 46 GMT day 0, 0.83) belongs_to profile_VIR005_1)".
+
+"(the_Segment(profile_VIR005_1, 48 N ; 020 W ; FL 310 ; FL 310 ; 11 46 GMT day 0, 44 N ; 030 W ; FL 310 ; FL 310 ; 12 43 GMT day 0, 0.83) belongs_to profile_VIR005_1)".
+
+"(the_Segment(profile_VIR005_1, 44 N ; 030 W ; FL 310 ; FL 310 ; 12 43 GMT day 0, 40 N ; 040 W ; FL 310 ; FL 310 ; 13 43 GMT day 0, 0.83) belongs_to profile_VIR005_1)".
+
+"(the_Segment(profile_VIR005_1, 40 N ; 040 W ; FL 310 ; FL 310 ; 13 43 GMT day 0, 36 N ; 050 W ; FL 310 ; FL 310 ; 14 47 GMT day 0, 0.83) belongs_to profile_VIR005_1)".
+
+"the_Aircraft_on(profile_BAW9668_1) = BAW9668".
+
+"the_Type_of(BAW9668) = DC10".
+
+"(BAW9668 meets_mnps)".
+
+"(the_Segment(profile_BAW9668_1, 53 N ; 015 W ; FL 310 ; FL 310 ; 11 17 GMT day 0, 54 N ; 020 W ; FL 310 ; FL 310 ; 11 42 GMT day 0, 0.82) belongs_to profile_BAW9668_1)".
+
+"(the_Segment(profile_BAW9668_1, 54 N ; 020 W ; FL 310 ; FL 310 ; 11 42 GMT day 0, 56 N ; 030 W ; FL 310 ; FL 310 ; 12 31 GMT day 0, 0.82) belongs_to profile_BAW9668_1)".
+
+"(the_Segment(profile_BAW9668_1, 56 N ; 030 W ; FL 310 ; FL 310 ; 12 31 GMT day 0, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 18 GMT day 0, 0.82) belongs_to profile_BAW9668_1)".
+
+"(the_Segment(profile_BAW9668_1, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 18 GMT day 0, 56 N ; 050 W ; FL 310 ; FL 310 ; 14 03 GMT day 0, 0.82) belongs_to profile_BAW9668_1)".
+
+
+"the_Aircraft_on(profile_AIH067_1) = AIH067".
+
+"the_Type_of(AIH067) = B767".
+
+"(AIH067 meets_mnps)".
+
+"(the_Segment(profile_AIH067_1, 53 N ; 015 W ; FL 340 ; FL 340 ; 11 17 GMT day 0, 54 N ; 020 W ; FL 340 ; FL 340 ; 11 43 GMT day 0, 0.80) belongs_to profile_AIH067_1)".
+
+"(the_Segment(profile_AIH067_1, 54 N ; 020 W ; FL 340 ; FL 340 ; 11 43 GMT day 0, 56 N ; 030 W ; FL 340 ; FL 340 ; 12 34 GMT day 0, 0.80) belongs_to profile_AIH067_1)".
+
+"(the_Segment(profile_AIH067_1, 56 N ; 030 W ; FL 340 ; FL 340 ; 12 34 GMT day 0, 57 N ; 040 W ; FL 340 ; FL 340 ; 13 22 GMT day 0, 0.80) belongs_to profile_AIH067_1)".
+
+"(the_Segment(profile_AIH067_1, 57 N ; 040 W ; FL 340 ; FL 340 ; 13 22 GMT day 0, 56 N ; 050 W ; FL 340 ; FL 340 ; 14 08 GMT day 0, 0.80) belongs_to profile_AIH067_1)".
+
+"the_Aircraft_on(profile_NWA39_1) = NWA39".
+
+"the_Type_of(NWA39) = DC10".
+
+"(NWA39 meets_mnps)".
+
+"(the_Segment(profile_NWA39_1, 53 N ; 015 W ; FL 330 ; FL 330 ; 11 23 GMT day 0, 54 N ; 020 W ; FL 330 ; FL 330 ; 11 48 GMT day 0, 0.83) belongs_to profile_NWA39_1)".
+
+"(the_Segment(profile_NWA39_1, 54 N ; 020 W ; FL 330 ; FL 330 ; 11 48 GMT day 0, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 36 GMT day 0, 0.83) belongs_to profile_NWA39_1)".
+
+"(the_Segment(profile_NWA39_1, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 36 GMT day 0, 57 N ; 040 W ; FL 330 ; FL 330 ; 13 22 GMT day 0, 0.83) belongs_to profile_NWA39_1)".
+
+"(the_Segment(profile_NWA39_1, 57 N ; 040 W ; FL 330 ; FL 330 ; 13 22 GMT day 0, 56 N ; 050 W ; FL 330 ; FL 330 ; 14 07 GMT day 0, 0.83) belongs_to profile_NWA39_1)".
+
+"the_Aircraft_on(profile_KLM611_1) = KLM611".
+
+"the_Type_of(KLM611) = B747".
+
+"(KLM611 meets_mnps)".
+
+"(the_Segment(profile_KLM611_1, 55 N ; 010 W ; FL 330 ; FL 330 ; 11 10 GMT day 0, 57 N ; 020 W ; FL 330 ; FL 330 ; 11 55 GMT day 0, 0.85) belongs_to profile_KLM611_1)".
+
+"(the_Segment(profile_KLM611_1, 57 N ; 020 W ; FL 330 ; FL 330 ; 11 55 GMT day 0, 59 N ; 030 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 0.85) belongs_to profile_KLM611_1)".
+
+"(the_Segment(profile_KLM611_1, 59 N ; 030 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 60 N ; 040 W ; FL 330 ; FL 330 ; 13 19 GMT day 0, 0.85) belongs_to profile_KLM611_1)".
+
+"(the_Segment(profile_KLM611_1, 60 N ; 040 W ; FL 330 ; FL 330 ; 13 19 GMT day 0, 59 N ; 050 W ; FL 330 ; FL 330 ; 13 59 GMT day 0, 0.85) belongs_to profile_KLM611_1)".
+
+"the_Aircraft_on(profile_COA37_1) = COA37".
+
+"the_Type_of(COA37) = DC10".
+
+"(COA37 meets_mnps)".
+
+"(the_Segment(profile_COA37_1, 54 N ; 015 W ; FL 310 ; FL 310 ; 11 31 GMT day 0, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 54 GMT day 0, 0.84) belongs_to profile_COA37_1)".
+
+"(the_Segment(profile_COA37_1, 55 N ; 020 W ; FL 310 ; FL 310 ; 11 54 GMT day 0, 57 N ; 030 W ; FL 310 ; FL 310 ; 12 39 GMT day 0, 0.84) belongs_to profile_COA37_1)".
+
+"(the_Segment(profile_COA37_1, 57 N ; 030 W ; FL 310 ; FL 310 ; 12 39 GMT day 0, 58 N ; 040 W ; FL 310 ; FL 310 ; 13 24 GMT day 0, 0.84) belongs_to profile_COA37_1)".
+
+"(the_Segment(profile_COA37_1, 58 N ; 040 W ; FL 310 ; FL 310 ; 13 24 GMT day 0, 57 N ; 050 W ; FL 310 ; FL 310 ; 14 07 GMT day 0, 0.84) belongs_to profile_COA37_1)".
+
+"the_Aircraft_on(profile_DAL43_1) = DAL43".
+
+"the_Type_of(DAL43) = B767".
+
+"(DAL43 meets_mnps)".
+
+"(the_Segment(profile_DAL43_1, 52 N ; 015 W ; FL 360 ; FL 360 ; 11 27 GMT day 0, 53 N ; 020 W ; FL 360 ; FL 360 ; 11 52 GMT day 0, 0.81) belongs_to profile_DAL43_1)".
+
+"(the_Segment(profile_DAL43_1, 53 N ; 020 W ; FL 360 ; FL 360 ; 11 52 GMT day 0, 55 N ; 030 W ; FL 360 ; FL 360 ; 12 44 GMT day 0, 0.81) belongs_to profile_DAL43_1)".
+
+"(the_Segment(profile_DAL43_1, 55 N ; 030 W ; FL 360 ; FL 360 ; 12 44 GMT day 0, 56 N ; 040 W ; FL 360 ; FL 360 ; 13 33 GMT day 0, 0.81) belongs_to profile_DAL43_1)".
+
+"(the_Segment(profile_DAL43_1, 56 N ; 040 W ; FL 360 ; FL 360 ; 13 33 GMT day 0, 55 N ; 050 W ; FL 360 ; FL 360 ; 14 22 GMT day 0, 0.81) belongs_to profile_DAL43_1)".
+
+"the_Aircraft_on(profile_NWA37_1) = NWA37".
+
+"the_Type_of(NWA37) = DC10".
+
+"(NWA37 meets_mnps)".
+
+"(the_Segment(profile_NWA37_1, 54 N ; 015 W ; FL 330 ; FL 330 ; 11 33 GMT day 0, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 56 GMT day 0, 0.83) belongs_to profile_NWA37_1)".
+
+"(the_Segment(profile_NWA37_1, 55 N ; 020 W ; FL 330 ; FL 330 ; 11 56 GMT day 0, 57 N ; 030 W ; FL 330 ; FL 330 ; 12 44 GMT day 0, 0.83) belongs_to profile_NWA37_1)".
+
+"(the_Segment(profile_NWA37_1, 57 N ; 030 W ; FL 330 ; FL 330 ; 12 44 GMT day 0, 58 N ; 040 W ; FL 330 ; FL 330 ; 13 29 GMT day 0, 0.83) belongs_to profile_NWA37_1)".
+
+"(the_Segment(profile_NWA37_1, 58 N ; 040 W ; FL 330 ; FL 330 ; 13 29 GMT day 0, 57 N ; 050 W ; FL 330 ; FL 330 ; 14 13 GMT day 0, 0.83) belongs_to profile_NWA37_1)".
+
+"the_Aircraft_on(profile_USA27_1) = USA27".
+
+"the_Type_of(USA27) = B767".
+
+"(USA27 meets_mnps)".
+
+"(the_Segment(profile_USA27_1, 52 N ; 015 W ; FL 350 ; FL 350 ; 11 30 GMT day 0, 53 N ; 020 W ; FL 350 ; FL 350 ; 11 55 GMT day 0, 0.80) belongs_to profile_USA27_1)".
+
+"(the_Segment(profile_USA27_1, 53 N ; 020 W ; FL 350 ; FL 350 ; 11 55 GMT day 0, 55 N ; 030 W ; FL 350 ; FL 350 ; 12 47 GMT day 0, 0.80) belongs_to profile_USA27_1)".
+
+"(the_Segment(profile_USA27_1, 55 N ; 030 W ; FL 350 ; FL 350 ; 12 47 GMT day 0, 56 N ; 040 W ; FL 350 ; FL 350 ; 13 38 GMT day 0, 0.80) belongs_to profile_USA27_1)".
+
+"(the_Segment(profile_USA27_1, 56 N ; 040 W ; FL 350 ; FL 350 ; 13 38 GMT day 0, 55 N ; 050 W ; FL 350 ; FL 350 ; 14 28 GMT day 0, 0.80) belongs_to profile_USA27_1)".
+
+"the_Aircraft_on(profile_TWA843_1) = TWA843".
+
+"the_Type_of(TWA843) = B767".
+
+"(TWA843 meets_mnps)".
+
+"(the_Segment(profile_TWA843_1, 47 00 N ; 008 45 W ; FL 350 ; FL 350 ; 10 52 GMT day 0, 48 N ; 015 W ; FL 350 ; FL 350 ; 11 24 GMT day 0, 0.80) belongs_to profile_TWA843_1)".
+
+"(the_Segment(profile_TWA843_1, 48 N ; 015 W ; FL 350 ; FL 350 ; 11 24 GMT day 0, 50 N ; 020 W ; FL 360 ; FL 360 ; 11 52 GMT day 0, 0.80) belongs_to profile_TWA843_1)".
+
+"(the_Segment(profile_TWA843_1, 50 N ; 020 W ; FL 360 ; FL 360 ; 11 52 GMT day 0, 52 N ; 030 W ; FL 360 ; FL 360 ; 12 47 GMT day 0, 0.80) belongs_to profile_TWA843_1)".
+
+"(the_Segment(profile_TWA843_1, 52 N ; 030 W ; FL 360 ; FL 360 ; 12 47 GMT day 0, 53 N ; 040 W ; FL 360 ; FL 360 ; 13 43 GMT day 0, 0.80) belongs_to profile_TWA843_1)".
+
+"(the_Segment(profile_TWA843_1, 53 N ; 040 W ; FL 360 ; FL 360 ; 13 43 GMT day 0, 52 N ; 50 W ; FL 360 ; FL 360 ; 14 38 GMT day 0, 0.80) belongs_to profile_TWA843_1)".
+
+"the_Aircraft_on(profile_TOW37_1) = TOW37".
+
+"the_Type_of(TOW37) = B747".
+
+"(TOW37 meets_mnps)".
+
+"(the_Segment(profile_TOW37_1, 52 N ; 015 W ; FL 340 ; FL 340 ; 11 36 GMT day 0, 53 N ; 020 W ; FL 340 ; FL 340 ; 12 00 GMT day 0, 0.84) belongs_to profile_TOW37_1)".
+
+"(the_Segment(profile_TOW37_1, 53 N ; 020 W ; FL 340 ; FL 340 ; 12 00 GMT day 0, 55 N ; 030 W ; FL 340 ; FL 340 ; 12 49 GMT day 0, 0.84) belongs_to profile_TOW37_1)".
+
+"(the_Segment(profile_TOW37_1, 55 N ; 030 W ; FL 340 ; FL 340 ; 12 49 GMT day 0, 56 N ; 040 W ; FL 340 ; FL 340 ; 13 37 GMT day 0, 0.84) belongs_to profile_TOW37_1)".
+
+"(the_Segment(profile_TOW37_1, 56 N ; 040 W ; FL 340 ; FL 340 ; 13 37 GMT day 0, 55 N ; 050 W ; FL 340 ; FL 340 ; 14 25 GMT day 0, 0.84) belongs_to profile_TOW37_1)".
+
+"the_Aircraft_on(profile_SAB539_1) = SAB539".
+
+"the_Type_of(SAB539) = EA34".
+
+"(SAB539 meets_mnps)".
+
+"(the_Segment(profile_SAB539_1, 55 N ; 010 W ; FL 350 ; FL 350 ; 11 17 GMT day 0, 57 N ; 020 W ; FL 350 ; FL 350 ; 12 06 GMT day 0, 0.82) belongs_to profile_SAB539_1)".
+
+"(the_Segment(profile_SAB539_1, 57 N ; 020 W ; FL 350 ; FL 350 ; 12 06 GMT day 0, 59 N ; 030 W ; FL 350 ; FL 350 ; 12 51 GMT day 0, 0.82) belongs_to profile_SAB539_1)".
+
+"(the_Segment(profile_SAB539_1, 59 N ; 030 W ; FL 350 ; FL 350 ; 12 51 GMT day 0, 60 N ; 040 W ; FL 350 ; FL 350 ; 13 33 GMT day 0, 0.82) belongs_to profile_SAB539_1)".
+
+"(the_Segment(profile_SAB539_1, 60 N ; 040 W ; FL 350 ; FL 350 ; 13 33 GMT day 0, 59 N ; 050 W ; FL 350 ; FL 350 ; 14 13 GMT day 0, 0.82) belongs_to profile_SAB539_1)".
+
+"the_Aircraft_on(profile_UAL929_1) = UAL929".
+
+"the_Type_of(UAL929) = B777".
+
+"(UAL929 meets_mnps)".
+
+"(the_Segment(profile_UAL929_1, 54 20 N ; 012 00 W ; FL 370 ; FL 370 ; 11 26 GMT day 0, 56 N ; 020 W ; FL 370 ; FL 370 ; 12 05 GMT day 0, 0.84) belongs_to profile_UAL929_1)".
+
+"(the_Segment(profile_UAL929_1, 56 N ; 020 W ; FL 370 ; FL 370 ; 12 05 GMT day 0, 58 N ; 030 W ; FL 370 ; FL 370 ; 12 51 GMT day 0, 0.84) belongs_to profile_UAL929_1)".
+
+"(the_Segment(profile_UAL929_1, 58 N ; 030 W ; FL 370 ; FL 370 ; 12 51 GMT day 0, 59 N ; 040 W ; FL 370 ; FL 370 ; 13 32 GMT day 0, 0.84) belongs_to profile_UAL929_1)".
+
+"(the_Segment(profile_UAL929_1, 59 N ; 040 W ; FL 370 ; FL 370 ; 13 32 GMT day 0, 58 N ; 050 W ; FL 370 ; FL 370 ; 14 13 GMT day 0, 0.84) belongs_to profile_UAL929_1)".
+
+"the_Aircraft_on(profile_MPH601_1) = MPH601".
+
+"the_Type_of(MPH601) = B767".
+
+"(MPH601 meets_mnps)".
+
+"(the_Segment(profile_MPH601_1, 48 47 N ; 012 00 W ; FL 340 ; FL 340 ; 11 44 GMT day 0, 48 N ; 015 W ; FL 340 ; FL 340 ; 12 01 GMT day 0, 0.80) belongs_to profile_MPH601_1)".
+
+"(the_Segment(profile_MPH601_1, 48 N ; 015 W ; FL 340 ; FL 340 ; 12 01 GMT day 0, 47 N ; 020 W ; FL 340 ; FL 340 ; 12 26 GMT day 0, 0.80) belongs_to profile_MPH601_1)".
+
+"(the_Segment(profile_MPH601_1, 47 N ; 020 W ; FL 340 ; FL 340 ; 12 26 GMT day 0, 45 00 N ; 024 25 W ; FL 340 ; FL 340 ; 12 52 GMT day 0, 0.80) belongs_to profile_MPH601_1)".
+
+"(the_Segment(profile_MPH601_1, 45 00 N ; 024 25 W ; FL 340 ; FL 340 ; 12 52 GMT day 0, 42 N ; 030 W ; FL 340 ; FL 340 ; 13 28 GMT day 0, 0.80) belongs_to profile_MPH601_1)".
+
+"the_Aircraft_on(profile_ACA881_1) = ACA881".
+
+"the_Type_of(ACA881) = B74F".
+
+"(ACA881 meets_mnps)".
+
+"(the_Segment(profile_ACA881_1, 53 N ; 015 W ; FL 350 ; FL 350 ; 11 42 GMT day 0, 54 N ; 020 W ; FL 350 ; FL 350 ; 12 05 GMT day 0, 0.86) belongs_to profile_ACA881_1)".
+
+"(the_Segment(profile_ACA881_1, 54 N ; 020 W ; FL 350 ; FL 350 ; 12 05 GMT day 0, 56 N ; 030 W ; FL 350 ; FL 350 ; 12 52 GMT day 0, 0.86) belongs_to profile_ACA881_1)".
+
+"(the_Segment(profile_ACA881_1, 56 N ; 030 W ; FL 350 ; FL 350 ; 12 52 GMT day 0, 57 N ; 040 W ; FL 350 ; FL 350 ; 13 36 GMT day 0, 0.86) belongs_to profile_ACA881_1)".
+
+"(the_Segment(profile_ACA881_1, 57 N ; 040 W ; FL 350 ; FL 350 ; 13 36 GMT day 0, 56 N ; 050 W ; FL 350 ; FL 350 ; 14 19 GMT day 0, 0.86) belongs_to profile_ACA881_1)".
+
+"the_Aircraft_on(profile_ULE849_1) = ULE849".
+
+"the_Type_of(ULE849) = B767".
+
+"(ULE849 meets_mnps)".
+
+"(the_Segment(profile_ULE849_1, 54 N ; 015 W ; FL 340 ; FL 340 ; 11 39 GMT day 0, 55 N ; 020 W ; FL 340 ; FL 340 ; 12 04 GMT day 0, 0.80) belongs_to profile_ULE849_1)".
+
+"(the_Segment(profile_ULE849_1, 55 N ; 020 W ; FL 340 ; FL 340 ; 12 04 GMT day 0, 57 N ; 030 W ; FL 340 ; FL 340 ; 12 54 GMT day 0, 0.80) belongs_to profile_ULE849_1)".
+
+"(the_Segment(profile_ULE849_1, 57 N ; 030 W ; FL 340 ; FL 340 ; 12 54 GMT day 0, 58 N ; 040 W ; FL 340 ; FL 340 ; 13 40 GMT day 0, 0.80) belongs_to profile_ULE849_1)".
+
+"(the_Segment(profile_ULE849_1, 58 N ; 040 W ; FL 340 ; FL 340 ; 13 40 GMT day 0, 57 N ; 050 W ; FL 340 ; FL 340 ; 14 26 GMT day 0, 0.80) belongs_to profile_ULE849_1)".
+
+"the_Aircraft_on(profile_BAW2257_1) = BAW2257".
+
+"the_Type_of(BAW2257) = B747".
+
+"(BAW2257 meets_mnps)".
+
+"(the_Segment(profile_BAW2257_1, 48 47 N ; 012 00 W ; FL 290 ; FL 290 ; 11 53 GMT day 0, 48 N ; 015 W ; FL 290 ; FL 290 ; 12 08 GMT day 0, 0.84) belongs_to profile_BAW2257_1)".
+
+"(the_Segment(profile_BAW2257_1, 48 N ; 015 W ; FL 290 ; FL 290 ; 12 08 GMT day 0, 47 N ; 020 W ; FL 290 ; FL 290 ; 12 32 GMT day 0, 0.84) belongs_to profile_BAW2257_1)".
+
+"(the_Segment(profile_BAW2257_1, 47 N ; 020 W ; FL 290 ; FL 290 ; 12 32 GMT day 0, 45 N ; 024 W ; FL 290 ; FL 290 ; 12 55 GMT day 0, 0.84) belongs_to profile_BAW2257_1)".
+
+"(the_Segment(profile_BAW2257_1, 45 N ; 024 W ; FL 290 ; FL 290 ; 12 55 GMT day 0, 42 N ; 030 W ; FL 290 ; FL 290 ; 13 31 GMT day 0, 0.84) belongs_to profile_BAW2257_1)".
+
+"the_Aircraft_on(profile_COA25_1) = COA25".
+
+"the_Type_of(COA25) = DC10".
+
+"(COA25 meets_mnps)".
+
+"(the_Segment(profile_COA25_1, 53 N ; 015 W ; FL 310 ; FL 310 ; 11 45 GMT day 0, 54 N ; 020 W ; FL 310 ; FL 310 ; 12 09 GMT day 0, 0.83) belongs_to profile_COA25_1)".
+
+"(the_Segment(profile_COA25_1, 54 N ; 020 W ; FL 310 ; FL 310 ; 12 09 GMT day 0, 56 N ; 030 W ; FL 310 ; FL 310 ; 12 57 GMT day 0, 0.83) belongs_to profile_COA25_1)".
+
+"(the_Segment(profile_COA25_1, 56 N ; 030 W ; FL 310 ; FL 310 ; 12 57 GMT day 0, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 43 GMT day 0, 0.83) belongs_to profile_COA25_1)".
+
+"(the_Segment(profile_COA25_1, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 43 GMT day 0, 56 N ; 050 W ; FL 310 ; FL 310 ; 14 28 GMT day 0, 0.83) belongs_to profile_COA25_1)".
+
+"the_Aircraft_on(profile_BBC009_1) = BBC009".
+
+"the_Type_of(BBC009) = DC10".
+
+"(the_Segment(profile_BBC009_1, 53 N ; 015 W ; FL 330 ; FL 330 ; 11 45 GMT day 0, 54 N ; 020 W ; FL 330 ; FL 330 ; 12 09 GMT day 0, 0.83) belongs_to profile_BBC009_1)".
+
+"(the_Segment(profile_BBC009_1, 54 N ; 020 W ; FL 330 ; FL 330 ; 12 09 GMT day 0, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 58 GMT day 0, 0.83) belongs_to profile_BBC009_1)".
+
+"(the_Segment(profile_BBC009_1, 56 N ; 030 W ; FL 330 ; FL 330 ; 12 58 GMT day 0, 57 N ; 040 W ; FL 330 ; FL 330 ; 13 44 GMT day 0, 0.83) belongs_to profile_BBC009_1)".
+
+"(the_Segment(profile_BBC009_1, 57 N ; 040 W ; FL 330 ; FL 330 ; 13 44 GMT day 0, 56 N ; 050 W ; FL 330 ; FL 330 ; 14 29 GMT day 0, 0.83) belongs_to profile_BBC009_1)".
+
+"the_Aircraft_on(profile_UAL953_1) = UAL953".
+
+"the_Type_of(UAL953) = B767".
+
+"(UAL953 meets_mnps)".
+
+"(the_Segment(profile_UAL953_1, 55 N ; 010 W ; FL 360 ; FL 360 ; 11 20 GMT day 0, 57 N ; 020 W ; FL 360 ; FL 360 ; 12 11 GMT day 0, 0.80) belongs_to profile_UAL953_1)".
+
+"(the_Segment(profile_UAL953_1, 57 N ; 020 W ; FL 360 ; FL 360 ; 12 11 GMT day 0, 59 N ; 030 W ; FL 360 ; FL 360 ; 12 58 GMT day 0, 0.80) belongs_to profile_UAL953_1)".
+
+"(the_Segment(profile_UAL953_1, 59 N ; 030 W ; FL 360 ; FL 360 ; 12 58 GMT day 0, 60 N ; 040 W ; FL 360 ; FL 360 ; 13 40 GMT day 0, 0.80) belongs_to profile_UAL953_1)".
+
+"(the_Segment(profile_UAL953_1, 60 N ; 040 W ; FL 360 ; FL 360 ; 13 40 GMT day 0, 59 N ; 050 W ; FL 360 ; FL 360 ; 14 22 GMT day 0, 0.80) belongs_to profile_UAL953_1)".
+
+"the_Aircraft_on(profile_AAL173_1) = AAL173".
+
+"the_Type_of(AAL173) = B767".
+
+"(AAL173 meets_mnps)".
+
+"(the_Segment(profile_AAL173_1, 52 N ; 015 W ; FL 350 ; FL 350 ; 11 42 GMT day 0, 53 N ; 020 W ; FL 350 ; FL 350 ; 12 07 GMT day 0, 0.80) belongs_to profile_AAL173_1)".
+
+"(the_Segment(profile_AAL173_1, 53 N ; 020 W ; FL 350 ; FL 350 ; 12 07 GMT day 0, 55 N ; 030 W ; FL 350 ; FL 350 ; 12 59 GMT day 0, 0.80) belongs_to profile_AAL173_1)".
+
+"(the_Segment(profile_AAL173_1, 55 N ; 030 W ; FL 350 ; FL 350 ; 12 59 GMT day 0, 56 N ; 040 W ; FL 350 ; FL 350 ; 13 50 GMT day 0, 0.80) belongs_to profile_AAL173_1)".
+
+"(the_Segment(profile_AAL173_1, 56 N ; 040 W ; FL 350 ; FL 350 ; 13 50 GMT day 0, 55 N ; 050 W ; FL 350 ; FL 350 ; 14 40 GMT day 0, 0.80) belongs_to profile_AAL173_1)".
+
+"the_Aircraft_on(profile_DAL15_1) = DAL15".
+
+"the_Type_of(DAL15) = MD11".
+
+"(DAL15 meets_mnps)".
+
+"(the_Segment(profile_DAL15_1, 54 20 N ; 012 00 W ; FL 330 ; FL 330 ; 11 34 GMT day 0, 56 N ; 020 W ; FL 330 ; FL 330 ; 12 13 GMT day 0, 0.83) belongs_to profile_DAL15_1)".
+
+"(the_Segment(profile_DAL15_1, 56 N ; 020 W ; FL 330 ; FL 330 ; 12 13 GMT day 0, 58 N ; 030 W ; FL 330 ; FL 330 ; 12 59 GMT day 0, 0.83) belongs_to profile_DAL15_1)".
+
+"(the_Segment(profile_DAL15_1, 58 N ; 030 W ; FL 330 ; FL 330 ; 12 59 GMT day 0, 59 N ; 040 W ; FL 330 ; FL 330 ; 13 42 GMT day 0, 0.83) belongs_to profile_DAL15_1)".
+
+"(the_Segment(profile_DAL15_1, 59 N ; 040 W ; FL 330 ; FL 330 ; 13 42 GMT day 0, 58 N ; 050 W ; FL 330 ; FL 330 ; 14 23 GMT day 0, 0.83) belongs_to profile_DAL15_1)".
+
+"the_Aircraft_on(profile_ACA871_1) = ACA871".
+
+"the_Type_of(ACA871) = B747".
+
+"(ACA871 meets_mnps)".
+
+"(the_Segment(profile_ACA871_1, 53 N ; 015 W ; FL 340 ; FL 340 ; 11 47 GMT day 0, 54 N ; 020 W ; FL 340 ; FL 340 ; 12 11 GMT day 0, 0.84) belongs_to profile_ACA871_1)".
+
+"(the_Segment(profile_ACA871_1, 54 N ; 020 W ; FL 340 ; FL 340 ; 12 11 GMT day 0, 56 N ; 030 W ; FL 340 ; FL 340 ; 12 59 GMT day 0, 0.84) belongs_to profile_ACA871_1)".
+
+"(the_Segment(profile_ACA871_1, 56 N ; 030 W ; FL 340 ; FL 340 ; 12 59 GMT day 0, 57 N ; 040 W ; FL 340 ; FL 340 ; 13 44 GMT day 0, 0.84) belongs_to profile_ACA871_1)".
+
+"(the_Segment(profile_ACA871_1, 57 N ; 040 W ; FL 340 ; FL 340 ; 13 44 GMT day 0, 56 N ; 050 W ; FL 340 ; FL 340 ; 14 29 GMT day 0, 0.84) belongs_to profile_ACA871_1)".
+
+"the_Aircraft_on(profile_USA11_1) = USA11".
+
+"the_Type_of(USA11) = B767".
+
+"(USA11 meets_mnps)".
+
+"(the_Segment(profile_USA11_1, 44 30 N ; 013 00 W ; FL 370 ; FL 370 ; 11 29 GMT day 0, 46 N ; 020 W ; FL 370 ; FL 370 ; 12 06 GMT day 0, 0.80) belongs_to profile_USA11_1)".
+
+"(the_Segment(profile_USA11_1, 46 N ; 020 W ; FL 370 ; FL 370 ; 12 06 GMT day 0, 46 N ; 030 W ; FL 370 ; FL 370 ; 13 00 GMT day 0, 0.80) belongs_to profile_USA11_1)".
+
+"(the_Segment(profile_USA11_1, 46 N ; 030 W ; FL 370 ; FL 370 ; 13 00 GMT day 0, 46 N ; 040 W ; FL 370 ; FL 370 ; 14 03 GMT day 0, 0.80) belongs_to profile_USA11_1)".
+
+"(the_Segment(profile_USA11_1, 46 N ; 040 W ; FL 370 ; FL 370 ; 14 03 GMT day 0, 45 N ; 050 W ; FL 370 ; FL 370 ; 15 10 GMT day 0, 0.80) belongs_to profile_USA11_1)".
+
+"the_Aircraft_on(profile_CDN45_1) = CDN45".
+
+"the_Type_of(CDN45) = B767".
+
+"(CDN45 meets_mnps)".
+
+"(the_Segment(profile_CDN45_1, 52 N ; 015 W ; FL 340 ; FL 340 ; 11 44 GMT day 0, 53 N ; 020 W ; FL 340 ; FL 340 ; 12 10 GMT day 0, 0.80) belongs_to profile_CDN45_1)".
+
+"(the_Segment(profile_CDN45_1, 53 N ; 020 W ; FL 340 ; FL 340 ; 12 10 GMT day 0, 55 N ; 030 W ; FL 340 ; FL 340 ; 13 02 GMT day 0, 0.80) belongs_to profile_CDN45_1)".
+
+"(the_Segment(profile_CDN45_1, 55 N ; 030 W ; FL 340 ; FL 340 ; 13 02 GMT day 0, 56 N ; 040 W ; FL 340 ; FL 340 ; 13 53 GMT day 0, 0.80) belongs_to profile_CDN45_1)".
+
+"(the_Segment(profile_CDN45_1, 56 N ; 040 W ; FL 340 ; FL 340 ; 13 53 GMT day 0, 55 N ; 050 W ; FL 340 ; FL 340 ; 14 43 GMT day 0, 0.80) belongs_to profile_CDN45_1)".
+
+"the_Aircraft_on(profile_CFG144_1) = CFG144".
+
+"the_Type_of(CFG144) = B767".
+
+"(CFG144 meets_mnps)".
+
+"(the_Segment(profile_CFG144_1, 47 00 N ; 008 45 W ; FL 330 ; FL 330 ; 11 43 GMT day 0, 45 N ; 020 W ; FL 330 ; FL 330 ; 12 42 GMT day 0, 0.80) belongs_to profile_CFG144_1)".
+
+"(the_Segment(profile_CFG144_1, 45 N ; 020 W ; FL 330 ; FL 330 ; 12 42 GMT day 0, 41 N ; 030 W ; FL 330 ; FL 330 ; 13 42 GMT day 0, 0.80) belongs_to profile_CFG144_1)".
+
+"(the_Segment(profile_CFG144_1, 41 N ; 030 W ; FL 330 ; FL 330 ; 13 42 GMT day 0, 37 N ; 040 W ; FL 330 ; FL 330 ; 14 45 GMT day 0, 0.80) belongs_to profile_CFG144_1)".
+
+"the_Aircraft_on(profile_NWA43_1) = NWA43".
+
+"the_Type_of(NWA43) = DC10".
+
+"(NWA43 meets_mnps)".
+
+"(the_Segment(profile_NWA43_1, 55 N ; 010 W ; FL 310 ; FL 310 ; 11 32 GMT day 0, 57 N ; 020 W ; FL 330 ; FL 330 ; 12 19 GMT day 0, 0.83) belongs_to profile_NWA43_1)".
+
+"(the_Segment(profile_NWA43_1, 57 N ; 020 W ; FL 330 ; FL 330 ; 12 19 GMT day 0, 59 N ; 030 W ; FL 330 ; FL 330 ; 13 03 GMT day 0, 0.83) belongs_to profile_NWA43_1)".
+
+"(the_Segment(profile_NWA43_1, 59 N ; 030 W ; FL 330 ; FL 330 ; 13 03 GMT day 0, 60 N ; 040 W ; FL 330 ; FL 330 ; 13 44 GMT day 0, 0.83) belongs_to profile_NWA43_1)".
+
+"(the_Segment(profile_NWA43_1, 60 N ; 040 W ; FL 330 ; FL 330 ; 13 44 GMT day 0, 59 N ; 050 W ; FL 330 ; FL 330 ; 14 25 GMT day 0, 0.83) belongs_to profile_NWA43_1)".
+
+"the_Aircraft_on(profile_XBSOL_1) = XBSOL".
+
+"the_Type_of(XBSOL) = DA50".
+
+"(XBSOL meets_mnps)".
+
+"(the_Segment(profile_XBSOL_1, 49 N ; 040 W ; FL 390 ; FL 390 ; 11 51 GMT day 0, 47 N ; 030 W ; FL 390 ; FL 390 ; 12 40 GMT day 0, 0.78) belongs_to profile_XBSOL_1)".
+
+"(the_Segment(profile_XBSOL_1, 47 N ; 030 W ; FL 390 ; FL 390 ; 12 40 GMT day 0, 43 N ; 020 W ; FL 390 ; FL 390 ; 13 43 GMT day 0, 0.78) belongs_to profile_XBSOL_1)".
+
+"the_Aircraft_on(profile_OEIMI_1) = OEIMI".
+
+"the_Type_of(OEIMI) = DA90".
+
+"(OEIMI meets_mnps)".
+
+"(the_Segment(profile_OEIMI_1, 54 N ; 015 W ; FL 390 ; FL 390 ; 11 45 GMT day 0, 55 N ; 020 W ; FL 390 ; FL 390 ; 12 11 GMT day 0, 0.80) belongs_to profile_OEIMI_1)".
+
+"(the_Segment(profile_OEIMI_1, 55 N ; 020 W ; FL 390 ; FL 390 ; 12 11 GMT day 0, 57 N ; 030 W ; FL 390 ; FL 390 ; 13 03 GMT day 0, 0.80) belongs_to profile_OEIMI_1)".
+
+"(the_Segment(profile_OEIMI_1, 57 N ; 030 W ; FL 390 ; FL 390 ; 13 03 GMT day 0, 57 N ; 040 W ; FL 390 ; FL 390 ; 13 49 GMT day 0, 0.80) belongs_to profile_OEIMI_1)".
+
+"(the_Segment(profile_OEIMI_1, 57 N ; 040 W ; FL 390 ; FL 390 ; 13 49 GMT day 0, 56 N ; 050 W ; FL 390 ; FL 390 ; 14 35 GMT day 0, 0.80) belongs_to profile_OEIMI_1)".
+
+"the_Aircraft_on(profile_BAW115_1) = BAW115".
+
+"the_Type_of(BAW115) = B777".
+
+"(BAW115 meets_mnps)".
+
+"(the_Segment(profile_BAW115_1, 54 N ; 015 W ; FL 370 ; FL 370 ; 11 53 GMT day 0, 55 N ; 020 W ; FL 370 ; FL 370 ; 12 17 GMT day 0, 0.84) belongs_to profile_BAW115_1)".
+
+"(the_Segment(profile_BAW115_1, 55 N ; 020 W ; FL 370 ; FL 370 ; 12 17 GMT day 0, 57 N ; 030 W ; FL 370 ; FL 370 ; 13 04 GMT day 0, 0.84) belongs_to profile_BAW115_1)".
+
+"(the_Segment(profile_BAW115_1, 57 N ; 030 W ; FL 370 ; FL 370 ; 13 04 GMT day 0, 58 N ; 040 W ; FL 370 ; FL 370 ; 13 47 GMT day 0, 0.84) belongs_to profile_BAW115_1)".
+
+"(the_Segment(profile_BAW115_1, 58 N ; 040 W ; FL 370 ; FL 370 ; 13 47 GMT day 0, 57 N ; 050 W ; FL 370 ; FL 370 ; 14 30 GMT day 0, 0.84) belongs_to profile_BAW115_1)".
+
+"the_Aircraft_on(profile_UAL943_1) = UAL943".
+
+"the_Type_of(UAL943) = B777".
+
+"(UAL943 meets_mnps)".
+
+"(the_Segment(profile_UAL943_1, 53 N ; 015 W ; FL 360 ; FL 360 ; 11 53 GMT day 0, 54 N ; 020 W ; FL 360 ; FL 360 ; 12 17 GMT day 0, 0.84) belongs_to profile_UAL943_1)".
+
+"(the_Segment(profile_UAL943_1, 54 N ; 020 W ; FL 360 ; FL 360 ; 12 17 GMT day 0, 56 N ; 030 W ; FL 360 ; FL 360 ; 13 05 GMT day 0, 0.84) belongs_to profile_UAL943_1)".
+
+"(the_Segment(profile_UAL943_1, 56 N ; 030 W ; FL 360 ; FL 360 ; 13 05 GMT day 0, 57 N ; 040 W ; FL 360 ; FL 360 ; 13 50 GMT day 0, 0.84) belongs_to profile_UAL943_1)".
+
+"(the_Segment(profile_UAL943_1, 57 N ; 040 W ; FL 360 ; FL 360 ; 13 50 GMT day 0, 56 N ; 050 W ; FL 360 ; FL 360 ; 14 34 GMT day 0, 0.84) belongs_to profile_UAL943_1)".
+
+"the_Aircraft_on(profile_AIH063_1) = AIH063".
+
+"the_Type_of(AIH063) = B767".
+
+"(AIH063 meets_mnps)".
+
+"(the_Segment(profile_AIH063_1, 54 N ; 015 W ; FL 350 ; FL 350 ; 11 54 GMT day 0, 55 N ; 020 W ; FL 350 ; FL 350 ; 12 18 GMT day 0, 0.80) belongs_to profile_AIH063_1)".
+
+"(the_Segment(profile_AIH063_1, 55 N ; 020 W ; FL 350 ; FL 350 ; 12 18 GMT day 0, 57 N ; 030 W ; FL 350 ; FL 350 ; 13 08 GMT day 0, 0.80) belongs_to profile_AIH063_1)".
+
+"(the_Segment(profile_AIH063_1, 57 N ; 030 W ; FL 350 ; FL 350 ; 13 08 GMT day 0, 58 N ; 040 W ; FL 350 ; FL 350 ; 13 54 GMT day 0, 0.80) belongs_to profile_AIH063_1)".
+
+"(the_Segment(profile_AIH063_1, 58 N ; 040 W ; FL 350 ; FL 350 ; 13 54 GMT day 0, 57 N ; 050 W ; FL 350 ; FL 350 ; 14 39 GMT day 0, 0.80) belongs_to profile_AIH063_1)".
+
+"the_Aircraft_on(profile_FDX6_1) = FDX6".
+
+"the_Type_of(FDX6) = MD11".
+
+"(FDX6 meets_mnps)".
+
+"(the_Segment(profile_FDX6_1, 51 N ; 040 W ; FL 290 ; FL 290 ; 11 31 GMT day 0, 54 N ; 030 W ; FL 290 ; FL 290 ; 12 14 GMT day 0, 0.83) belongs_to profile_FDX6_1)".
+
+"(the_Segment(profile_FDX6_1, 54 N ; 030 W ; FL 290 ; FL 290 ; 12 14 GMT day 0, 56 N ; 020 W ; FL 290 ; FL 290 ; 12 53 GMT day 0, 0.83) belongs_to profile_FDX6_1)".
+
+"(the_Segment(profile_FDX6_1, 56 N ; 020 W ; FL 290 ; FL 290 ; 12 53 GMT day 0, 56 N ; 010 W ; FL 290 ; FL 290 ; 13 31 GMT day 0, 0.83) belongs_to profile_FDX6_1)".
+
+"the_Aircraft_on(profile_RATS69_1) = RATS69".
+
+"the_Type_of(RATS69) = C135".
+
+"(RATS69 meets_mnps)".
+
+"(the_Segment(profile_RATS69_1, 54 N ; 015 W ; FL 390 ; FL 390 ; 11 56 GMT day 0, 55 N ; 020 W ; FL 390 ; FL 390 ; 12 22 GMT day 0, 0.80) belongs_to profile_RATS69_1)".
+
+"(the_Segment(profile_RATS69_1, 55 N ; 020 W ; FL 390 ; FL 390 ; 12 22 GMT day 0, 57 N ; 030 W ; FL 390 ; FL 390 ; 13 11 GMT day 0, 0.80) belongs_to profile_RATS69_1)".
+
+"(the_Segment(profile_RATS69_1, 57 N ; 030 W ; FL 390 ; FL 390 ; 13 11 GMT day 0, 58 N ; 040 W ; FL 390 ; FL 390 ; 13 57 GMT day 0, 0.80) belongs_to profile_RATS69_1)".
+
+"(the_Segment(profile_RATS69_1, 58 N ; 040 W ; FL 390 ; FL 390 ; 13 57 GMT day 0, 57 N ; 050 W ; FL 390 ; FL 390 ; 14 42 GMT day 0, 0.80) belongs_to profile_RATS69_1)".
+
+"the_Aircraft_on(profile_RRR2668_1) = RRR2668".
+
+"the_Type_of(RRR2668) = VC10".
+
+"(RRR2668 meets_mnps)".
+
+"(the_Segment(profile_RRR2668_1, 52 N ; 015 W ; FL 280 ; FL 280 ; 11 54 GMT day 0, 52 N ; 020 W ; FL 280 ; FL 280 ; 12 19 GMT day 0, 0.75) belongs_to profile_RRR2668_1)".
+
+"(the_Segment(profile_RRR2668_1, 52 N ; 020 W ; FL 280 ; FL 280 ; 12 19 GMT day 0, 53 N ; 030 W ; FL 280 ; FL 280 ; 13 13 GMT day 0, 0.75) belongs_to profile_RRR2668_1)".
+
+"(the_Segment(profile_RRR2668_1, 53 N ; 030 W ; FL 280 ; FL 280 ; 13 13 GMT day 0, 53 N ; 040 W ; FL 280 ; FL 280 ; 14 11 GMT day 0, 0.75) belongs_to profile_RRR2668_1)".
+
+"(the_Segment(profile_RRR2668_1, 53 N ; 040 W ; FL 280 ; FL 280 ; 14 11 GMT day 0, 51 N ; 050 W ; FL 280 ; FL 280 ; 15 15 GMT day 0, 0.75) belongs_to profile_RRR2668_1)".
+
+"the_Aircraft_on(profile_DAL81_1) = DAL81".
+
+"the_Type_of(DAL81) = L101".
+
+"(DAL81 meets_mnps)".
+
+"(the_Segment(profile_DAL81_1, 53 N ; 015 W ; FL 310 ; FL 310 ; 11 59 GMT day 0, 54 N ; 020 W ; FL 310 ; FL 310 ; 12 24 GMT day 0, 0.83) belongs_to profile_DAL81_1)".
+
+"(the_Segment(profile_DAL81_1, 54 N ; 020 W ; FL 310 ; FL 310 ; 12 24 GMT day 0, 56 N ; 030 W ; FL 310 ; FL 310 ; 13 13 GMT day 0, 0.83) belongs_to profile_DAL81_1)".
+
+"(the_Segment(profile_DAL81_1, 56 N ; 030 W ; FL 310 ; FL 310 ; 13 13 GMT day 0, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 59 GMT day 0, 0.83) belongs_to profile_DAL81_1)".
+
+"(the_Segment(profile_DAL81_1, 57 N ; 040 W ; FL 310 ; FL 310 ; 13 59 GMT day 0, 56 N ; 050 W ; FL 310 ; FL 310 ; 14 44 GMT day 0, 0.83) belongs_to profile_DAL81_1)".
+
+"the_Aircraft_on(profile_VIR024_1) = VIR024".
+
+"the_Type_of(VIR024) = EA34".
+
+"(VIR024 meets_mnps)".
+
+"(the_Segment(profile_VIR024_1, 62 N ; 030 W ; FL 370 ; FL 370 ; 12 14 GMT day 0, 61 N ; 020 W ; FL 370 ; FL 370 ; 12 48 GMT day 0, 0.82) belongs_to profile_VIR024_1)".
+
+"(the_Segment(profile_VIR024_1, 61 N ; 020 W ; FL 370 ; FL 370 ; 12 48 GMT day 0, 57 N ; 010 W ; FL 370 ; FL 370 ; 13 33 GMT day 0, 0.82) belongs_to profile_VIR024_1)".
+
+"the_Aircraft_on(profile_DAL33_1) = DAL33".
+
+"the_Type_of(DAL33) = B767".
+
+"(DAL33 meets_mnps)".
+
+"(the_Segment(profile_DAL33_1, 54 N ; 015 W ; FL 310 ; FL 310 ; 12 01 GMT day 0, 55 N ; 020 W ; FL 310 ; FL 310 ; 12 26 GMT day 0, 0.81) belongs_to profile_DAL33_1)".
+
+"(the_Segment(profile_DAL33_1, 55 N ; 020 W ; FL 310 ; FL 310 ; 12 26 GMT day 0, 57 N ; 030 W ; FL 310 ; FL 310 ; 13 14 GMT day 0, 0.81) belongs_to profile_DAL33_1)".
+
+"(the_Segment(profile_DAL33_1, 57 N ; 030 W ; FL 310 ; FL 310 ; 13 14 GMT day 0, 58 N ; 040 W ; FL 310 ; FL 310 ; 14 01 GMT day 0, 0.81) belongs_to profile_DAL33_1)".
+
+"(the_Segment(profile_DAL33_1, 58 N ; 040 W ; FL 310 ; FL 310 ; 14 01 GMT day 0, 57 N ; 050 W ; FL 310 ; FL 310 ; 14 46 GMT day 0, 0.81) belongs_to profile_DAL33_1)".
+
+"the_Aircraft_on(profile_GAF411_1) = GAF411".
+
+"the_Type_of(GAF411) = CL60".
+
+"(GAF411 meets_mnps)".
+
+"(the_Segment(profile_GAF411_1, 52 N ; 015 W ; FL 390 ; FL 390 ; 11 52 GMT day 0, 53 N ; 020 W ; FL 390 ; FL 390 ; 12 19 GMT day 0, 0.74) belongs_to profile_GAF411_1)".
+
+"(the_Segment(profile_GAF411_1, 53 N ; 020 W ; FL 390 ; FL 390 ; 12 19 GMT day 0, 55 N ; 030 W ; FL 390 ; FL 390 ; 13 15 GMT day 0, 0.74) belongs_to profile_GAF411_1)".
+
+"(the_Segment(profile_GAF411_1, 55 N ; 030 W ; FL 390 ; FL 390 ; 13 15 GMT day 0, 56 N ; 040 W ; FL 390 ; FL 390 ; 14 09 GMT day 0, 0.74) belongs_to profile_GAF411_1)".
+
+"(the_Segment(profile_GAF411_1, 56 N ; 040 W ; FL 390 ; FL 390 ; 14 09 GMT day 0, 55 N ; 050 W ; FL 390 ; FL 390 ; 15 02 GMT day 0, 0.74) belongs_to profile_GAF411_1)".
+
+"the_Aircraft_on(profile_AAL45_1) = AAL45".
+
+"the_Type_of(AAL45) = B767".
+
+"(AAL45 meets_mnps)".
+
+"(the_Segment(profile_AAL45_1, 53 N ; 015 W ; FL 350 ; FL 350 ; 12 00 GMT day 0, 54 N ; 020 W ; FL 350 ; FL 350 ; 12 25 GMT day 0, 0.80) belongs_to profile_AAL45_1)".
+
+"(the_Segment(profile_AAL45_1, 54 N ; 020 W ; FL 350 ; FL 350 ; 12 25 GMT day 0, 56 N ; 030 W ; FL 350 ; FL 350 ; 13 16 GMT day 0, 0.80) belongs_to profile_AAL45_1)".
+
+"(the_Segment(profile_AAL45_1, 56 N ; 030 W ; FL 350 ; FL 350 ; 13 16 GMT day 0, 57 N ; 040 W ; FL 350 ; FL 350 ; 14 04 GMT day 0, 0.80) belongs_to profile_AAL45_1)".
+
+"(the_Segment(profile_AAL45_1, 57 N ; 040 W ; FL 350 ; FL 350 ; 14 04 GMT day 0, 56 N ; 050 W ; FL 350 ; FL 350 ; 14 50 GMT day 0, 0.80) belongs_to profile_AAL45_1)".
+
+"the_Aircraft_on(profile_AAL57_1) = AAL57".
+
+"the_Type_of(AAL57) = MD11".
+
+"(AAL57 meets_mnps)".
+
+"(the_Segment(profile_AAL57_1, 48 47 N ; 012 00 W ; FL 340 ; FL 340 ; 12 05 GMT day 0, 48 N ; 015 W ; FL 340 ; FL 340 ; 12 21 GMT day 0, 0.84) belongs_to profile_AAL57_1)".
+
+"(the_Segment(profile_AAL57_1, 48 N ; 015 W ; FL 340 ; FL 340 ; 12 21 GMT day 0, 47 N ; 020 W ; FL 340 ; FL 340 ; 12 46 GMT day 0, 0.84) belongs_to profile_AAL57_1)".
+
+"(the_Segment(profile_AAL57_1, 47 N ; 020 W ; FL 340 ; FL 340 ; 12 46 GMT day 0, 43 N ; 030 W ; FL 340 ; FL 340 ; 13 43 GMT day 0, 0.84) belongs_to profile_AAL57_1)".
+
+"(the_Segment(profile_AAL57_1, 43 N ; 030 W ; FL 340 ; FL 340 ; 13 43 GMT day 0, 41 N ; 040 W ; FL 340 ; FL 340 ; 14 39 GMT day 0, 0.84) belongs_to profile_AAL57_1)".
+
+"the_Aircraft_on(profile_COA49_1) = COA49".
+
+"the_Type_of(COA49) = DC10".
+
+"(COA49 meets_mnps)".
+
+"(the_Segment(profile_COA49_1, 54 20 N ; 012 00 W ; FL 310 ; FL 310 ; 11 53 GMT day 0, 56 N ; 020 W ; FL 310 ; FL 310 ; 12 31 GMT day 0, 0.84) belongs_to profile_COA49_1)".
+
+"(the_Segment(profile_COA49_1, 56 N ; 020 W ; FL 310 ; FL 310 ; 12 31 GMT day 0, 58 N ; 030 W ; FL 310 ; FL 310 ; 13 16 GMT day 0, 0.84) belongs_to profile_COA49_1)".
+
+"(the_Segment(profile_COA49_1, 58 N ; 030 W ; FL 310 ; FL 310 ; 13 16 GMT day 0, 59 N ; 040 W ; FL 310 ; FL 310 ; 13 58 GMT day 0, 0.84) belongs_to profile_COA49_1)".
+
+"(the_Segment(profile_COA49_1, 59 N ; 040 W ; FL 310 ; FL 310 ; 13 58 GMT day 0, 58 N ; 050 W ; FL 310 ; FL 310 ; 14 39 GMT day 0, 0.84) belongs_to profile_COA49_1)".
+
+"the_Aircraft_on(profile_WITCH92_1) = WITCH92".
+
+"the_Type_of(WITCH92) = C130".
+
+"(the_Segment(profile_WITCH92_1, 54 13 N ; 013 00 W ; FL 180 ; FL 180 ; 10 57 GMT day 0, 56 N ; 020 W ; FL 180 ; FL 180 ; 11 56 GMT day 0, 2.80) belongs_to profile_WITCH92_1)".
+
+"(the_Segment(profile_WITCH92_1, 56 N ; 020 W ; FL 180 ; FL 180 ; 11 56 GMT day 0, 57 N ; 025 W ; FL 180 ; FL 180 ; 12 38 GMT day 0, 2.80) belongs_to profile_WITCH92_1)".
+
+"(the_Segment(profile_WITCH92_1, 57 N ; 025 W ; FL 180 ; FL 180 ; 12 38 GMT day 0, 58 N ; 030 W ; FL 180 ; FL 180 ; 13 18 GMT day 0, 2.80) belongs_to profile_WITCH92_1)".
+
+"(the_Segment(profile_WITCH92_1, 58 N ; 030 W ; FL 180 ; FL 180 ; 13 18 GMT day 0, 57 N ; 040 W ; FL 180 ; FL 180 ; 14 43 GMT day 0, 2.80) belongs_to profile_WITCH92_1)".
+
+"(the_Segment(profile_WITCH92_1, 57 N ; 040 W ; FL 180 ; FL 180 ; 14 43 GMT day 0, 52 N ; 50 W ; FL 180 ; FL 180 ; 16 37 GMT day 0, 2.80) belongs_to profile_WITCH92_1)".
+
+"the_Aircraft_on(profile_UAL925_1) = UAL925".
+
+"the_Type_of(UAL925) = B767".
+
+"(UAL925 meets_mnps)".
+
+"(the_Segment(profile_UAL925_1, 54 N ; 015 W ; FL 370 ; FL 370 ; 12 03 GMT day 0, 55 N ; 020 W ; FL 370 ; FL 370 ; 12 28 GMT day 0, 0.80) belongs_to profile_UAL925_1)".
+
+"(the_Segment(profile_UAL925_1, 55 N ; 020 W ; FL 370 ; FL 370 ; 12 28 GMT day 0, 57 N ; 030 W ; FL 370 ; FL 370 ; 13 18 GMT day 0, 0.80) belongs_to profile_UAL925_1)".
+
+"(the_Segment(profile_UAL925_1, 57 N ; 030 W ; FL 370 ; FL 370 ; 13 18 GMT day 0, 58 N ; 040 W ; FL 370 ; FL 370 ; 14 04 GMT day 0, 0.80) belongs_to profile_UAL925_1)".
+
+"(the_Segment(profile_UAL925_1, 58 N ; 040 W ; FL 370 ; FL 370 ; 14 04 GMT day 0, 57 N ; 050 W ; FL 370 ; FL 370 ; 14 49 GMT day 0, 0.80) belongs_to profile_UAL925_1)".
+
+"the_Aircraft_on(profile_BAW175_1) = BAW175".
+
+"the_Type_of(BAW175) = B747".
+
+"(BAW175 meets_mnps)".
+
+"(the_Segment(profile_BAW175_1, 53 N ; 015 W ; FL 330 ; FL 330 ; 12 05 GMT day 0, 54 N ; 020 W ; FL 340 ; FL 340 ; 12 29 GMT day 0, 0.84) belongs_to profile_BAW175_1)".
+
+"(the_Segment(profile_BAW175_1, 54 N ; 020 W ; FL 340 ; FL 340 ; 12 29 GMT day 0, 56 N ; 030 W ; FL 340 ; FL 340 ; 13 18 GMT day 0, 0.84) belongs_to profile_BAW175_1)".
+
+"(the_Segment(profile_BAW175_1, 56 N ; 030 W ; FL 340 ; FL 340 ; 13 18 GMT day 0, 57 N ; 040 W ; FL 340 ; FL 340 ; 14 03 GMT day 0, 0.84) belongs_to profile_BAW175_1)".
+
+"(the_Segment(profile_BAW175_1, 57 N ; 040 W ; FL 340 ; FL 340 ; 14 03 GMT day 0, 56 N ; 050 W ; FL 340 ; FL 340 ; 14 47 GMT day 0, 0.84) belongs_to profile_BAW175_1)".
+
+"the_Aircraft_on(profile_EIN105_1) = EIN105".
+
+"the_Type_of(EIN105) = EA33".
+
+"(EIN105 meets_mnps)".
+
+"(the_Segment(profile_EIN105_1, 54 20 N ; 012 00 W ; FL 350 ; FL 350 ; 11 51 GMT day 0, 56 N ; 020 W ; FL 350 ; FL 350 ; 12 31 GMT day 0, 0.81) belongs_to profile_EIN105_1)".
+
+"(the_Segment(profile_EIN105_1, 56 N ; 020 W ; FL 350 ; FL 350 ; 12 31 GMT day 0, 58 N ; 030 W ; FL 350 ; FL 350 ; 13 19 GMT day 0, 0.81) belongs_to profile_EIN105_1)".
+
+"(the_Segment(profile_EIN105_1, 58 N ; 030 W ; FL 350 ; FL 350 ; 13 19 GMT day 0, 59 N ; 040 W ; FL 350 ; FL 350 ; 14 02 GMT day 0, 0.81) belongs_to profile_EIN105_1)".
+
+"(the_Segment(profile_EIN105_1, 59 N ; 040 W ; FL 350 ; FL 350 ; 14 02 GMT day 0, 58 N ; 050 W ; FL 350 ; FL 350 ; 14 45 GMT day 0, 0.81) belongs_to profile_EIN105_1)".
+
+"the_Aircraft_on(profile_N462QS_1) = N462QS".
+
+"the_Type_of(N462QS) = G4".
+
+"(N462QS meets_mnps)".
+
+"(the_Segment(profile_N462QS_1, 53 N ; 015 W ; FL 390 ; FL 390 ; 11 58 GMT day 0, 54 N ; 020 W ; FL 410 ; FL 410 ; 12 25 GMT day 0, 0.77) belongs_to profile_N462QS_1)".
+
+"(the_Segment(profile_N462QS_1, 54 N ; 020 W ; FL 410 ; FL 410 ; 12 25 GMT day 0, 56 N ; 030 W ; FL 410 ; FL 410 ; 13 21 GMT day 0, 0.77) belongs_to profile_N462QS_1)".
+
+"(the_Segment(profile_N462QS_1, 56 N ; 030 W ; FL 410 ; FL 410 ; 13 21 GMT day 0, 57 N ; 040 W ; FL 410 ; FL 410 ; 14 09 GMT day 0, 0.77) belongs_to profile_N462QS_1)".
+
+"(the_Segment(profile_N462QS_1, 57 N ; 040 W ; FL 410 ; FL 410 ; 14 09 GMT day 0, 56 N ; 050 W ; FL 410 ; FL 410 ; 14 58 GMT day 0, 0.77) belongs_to profile_N462QS_1)".
+
+"the_Aircraft_on(profile_USA781_1) = USA781".
+
+"the_Type_of(USA781) = B767".
+
+"(USA781 meets_mnps)".
+
+"(the_Segment(profile_USA781_1, 53 N ; 015 W ; FL 360 ; FL 360 ; 12 05 GMT day 0, 54 N ; 020 W ; FL 360 ; FL 360 ; 12 30 GMT day 0, 0.80) belongs_to profile_USA781_1)".
+
+"(the_Segment(profile_USA781_1, 54 N ; 020 W ; FL 360 ; FL 360 ; 12 30 GMT day 0, 56 N ; 030 W ; FL 360 ; FL 360 ; 13 22 GMT day 0, 0.80) belongs_to profile_USA781_1)".
+
+"(the_Segment(profile_USA781_1, 56 N ; 030 W ; FL 360 ; FL 360 ; 13 22 GMT day 0, 57 N ; 040 W ; FL 360 ; FL 360 ; 14 10 GMT day 0, 0.80) belongs_to profile_USA781_1)".
+
+"(the_Segment(profile_USA781_1, 57 N ; 040 W ; FL 360 ; FL 360 ; 14 10 GMT day 0, 56 N ; 050 W ; FL 360 ; FL 360 ; 14 56 GMT day 0, 0.80) belongs_to profile_USA781_1)".
+
+"the_Aircraft_on(profile_XAVTO_1) = XAVTO".
+
+"the_Type_of(XAVTO) = DA90".
+
+"(XAVTO meets_mnps)".
+
+"(the_Segment(profile_XAVTO_1, 51 N ; 015 W ; FL 390 ; FL 390 ; 12 02 GMT day 0, 52 N ; 020 W ; FL 390 ; FL 390 ; 12 29 GMT day 0, 0.80) belongs_to profile_XAVTO_1)".
+
+"(the_Segment(profile_XAVTO_1, 52 N ; 020 W ; FL 390 ; FL 390 ; 12 29 GMT day 0, 53 N ; 030 W ; FL 390 ; FL 390 ; 13 22 GMT day 0, 0.80) belongs_to profile_XAVTO_1)".
+
+"(the_Segment(profile_XAVTO_1, 53 N ; 030 W ; FL 390 ; FL 390 ; 13 22 GMT day 0, 53 N ; 040 W ; FL 390 ; FL 390 ; 14 16 GMT day 0, 0.80) belongs_to profile_XAVTO_1)".
+
+"(the_Segment(profile_XAVTO_1, 53 N ; 040 W ; FL 390 ; FL 390 ; 14 16 GMT day 0, 51 N ; 050 W ; FL 390 ; FL 390 ; 15 15 GMT day 0, 0.80) belongs_to profile_XAVTO_1)".
+
+"the_Aircraft_on(profile_N663PD_1) = N663PD".
+
+"the_Type_of(N663PD) = G2".
+
+"(N663PD meets_mnps)".
+
+"(the_Segment(profile_N663PD_1, 51 N ; 040 W ; FL 410 ; FL 410 ; 12 00 GMT day 0, 52 N ; 030 W ; FL 410 ; FL 410 ; 12 42 GMT day 0, 0.83) belongs_to profile_N663PD_1)".
+
+"(the_Segment(profile_N663PD_1, 52 N ; 030 W ; FL 410 ; FL 410 ; 12 42 GMT day 0, 53 N ; 020 W ; FL 410 ; FL 410 ; 13 23 GMT day 0, 0.83) belongs_to profile_N663PD_1)".
+
+"(the_Segment(profile_N663PD_1, 53 N ; 020 W ; FL 410 ; FL 410 ; 13 23 GMT day 0, 53 N ; 015 W ; FL 410 ; FL 410 ; 13 44 GMT day 0, 0.83) belongs_to profile_N663PD_1)".
+
+"the_Aircraft_on(profile_DAL49_1) = DAL49".
+
+"the_Type_of(DAL49) = MD11".
+
+"(DAL49 meets_mnps)".
+
+"(the_Segment(profile_DAL49_1, 54 20 N ; 012 00 W ; FL 330 ; FL 330 ; 12 00 GMT day 0, 56 N ; 020 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 0.83) belongs_to profile_DAL49_1)".
+
+"(the_Segment(profile_DAL49_1, 56 N ; 020 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 58 N ; 030 W ; FL 330 ; FL 330 ; 13 25 GMT day 0, 0.83) belongs_to profile_DAL49_1)".
+
+"(the_Segment(profile_DAL49_1, 58 N ; 030 W ; FL 330 ; FL 330 ; 13 25 GMT day 0, 59 N ; 040 W ; FL 330 ; FL 330 ; 14 08 GMT day 0, 0.83) belongs_to profile_DAL49_1)".
+
+"(the_Segment(profile_DAL49_1, 59 N ; 040 W ; FL 330 ; FL 330 ; 14 08 GMT day 0, 58 N ; 050 W ; FL 330 ; FL 330 ; 14 49 GMT day 0, 0.83) belongs_to profile_DAL49_1)".
+
+"the_Aircraft_on(profile_AIH065_1) = AIH065".
+
+"the_Type_of(AIH065) = B767".
+
+"(AIH065 meets_mnps)".
+
+"(the_Segment(profile_AIH065_1, 48 47 N ; 012 00 W ; FL 340 ; FL 340 ; 12 17 GMT day 0, 47 N ; 015 W ; FL 340 ; FL 340 ; 12 39 GMT day 0, 0.80) belongs_to profile_AIH065_1)".
+
+"(the_Segment(profile_AIH065_1, 47 N ; 015 W ; FL 340 ; FL 340 ; 12 39 GMT day 0, 46 N ; 020 W ; FL 340 ; FL 340 ; 13 05 GMT day 0, 0.80) belongs_to profile_AIH065_1)".
+
+"(the_Segment(profile_AIH065_1, 46 N ; 020 W ; FL 340 ; FL 340 ; 13 05 GMT day 0, 42 N ; 030 W ; FL 340 ; FL 340 ; 14 05 GMT day 0, 0.80) belongs_to profile_AIH065_1)".
+
+"(the_Segment(profile_AIH065_1, 42 N ; 030 W ; FL 340 ; FL 340 ; 14 05 GMT day 0, 38 N ; 040 W ; FL 340 ; FL 340 ; 15 07 GMT day 0, 0.80) belongs_to profile_AIH065_1)".
+
+"the_Aircraft_on(profile_DAL141_1) = DAL141".
+
+"the_Type_of(DAL141) = L101".
+
+"(DAL141 meets_mnps)".
+
+"(the_Segment(profile_DAL141_1, 54 20 N ; 012 00 W ; FL 310 ; FL 310 ; 12 03 GMT day 0, 56 N ; 020 W ; FL 310 ; FL 310 ; 12 41 GMT day 0, 0.84) belongs_to profile_DAL141_1)".
+
+"(the_Segment(profile_DAL141_1, 56 N ; 020 W ; FL 310 ; FL 310 ; 12 41 GMT day 0, 58 N ; 030 W ; FL 310 ; FL 310 ; 13 26 GMT day 0, 0.84) belongs_to profile_DAL141_1)".
+
+"(the_Segment(profile_DAL141_1, 58 N ; 030 W ; FL 310 ; FL 310 ; 13 26 GMT day 0, 59 N ; 040 W ; FL 310 ; FL 310 ; 14 08 GMT day 0, 0.84) belongs_to profile_DAL141_1)".
+
+"(the_Segment(profile_DAL141_1, 59 N ; 040 W ; FL 310 ; FL 310 ; 14 08 GMT day 0, 58 N ; 050 W ; FL 310 ; FL 310 ; 14 49 GMT day 0, 0.84) belongs_to profile_DAL141_1)".
+
+"the_Aircraft_on(profile_AMX030_1) = AMX030".
+
+"the_Type_of(AMX030) = B767".
+
+"(AMX030 meets_mnps)".
+
+"(the_Segment(profile_AMX030_1, 49 N ; 015 W ; FL 310 ; FL 310 ; 12 15 GMT day 0, 48 N ; 020 W ; FL 310 ; FL 310 ; 12 41 GMT day 0, 0.80) belongs_to profile_AMX030_1)".
+
+"(the_Segment(profile_AMX030_1, 48 N ; 020 W ; FL 310 ; FL 310 ; 12 41 GMT day 0, 44 N ; 030 W ; FL 310 ; FL 310 ; 13 40 GMT day 0, 0.80) belongs_to profile_AMX030_1)".
+
+"(the_Segment(profile_AMX030_1, 44 N ; 030 W ; FL 310 ; FL 310 ; 13 40 GMT day 0, 40 N ; 040 W ; FL 310 ; FL 310 ; 14 43 GMT day 0, 0.80) belongs_to profile_AMX030_1)".
+
+"(the_Segment(profile_AMX030_1, 40 N ; 040 W ; FL 310 ; FL 310 ; 14 43 GMT day 0, 36 N ; 050 W ; FL 310 ; FL 310 ; 15 48 GMT day 0, 0.80) belongs_to profile_AMX030_1)".
+
+"the_Aircraft_on(profile_AJM002_1) = AJM002".
+
+"the_Type_of(AJM002) = EA31".
+
+"(AJM002 meets_mnps)".
+
+"(the_Segment(profile_AJM002_1, 49 N ; 015 W ; FL 290 ; FL 290 ; 12 12 GMT day 0, 49 N ; 020 W ; FL 290 ; FL 290 ; 12 36 GMT day 0, 0.80) belongs_to profile_AJM002_1)".
+
+"(the_Segment(profile_AJM002_1, 49 N ; 020 W ; FL 290 ; FL 290 ; 12 36 GMT day 0, 44 N ; 030 W ; FL 290 ; FL 290 ; 13 39 GMT day 0, 0.80) belongs_to profile_AJM002_1)".
+
+"(the_Segment(profile_AJM002_1, 44 N ; 030 W ; FL 290 ; FL 290 ; 13 39 GMT day 0, 40 N ; 040 W ; FL 290 ; FL 290 ; 14 41 GMT day 0, 0.80) belongs_to profile_AJM002_1)".
+
+"(the_Segment(profile_AJM002_1, 40 N ; 040 W ; FL 290 ; FL 290 ; 14 41 GMT day 0, 36 N ; 050 W ; FL 290 ; FL 290 ; 15 46 GMT day 0, 0.80) belongs_to profile_AJM002_1)".
+
+"the_Aircraft_on(profile_VIR011_1) = VIR011".
+
+"the_Type_of(VIR011) = B747".
+
+"(VIR011 meets_mnps)".
+
+"(the_Segment(profile_VIR011_1, 52 N ; 015 W ; FL 330 ; FL 330 ; 12 15 GMT day 0, 53 N ; 020 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 0.86) belongs_to profile_VIR011_1)".
+
+"(the_Segment(profile_VIR011_1, 53 N ; 020 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 55 N ; 030 W ; FL 330 ; FL 330 ; 13 27 GMT day 0, 0.86) belongs_to profile_VIR011_1)".
+
+"(the_Segment(profile_VIR011_1, 55 N ; 030 W ; FL 330 ; FL 330 ; 13 27 GMT day 0, 56 N ; 040 W ; FL 330 ; FL 330 ; 14 14 GMT day 0, 0.86) belongs_to profile_VIR011_1)".
+
+"(the_Segment(profile_VIR011_1, 56 N ; 040 W ; FL 330 ; FL 330 ; 14 14 GMT day 0, 55 N ; 050 W ; FL 330 ; FL 330 ; 15 00 GMT day 0, 0.86) belongs_to profile_VIR011_1)".
+
+"the_Aircraft_on(profile_LDA6868_1) = LDA6868".
+
+"the_Type_of(LDA6868) = B767".
+
+"(LDA6868 meets_mnps)".
+
+"(the_Segment(profile_LDA6868_1, 46 00 N ; 008 45 W ; FL 310 ; FL 310 ; 12 15 GMT day 0, 46 N ; 015 W ; FL 330 ; FL 330 ; 12 47 GMT day 0, 0.80) belongs_to profile_LDA6868_1)".
+
+"(the_Segment(profile_LDA6868_1, 46 N ; 015 W ; FL 330 ; FL 330 ; 12 47 GMT day 0, 45 N ; 020 W ; FL 330 ; FL 330 ; 13 13 GMT day 0, 0.80) belongs_to profile_LDA6868_1)".
+
+"(the_Segment(profile_LDA6868_1, 45 N ; 020 W ; FL 330 ; FL 330 ; 13 13 GMT day 0, 42 N ; 030 W ; FL 330 ; FL 330 ; 14 10 GMT day 0, 0.80) belongs_to profile_LDA6868_1)".
+
+"(the_Segment(profile_LDA6868_1, 42 N ; 030 W ; FL 330 ; FL 330 ; 14 10 GMT day 0, 39 N ; 040 W ; FL 330 ; FL 330 ; 15 10 GMT day 0, 0.80) belongs_to profile_LDA6868_1)".
+
+"the_Aircraft_on(profile_BAW9696_1) = BAW9696".
+
+"the_Type_of(BAW9696) = B767".
+
+"(BAW9696 meets_mnps)".
+
+"(the_Segment(profile_BAW9696_1, 53 N ; 015 W ; FL 330 ; FL 330 ; 12 13 GMT day 0, 54 N ; 020 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 0.80) belongs_to profile_BAW9696_1)".
+
+"(the_Segment(profile_BAW9696_1, 54 N ; 020 W ; FL 330 ; FL 330 ; 12 39 GMT day 0, 56 N ; 030 W ; FL 330 ; FL 330 ; 13 30 GMT day 0, 0.80) belongs_to profile_BAW9696_1)".
+
+"(the_Segment(profile_BAW9696_1, 56 N ; 030 W ; FL 330 ; FL 330 ; 13 30 GMT day 0, 57 N ; 040 W ; FL 330 ; FL 330 ; 14 17 GMT day 0, 0.80) belongs_to profile_BAW9696_1)".
+
+"(the_Segment(profile_BAW9696_1, 57 N ; 040 W ; FL 330 ; FL 330 ; 14 17 GMT day 0, 56 N ; 050 W ; FL 330 ; FL 330 ; 15 04 GMT day 0, 0.80) belongs_to profile_BAW9696_1)".
+
+"the_Aircraft_on(profile_DAL147_1) = DAL147".
+
+"the_Type_of(DAL147) = B767".
+
+"(DAL147 meets_mnps)".
+
+"(the_Segment(profile_DAL147_1, 54 N ; 015 W ; FL 330 ; FL 330 ; 12 17 GMT day 0, 55 N ; 020 W ; FL 330 ; FL 330 ; 12 42 GMT day 0, 0.81) belongs_to profile_DAL147_1)".
+
+"(the_Segment(profile_DAL147_1, 55 N ; 020 W ; FL 330 ; FL 330 ; 12 42 GMT day 0, 57 N ; 030 W ; FL 330 ; FL 330 ; 13 32 GMT day 0, 0.81) belongs_to profile_DAL147_1)".
+
+"(the_Segment(profile_DAL147_1, 57 N ; 030 W ; FL 330 ; FL 330 ; 13 32 GMT day 0, 58 N ; 040 W ; FL 330 ; FL 330 ; 14 18 GMT day 0, 0.81) belongs_to profile_DAL147_1)".
+
+"(the_Segment(profile_DAL147_1, 58 N ; 040 W ; FL 330 ; FL 330 ; 14 18 GMT day 0, 57 N ; 050 W ; FL 330 ; FL 330 ; 15 03 GMT day 0, 0.81) belongs_to profile_DAL147_1)".
+
+"the_Aircraft_on(profile_TWA841_1) = TWA841".
+
+"the_Type_of(TWA841) = B747".
+
+"(TWA841 meets_mnps)".
+
+"(the_Segment(profile_TWA841_1, 50 N ; 015 W ; FL 340 ; FL 340 ; 12 17 GMT day 0, 50 N ; 020 W ; FL 340 ; FL 340 ; 12 40 GMT day 0, 0.84) belongs_to profile_TWA841_1)".
+
+"(the_Segment(profile_TWA841_1, 50 N ; 020 W ; FL 340 ; FL 340 ; 12 40 GMT day 0, 52 N ; 030 W ; FL 340 ; FL 340 ; 13 32 GMT day 0, 0.84) belongs_to profile_TWA841_1)".
+
+"(the_Segment(profile_TWA841_1, 52 N ; 030 W ; FL 340 ; FL 340 ; 13 32 GMT day 0, 53 N ; 040 W ; FL 340 ; FL 340 ; 14 26 GMT day 0, 0.84) belongs_to profile_TWA841_1)".
+
+"(the_Segment(profile_TWA841_1, 53 N ; 040 W ; FL 340 ; FL 340 ; 14 26 GMT day 0, 52 N ; 050 W ; FL 340 ; FL 340 ; 15 18 GMT day 0, 0.84) belongs_to profile_TWA841_1)".
+
+"the_Aircraft_on(profile_COA063_1) = COA063".
+
+"the_Type_of(COA063) = DC10".
+
+"(COA063 meets_mnps)".
+
+"(the_Segment(profile_COA063_1, 44 30 N ; 013 00 W ; FL 280 ; FL 280 ; 12 06 GMT day 0, 45 N ; 020 W ; FL 280 ; FL 280 ; 12 41 GMT day 0, 0.84) belongs_to profile_COA063_1)".
+
+"(the_Segment(profile_COA063_1, 45 N ; 020 W ; FL 280 ; FL 280 ; 12 41 GMT day 0, 46 N ; 030 W ; FL 280 ; FL 280 ; 13 33 GMT day 0, 0.84) belongs_to profile_COA063_1)".
+
+"(the_Segment(profile_COA063_1, 46 N ; 030 W ; FL 280 ; FL 280 ; 13 33 GMT day 0, 46 N ; 040 W ; FL 280 ; FL 280 ; 14 30 GMT day 0, 0.84) belongs_to profile_COA063_1)".
+
+"(the_Segment(profile_COA063_1, 46 N ; 040 W ; FL 280 ; FL 280 ; 14 30 GMT day 0, 45 N ; 050 W ; FL 280 ; FL 280 ; 15 28 GMT day 0, 0.84) belongs_to profile_COA063_1)".
+
+"the_Aircraft_on(profile_AOM427_1) = AOM427".
+
+"the_Type_of(AOM427) = DC10".
+
+"(AOM427 meets_mnps)".
+
+"(the_Segment(profile_AOM427_1, 48 00 N ; 008 45 W ; FL 290 ; FL 290 ; 12 15 GMT day 0, 45 N ; 020 W ; FL 290 ; FL 290 ; 13 14 GMT day 0, 0.84) belongs_to profile_AOM427_1)".
+
+"(the_Segment(profile_AOM427_1, 45 N ; 020 W ; FL 290 ; FL 290 ; 13 14 GMT day 0, 40 N ; 030 W ; FL 290 ; FL 290 ; 14 15 GMT day 0, 0.84) belongs_to profile_AOM427_1)".
+
+"the_Aircraft_on(profile_DAL123_1) = DAL123".
+
+"the_Type_of(DAL123) = B767".
+
+"(DAL123 meets_mnps)".

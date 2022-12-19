@@ -1,0 +1,1148 @@
+"     (Segment1 of Profile1 and Segment2 of Profile2 are_in_oceanic_conflict)
+      <=>
+       [(Segment1 belongs_to Profile1)
+        &
+        (Segment2 belongs_to Profile2)
+        &
+        (Segment1 and Segment2 are_in_oceanic_conflict)
+       ]  ".
+"    (Segment1 and Segment2 are_in_oceanic_conflict)
+     <=>
+     [(Segment1 and Segment2
+      are_in_vertical_oceanic_conflict)
+      &
+      (Segment1 and Segment2
+      are_in_lateral_and_longitudinal_oceanic_conflict)
+     ]".
+"     [Flight_level1 = the_min_entry_Flight_level_of(Segment1)
+       &
+       Flight_level2 = the_max_entry_Flight_level_of(Segment2)
+       &
+       (Flight_level1 is_at_or_above Flight_level2)
+      ]
+      =>
+      [(Segment1 and Segment2
+      are_in_vertical_oceanic_conflict)
+        <=>
+        the_Val_in_feet_of(Flight_level1)  -
+        the_Val_in_feet_of(Flight_level2)
+        <
+	       2000      ]".
+"     [Flight_level1 = the_min_entry_Flight_level_of(Segment1)
+       &
+       Flight_level2 = the_max_entry_Flight_level_of(Segment2)
+       &
+       (Flight_level2  is_above Flight_level1)
+      ]
+      =>
+      [(Segment1 and Segment2
+      are_in_vertical_oceanic_conflict)
+        <=>
+        the_Val_in_feet_of(Flight_level2)  -
+        the_Val_in_feet_of(Flight_level1)
+        <
+       2000      ]".
+"[ 2D_pt1 = the_2D_pt_of(the_entry_4D_pt_of(Segment1)) 
+        &
+       2D_pt2 = the_2D_pt_of(the_entry_4D_pt_of(Segment2)) 
+       ]
+     =>
+     [(Segment1 and Segment2
+       are_in_lateral_and_longitudinal_oceanic_conflict)
+       <=>
+      the_nm_linear_dist_Val_between(2D_pt1,2D_pt2)
+       < 100      ]".
+"     the_min_entry_Flight_level_of(Segment)
+      =
+      the_min_Flight_level_of(the_entry_Flight_level_range_of(Segment))".
+"        [ the_min_Flight_level_of(Flight_level1 ; Flight_level2) =
+           Flight_level1
+           <=>
+           (Flight_level1 is_at_or_below Flight_level2)
+         ]
+         &
+         [ the_min_Flight_level_of(Flight_level1 ; Flight_level2) =
+           Flight_level2
+           <=>
+           (Flight_level2 is_at_or_below Flight_level1)
+         ] ".
+"     the_max_entry_Flight_level_of(Segment)
+      =
+      the_max_Flight_level_of(the_entry_Flight_level_range_of(Segment))".
+"        [ the_max_Flight_level_of(Flight_level1 ; Flight_level2) =
+           Flight_level1
+           <=>
+           (Flight_level1 is_at_or_above Flight_level2)
+         ]
+         &
+         [ the_max_Flight_level_of(Flight_level1 ; Flight_level2) =
+           Flight_level2
+           <=>
+           (Flight_level2 is_at_or_above Flight_level1)
+         ] ".
+"     (Flight_level1 is_at_or_below Flight_level2)
+      <=>
+      the_Val_in_100s_of_feet_of(Flight_level1) =<
+      the_Val_in_100s_of_feet_of(Flight_level2) ".
+"     (Flight_level1 is_above Flight_level2)
+      <=>
+      the_Val_in_100s_of_feet_of(Flight_level1)  >
+      the_Val_in_100s_of_feet_of(Flight_level2) ".
+"     (Flight_level1 is_at_or_above Flight_level2)
+      <=>
+      the_Val_in_100s_of_feet_of(Flight_level1)  >=
+      the_Val_in_100s_of_feet_of(Flight_level2) ".
+"        the_Val_in_100s_of_feet_of(FL   Int_0_to_1000)    =
+         Int_0_to_1000".
+"     the_entry_Flight_level_range_of(Segment) =
+      the_Flight_level_range_of(the_entry_4D_pt_of(Segment)) ".
+"
+     the_entry_4D_pt_of(the_Segment(Profile,4D_pt1,4D_pt2,Val)) = 4D_pt1 ".
+"    the_Flight_level_range_of(4D_pt)  =
+     the_Flight_level_range_of(the_3D_pt_of(4D_pt))".
+"     the_Flight_level_range_of (2D_pt ; Flight_level_range) =
+      Flight_level_range ".
+"     (Flight_level1 is_above Flight_level2)
+      <=>
+      the_Val_in_100s_of_feet_of(Flight_level1)  >
+      the_Val_in_100s_of_feet_of(Flight_level2) ".
+"     the_Val_in_feet_of(FL Int_0_to_1000)  = 100 *
+        Int_0_to_1000".
+"
+     the_nm_linear_dist_Val_between(2D_pt1,2D_pt2)
+      = sqrt(((the_lat_Val_in_arc_mins_of(2D_pt1)
+          - the_lat_Val_in_arc_mins_of(2D_pt2))
+          ^ 2)
+          +
+          (the_long_arc_mins_dist_Val_between(
+            the_long_Val_in_arc_mins_of(2D_pt1)
+           ,
+          the_long_Val_in_arc_mins_of(2D_pt2)) ^ 2)
+         )".
+"     [(0 =< Val1 < 21600)
+       &
+       (0 =< Val2 < 21600)
+      ]
+      =>
+      the_long_arc_mins_dist_Val_between(Val1,Val2)
+      = min((the_long_arc_mins_eastward_Val_from Val1 to Val2),
+         (the_long_arc_mins_westward_Val_from Val1 to Val2)) ".
+"     [(0 =< Val1 < 21600)
+       &
+       (0 =< Val2 < 21600)
+      ]
+      =>
+      (the_long_arc_mins_eastward_Val_from Val1 to Val2)
+      = max(Val2 -Val1,
+          round(Val2 + 21600 - Val1) mod 21600) ".
+"     [(0 =< Val1 < 21600)
+       &
+       (0 =< Val2 < 21600)
+      ]
+      =>
+      (the_long_arc_mins_westward_Val_from Val1 to Val2)
+      =  (the_long_arc_mins_eastward_Val_from Val2 to Val1)
+     ".
+"     the_lat_Val_in_arc_mins_of(2D_pt)
+        = the_total_Val_in_arc_mins_of(the_Lat_of(2D_pt)) ".
+"     the_long_Val_in_arc_mins_of(2D_pt)
+        = the_total_Val_in_arc_mins_of(the_Long_of(2D_pt)) ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_90 N)  =
+      Int_0_to_90 * 60".
+"     the_total_Val_in_arc_mins_of(Int_0_to_90 S) =  -
+        (Int_0_to_90 * 60) ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_89 Int_0_to_59
+        N)
+      = (Int_0_to_89  * 60) + Int_0_to_59 ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_89 Int_0_to_59
+        S)
+      =   -(Int_0_to_89  * 60) - Int_0_to_59 ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_180 E)  =
+        Int_0_to_180 * 60 ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_180 W)
+      =  (21600 - (Int_0_to_180 * 60)) mod 21600 ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_179 Int_0_to_59 E)
+      = (Int_0_to_179  * 60) + Int_0_to_59 ".
+"     the_total_Val_in_arc_mins_of(Int_0_to_179 Int_0_to_59 W)
+      =  (21600 - (Int_0_to_179  * 60)  - Int_0_to_59) mod 21600 ".
+"     the_Lat_of( Lat ; Long ) = Lat ".
+"     the_Long_of( Lat ; Long ) = Long ".
+"     the_2D_pt_of (2D_pt ; Flight_level_range) = 2D_pt ".
+"    the_2D_pt_of(4D_pt)                  =
+     the_2D_pt_of(the_3D_pt_of(4D_pt)) ".
+"     the_3D_pt_of (3D_pt ; Time) = 3D_pt ".
+/****************************************************************************/
+/* FAROAS PROJECT                                                           */
+/* Commercial in Confidence                                                 */
+/*                                                                          */
+/* FIS					                                    */
+/* 									    */
+/* DATE - 25 OCTOBER 1993                                                   */
+/* Updated 1/97 TLMc with (guess)
+    AIRBUS340 
+   "(EA33 is_a_jet_type)".
+   "(C5 is_a_jet_type)".
+   "(AN4 is_a_jet_type)".
+    AIRBUS340 
+   "(EA34 is_a_jet_type)".*/
+
+/****************************************************************************/
+
+/* Airspaces 								    */
+
+/* Shanwick Oceanic Controlled Airspace					    */
+
+"(FL 1000 is_the_max_flight_level_for Shanwick airspace)".
+
+"(FL 55 is_the_min_flight_level_for Shanwick airspace)".
+
+"(61 N ; 30 W and 61 N ; 10 W are_vertices_for Shanwick airspace)".
+
+"(61 N ; 10 W and 54 34 N ; 10 W are_vertices_for Shanwick airspace)".
+
+"(54 34 N ; 10 W and 54 N ; 15 W are_vertices_for Shanwick airspace)".
+
+"(54 N ; 15 W and 49 N ; 15 W are_vertices_for Shanwick airspace)".
+
+"(49 N ; 15 W and 48 30 N ; 08 W are_vertices_for Shanwick airspace)".
+
+"(48 30 N ; 08 W and 45 N ; 08 W are_vertices_for Shanwick airspace)".
+
+"(45 N ; 08 W and 45 N ; 30 W are_vertices_for Shanwick airspace)".
+
+"(45 N ; 30 W and 61 N ; 30 W are_vertices_for Shanwick airspace)".
+
+/* Oceanic Controlled Airspace - Temporary co-ords			    */
+
+"(FL 1000 is_the_max_flight_level_for Oceanic airspace)".
+
+"(FL 55 is_the_min_flight_level_for Oceanic airspace)".
+
+"(61 N ; 30 W and 61 N ; 10 W are_vertices_for Oceanic airspace)".
+
+"(61 N ; 10 W and 54 34 N ; 10 W are_vertices_for Oceanic airspace)".
+
+"(54 34 N ; 10 W and 54 N ; 15 W are_vertices_for Oceanic airspace)".
+
+"(54 N ; 15 W and 49 N ; 15 W are_vertices_for Oceanic airspace)".
+
+"(49 N ; 15 W and 48 30 N ; 08 W are_vertices_for Oceanic airspace)".
+
+"(48 30 N ; 08 W and 45 N ; 08 W are_vertices_for Oceanic airspace)".
+
+"(45 N ; 08 W and 45 N ; 30 W are_vertices_for Oceanic airspace)".
+
+"(45 N ; 30 W and 61 N ; 30 W are_vertices_for Oceanic airspace)".
+
+
+/* MNPS Airspace 							    */
+
+"(FL 400 is_the_max_flight_level_for MNPS airspace)".
+
+"(FL 275 is_the_min_flight_level_for MNPS airspace)".
+
+/* Aircraft Types 							    */
+
+/* Turbo Commander */
+"(AC6T is_a_turbo_type)".
+
+/* Commander 560 */
+"(AC56 is_a_piston_type)".
+
+/* Atlantic */
+"(ATLA is_a_turbo_type)".
+
+/* Stratofortress */
+"(B52 is_a_jet_type)".
+
+/* Boeing 707 */
+"(B707 is_a_jet_type)".
+
+/* Boeing 727 */
+"(B727 is_a_jet_type)".
+
+/* Boeing 737 */
+"(B737 is_a_jet_type)".
+
+/* Boeing 737 300/500 Series */
+"(B73S is_a_jet_type)".
+
+/* Boeing 747 */
+"(B747 is_a_jet_type)".
+
+/* Boeing 747 400 Series */
+"(B74F is_a_jet_type)".
+
+/* Boeing 74S */
+"(B74S is_a_jet_type)".
+
+/* Boeing 757 */
+"(B757 is_a_jet_type)".
+
+/* Boeing 767 */
+"(B767 is_a_jet_type)".
+
+/* BAC111 */
+"(BA11 is_a_jet_type)".
+
+/* Jetstream 31 */
+"(BA31 is_a_turbo_type)".
+
+/* Jetstream 32 */
+"(BA32 is_a_turbo_type)".
+
+/* BAE 146 */
+"(BA46 is_a_jet_type)".
+
+/* SUPER KINGAIR 20*/
+"(BE20 is_a_turbo_type)".
+
+/* SUPER KINGAIR 30 */
+"(BE30 is_a_turbo_type)".
+
+/* GREYHOUND */
+"(C2 is_a_turbo_type)".
+
+/* GALAXY */
+"(C5A is_a_jet_type)".
+
+/* NIGHTINGALE */
+"(C9 is_a_jet_type)".
+
+/* SUPER KINGAIR 200 */
+"(C12 is_a_turbo_type)".
+
+/* GULFSTREAM 3 */
+"(CA20A is_a_jet_type)".
+
+/* LEARJET */
+"(C21 is_a_jet_type)".
+
+/* HERCULES */
+"(C130 is_a_turbo_type)".
+
+/* STRATOLIFTER */
+"(C135 is_a_jet_type)".
+
+/* BOEING VC137 */
+"(C137 is_a_jet_type)".
+
+/* JET STAR  */
+"(C140 is_a_jet_type)".
+
+/* STARLIFTER */
+"(C141 is_a_jet_type)".
+
+/* TITAN */
+"(C404 is_a_piston_type)".
+
+/* CONQUEST 2 */
+"(C441 is_a_turbo_type)".
+
+/* CITATION111 */
+"(C500 is_a_jet_type)".
+
+/* CONCORDE (SUPERSONIC) */
+"(CONC is_a_jet_type)".
+
+/* CONCORDE (SUBSONIC) */
+
+/* CHALLENGER  */
+"(CL60 is_a_jet_type)".
+
+/* CANADAIR REGIONAL JET */
+"(CL65 is_a_jet_type)".
+
+/* FALCON 20 */
+"(DA20 is_a_jet_type)".
+
+/* FALCON 50 */
+"(DA50 is_a_jet_type)".
+
+/* FALCON 900 */
+"(DA90 is_a_jet_type)".
+
+/* DOUGLAS DC8 */
+"(DC8 is_a_jet_type)".
+
+/* SUPER DC8 ALL SERIES */
+"(DC8S is_a_jet_type)".
+
+/* SUPER DC8-60  */
+"(DC86 is_a_jet_type)".
+
+/* DOUGLAS DC9 */
+"(DC9 is_a_jet_type)".
+
+/* DOUGLAS DC10 */
+"(DC10 is_a_jet_type)".
+
+/* CARIBOU */
+"(DH4 is_a_turbo_type)".
+
+/* BUFFALO */
+"(DH5 is_a_turbo_type)".
+
+/* DASH-7 */
+"(DH7 is_a_turbo_type)".
+
+/* DASH-8 */
+"(DH8 is_a_turbo_type)".
+
+/* AIRBUS300 */
+"(EA30 is_a_jet_type)".
+
+/* AIRBUS310 */
+"(EA31 is_a_jet_type)".
+
+/* AIRBUS320 */
+"(EA32 is_a_jet_type)".
+
+/* AIRBUS330 */
+"(EA33 is_a_jet_type)".
+
+/* AIRBUS340 */
+"(EA34 is_a_jet_type)".
+
+/* AWACS  */
+"(E3A is_a_jet_type)".
+
+/* SUPERJET 747 */
+"(E4A is_a_jet_type)".
+
+/* SUPERJET 747 */
+"(E6 is_a_jet_type)".
+
+/* F111 */
+"(F111 is_a_jet_type)".
+
+/* PHANTOM */
+"(F4 is_a_jet_type)".
+
+/* TOMCAT  */
+"(F14 is_a_jet_type)".
+
+/* EAGLE */
+"(F15 is_a_jet_type)".
+
+/* FALCON */
+"(F16 is_a_jet_type)".
+
+/* COBRA  */
+"(F18 is_a_jet_type)".
+
+/* FELLOWSHIP */
+"(FK28 is_a_jet_type)".
+
+/* GULFSTREAM II */
+"(G2 is_a_jet_type)".
+
+/* GULFSTREAM 3 */
+"(G3 is_a_jet_type)".
+
+/* GULFSTREAM 4 */
+"(G4 is_a_jet_type)".
+
+/* HARRIER */
+"(HAR is_a_jet_type)".
+
+/* DOMINIE/HS125 */
+"(HS25 is_a_jet_type)".
+
+/* ANDOVER/HS748 */
+"(HS74 is_a_turbo_type)".
+
+/* ILYUSHIN 62 */
+"(IL62 is_a_jet_type)".
+
+/* ILYUSHIN 86 */
+"(IL86 is_a_jet_type)".
+
+/* DC10-TANKER */
+"(KC10 is_a_jet_type)".
+
+/* C135-TANKER */
+"(KC35 is_a_jet_type)".
+
+/* TRISTAR */
+"(L101 is_a_jet_type)".
+
+/* JETSTAR */
+"(L329 is_a_jet_type)".
+
+/* LEARJET 35 A */
+"(LR35 is_a_jet_type)".
+
+/* LEARJET 55 */
+"(LR55 is_a_jet_type)".
+
+/* DOULGAS MD11 */
+"(MD11 is_a_jet_type)".
+
+/* DC9 */
+"(MD80 is_a_jet_type)".
+
+/* TORNADO */
+"(MRC is_a_jet_type)".
+
+/* SABRELINER */
+"(N265 is_a_jet_type)".
+
+/* TRANSALL C160 */
+"(ND16 is_a_turbo_type)".
+
+/* NIMROD */
+"(NIM is_a_jet_type)".
+
+/* AURORA */
+"(P140 is_a_turbo_type)".
+
+/* ELECTRA/ORION */
+"(P3 is_a_turbo_type)".
+
+/* P3C LOCKHEED */
+"(P3C is_a_turbo_type)".
+
+/* TWIN COMACHE */
+"(PA30 is_a_piston_type)".
+
+/* NAVAJO */
+"(PA31 is_a_piston_type)".
+
+/* SENECA PA34-220T */
+"(PA34 is_a_piston_type)".
+
+/* CHEYENNE */
+"(PA42 is_a_turbo_type)".
+
+/* AEROSTAR 600 */
+"(PA60 is_a_piston_type)".
+
+/* TUPOLEV 134 */
+"(TU34 is_a_jet_type)".
+
+/* SABRELINER  */
+"(T39 is_a_jet_type)".
+
+/* VC10- TANKER */
+"(VC10 is_a_jet_type)".
+
+/* VICTOR-TANKER */
+"(VCTR is_a_jet_type)".
+
+/* U2/TR1 */
+"(U2 is_a_jet_type)".
+
+/* TYPE1 */
+"(TYP1 is_a_jet_type)".
+
+/* TYPE2 */
+"(TYP2 is_a_jet_type)".
+
+/* TYPE3 */
+"(TYP3 is_a_jet_type)".
+
+/* TYPE4 */
+"(TYP4 is_a_turbo_type)".
+
+/* TYPE5 */
+"(TYP5 is_a_piston_type)".
+
+/* TYPE6 */
+"(TYP6 is_a_jet_type)".
+
+/* TYPE7 */
+"(TYP7 is_a_turbo_type)".
+
+/* NEW ONES NEED TO BE VERIFIED .... */
+
+   "(C5 is_a_jet_type)".
+   "(AN4 is_a_jet_type)".
+
+
+
+/* Proximate Airfields 							    */
+/* Comments follow the following form 					    */
+/* Airfield name - abbreviation - inside r outside Shanwick 		    */
+
+/* SONDRESTROM FJORD - BGSF - INSIDE */
+"(67 01 N ; 50 41 W is_a_prox_airfield_pt)".
+
+/* KEFLAVIK - BIKF - INSIDE */
+"(63 59 N ; 22 36 W is_a_prox_airfield_pt)".
+
+/* REYKJAVIK AIRFIELD - BIRK - INSIDE */
+"(63 59 N ; 22 36 W is_a_prox_airfield_pt)".
+
+/* EDMONTON AIRFIELD - CYEG - OUTSIDE */
+
+/* FROBISHER - CYFB - INSIDE */
+"(63 45 N ; 68 33 W is_a_prox_airfield_pt)".
+
+/* HALIFAX INTERNATIONAL - CYHZ - INSIDE */
+"(44 53 N ; 63 31 W is_a_prox_airfield_pt)".
+
+/* STEPHENVILLE - CYJT - INSIDE */
+"(48 33 N ; 58 33 W is_a_prox_airfield_pt)".
+ 
+/* MIRABEL (MONTREAL) - CYMX  - INSIDE */
+"( 45 41 N ; 74 02 W is_a_prox_airfield_pt)".
+ 
+/* OTTAWA - CYOW - INSIDE */
+"( 45 19 N ;  75 40 W is_a_prox_airfield_pt)".
+ 
+/* QUEBEC - CYQB - INSIDE */
+"( 46 48 N ;  71 24 W is_a_prox_airfield_pt)".
+ 
+/* GANDER -  - INSIDE */
+"( 48 56 N ;  54 34 W is_a_prox_airfield_pt)".
+ 
+/* VANCOUVER - CYVR  - OUTSIDE */
+
+/* WINNIPEG - CYWG  - OUTSIDE */
+
+/* SASKATOON - CYXE  - OUTSIDE */
+
+/* CALGARY - CYYC  - OUTSIDE */
+ 
+/* GOOSE BAY - CYYR - INSIDE */
+"(53 19 N ; 60 26 W is_a_prox_airfield_pt)".
+ 
+/* ST JOHNS - CYYT  - INSIDE */
+"( 47 37 N ;  52 45 W is_a_prox_airfield_pt)".
+ 
+/* TORONTO -  CYYZ - INSIDE */
+"( 43 41 N ;  79 38 W is_a_prox_airfield_pt)".
+ 
+/* DORVAL (MONTREAL) -  CYUL - INSIDE */
+"( 45 28 N ;  73 45 W is_a_prox_airfield_pt)".
+ 
+/* BRUSSELS  - EBBR - INSIDE */
+"( 50 54 N ; 04 32 E is_a_prox_airfield_pt)".
+ 
+/* OSTEND - EBOS - INSIDE */
+"( 51 12 N ;  02 52 E is_a_prox_airfield_pt)".
+ 
+/* BITBURG - EDAB - INSIDE */
+"( 49 57 N ;  06 34 E is_a_prox_airfield_pt)".
+ 
+/* SPANGDALEM - EDAD  - INSIDE */
+"( 49 59 N ;  06 42 E is_a_prox_airfield_pt)".
+ 
+/* FRANKFURT RHEINMAN - EDAF - INSIDE */
+"( 50 02 N ;  08 34 E is_a_prox_airfield_pt)".
+ 
+/* HAHN - EDAH  - INSIDE */
+"( 49 57 N ;  07 16 E is_a_prox_airfield_pt)".
+ 
+/* LAHR - EDAN - INSIDE */
+"( 48 22 N ;  07 50 E is_a_prox_airfield_pt)".
+ 
+/* RAMSTEIN - EDAR - INSIDE */
+"( 49 26 N ;  07 36 E is_a_prox_airfield_pt)".
+ 
+/* BERLIN/TEGAL - EDBT  - OUTSIDE */
+ 
+/* NORDHOLZ - EDCN - INSIDE */
+"( 53 46 N ; 08 40 E is_a_prox_airfield_pt)".
+ 
+/* FRANKFURT MAIN - EDDF  - INSIDE */
+"( 50 02 N ;  08 34 E is_a_prox_airfield_pt)".
+
+/* HAMBURG - EDDH  - INSIDE */
+"( 53 38 N ; 09 59 E is_a_prox_airfield_pt)".
+
+/* BONN - EDDK - INSIDE */
+"( 50 52 N ;  07 09 E is_a_prox_airfield_pt)".
+
+/* DUSSELDORF - EDDL - INSIDE */
+"( 51 17 N ;  06 45 E is_a_prox_airfield_pt)".
+
+/* MUNICH - EDDM - OUTSIDE */
+
+/* NURNBERG- EDDN - OUTSIDE */
+ 
+/*  STUTTGART - EDDS  - INSIDE */
+"( 48 41 N ;  09 12 E is_a_prox_airfield_pt)".
+
+/* GUTERSLOH - EDUO  - INSIDE */
+"( 51 55 N ;  08 18 E is_a_prox_airfield_pt)".
+
+/* HANOVER - EDVV  - INSIDE */
+"( 52 28 N ;  09 41 E is_a_prox_airfield_pt)".
+
+/* HELSINKI - EFHK  - OUTSIDE */
+
+/* BELFAST - EGAA - INSIDE (JETPROX) */
+"( 54 34 N ;  06 13 W is_a_prox_airfield_pt)".
+
+/* EGBB - BIRMINGHAM - INSIDE */
+"( 52 27 N ;  01 45 W is_a_prox_airfield_pt)".
+
+/*  EGCC - MANCHESTER - INSIDE */
+"( 53 21 N ; 02 16 W is_a_prox_airfield_pt)".
+
+/* ST MAWGEN - EDDE - INSIDE (JETPROX) */
+"( 50 26 N ;  05 00 W is_a_prox_airfield_pt)".
+
+/* LYNEHAM - EGDL - INSIDE */
+"( 51 30 N ;  01 59 W is_a_prox_airfield_pt)".
+
+/* BOSCOMBE DOWN - EGDM - INSIDE */
+"( 51 09 N ; 01 45 W is_a_prox_airfield_pt)".
+
+/* CARDIFF (WALES) - EGFF  - INSIDE */
+"( 51 24 N ;  03 21 W is_a_prox_airfield_pt)".
+
+/* LIVERPOOL - EGGP - INSIDE */
+"(53 21 N ; 02 53 W is_a_prox_airfield_pt)".
+
+/* LUTON - EGGW - INSIDE */
+"( 51 53 N ; 00 22 W is_a_prox_airfield_pt)".
+
+/* GATWICK - EGKK  - INSIDE */
+"( 51 09 N ;  00 11 W is_a_prox_airfield_pt)".
+
+/* HEATHROW - EGLL - INSIDE */
+"( 51 28 N ;  00 27 W is_a_prox_airfield_pt)".
+
+/* LEEDS - EGNM - INSIDE */
+"( 53 52 N ;  01 39 W is_a_prox_airfield_pt)".
+
+/* NEWCASTLE - EGNT  - INSIDE */
+"( 55 02 N ;  01 41 W is_a_prox_airfield_pt)".
+
+/* EAST MIDLANDS - EGNX  - INSIDE */
+"( 52 50 N ; 01 19 W is_a_prox_airfield_pt)".
+
+/* ABERDEEN - EGPD  - INSIDE */
+"( 57 12 N ;  02 12 W is_a_prox_airfield_pt)".
+
+/* GLASGOW - EGPF - INSIDE (JETPROX) */
+"( 55 57 N ;  04 26 W is_a_prox_airfield_pt)".
+
+/* EDINGURGH - EGPH  - INSIDE (JETPROX) */
+"( 55 57 N ;  03 22 W is_a_prox_airfield_pt)".
+
+/* PRESTWICK - EGPK  - INSIDE (JETPROX) */
+"( 55 30 N ;  04 35 W is_a_prox_airfield_pt)".
+
+/* STORNOWAY - EGPO  - INSIDE */
+"( 58 13 N ;  06 20 W is_a_prox_airfield_pt)".
+
+/* MACRIHANISH - EGQJ - INSIDE (JETPROX) */
+"( 55 29 N ;  05 41 W is_a_prox_airfield_pt)".
+
+/* KINLOSS - EGQK - INSIDE (JETPROX) */
+"( 57 36 N ;  03 33 W is_a_prox_airfield_pt)".
+
+/* LEUCHARS - EGQL  - INSIDE */
+"( 56 22 N ;  02 51 W is_a_prox_airfield_pt)".
+
+/* LOSSIEMOUTH - EGQS - INSIDE */
+"( 57 43 N ;  03 20 W is_a_prox_airfield_pt)".
+
+/*  STANSTED - EGSS  - INSIDE */
+"( 51 53 N ;  00 14 W is_a_prox_airfield_pt)".
+
+/* UPPER HEYFORD - EGUA - INSIDE */
+"( 51 56 N ;  01 15 W is_a_prox_airfield_pt)".
+
+/* FARNBOROUGH - EGUF  - INSIDE */
+"( 51 17 N ;  00 46 W is_a_prox_airfield_pt)".
+
+/* LAKENHEATH - EGUL  - INSIDE */
+"( 52 25 N ;  00 34 E is_a_prox_airfield_pt)".
+
+/* MILDENHALL - EGUN  - INSIDE */
+"( 52 22 N ;  00 29 E is_a_prox_airfield_pt)".
+
+/* FAIRFORD - EGVA  - INSIDE */
+"( 51 41 N ; 01 47 W is_a_prox_airfield_pt)".
+
+/* WOODBRIDGE  - EGVG  - INSIDE */
+"( 52 05 N ;  01 24 E is_a_prox_airfield_pt)".
+
+/* BRIZE NORTON - EGVN  - INSIDE */
+"( 51 45 N ;  01 35 W is_a_prox_airfield_pt)".
+
+/* ALCONBURY - EGWZ  - INSIDE */
+"( 52 22 N ; 00 13 W is_a_prox_airfield_pt)".
+
+/* SCAMPTON - EGXP  - INSIDE */
+"( 53 18 N ;  00 33 W is_a_prox_airfield_pt)".
+
+/* AMSTERDAM  - EHAM  - INSIDE */
+"( 52 18 N ;  04 46 E is_a_prox_airfield_pt)".
+
+/* MAASTRICHT - EHBK   - INSIDE */
+"( 50 55 N ;  05 46 E is_a_prox_airfield_pt)".
+
+/* VALKENBURG - EHVB  - INSIDE */
+"( 52 10 N ;  04 25 E is_a_prox_airfield_pt)".
+
+/* ROTTERDAM -  EHRD  - INSIDE */
+"( 51 58 N ;  04 27 E is_a_prox_airfield_pt)".
+
+/* CORK - EICK  - INSIDE (JETPROX) */
+"( 51 53 N ;  08 30 W is_a_prox_airfield_pt)".
+
+/* DUBLIN  - EIDW  - INSIDE (JETPROX) */
+"( 53 26 N ;  06 15 W is_a_prox_airfield_pt)".
+
+/* KNOCK - EIKN  - INSIDE (JETPROX) */
+"(53 55  N ; 08 49  W is_a_prox_airfield_pt)".
+
+/* SHANNON - EINN  - INSIDE (JETPROX) */
+"(52 47  N ;  08 55 W is_a_prox_airfield_pt)".
+
+/* COHENHAGEN -  EKCH - OUTSIDE */
+
+/* VAERLOSE -  EKVL - OUTSIDE */
+
+/* LUXENBURG - ELLX  - INSIDE */
+"( 49 37 N ; 06 12 E is_a_prox_airfield_pt)".
+
+/* BERGEN FLESLAND  - ENBR  - INSIDE */
+"( 60 17 N ;  05 13 E is_a_prox_airfield_pt)".
+
+/* OSLO/FORNEBU - ENFB  - OUTSIDE */
+
+/* OSLO/GARDERMOEN  - ENGM  - OUTSIDE */
+
+/* STAVANGER - ENZV  - INSIDE */
+"( 58 53 N ;  05 38 E is_a_prox_airfield_pt)".
+
+/* WARSAW  - EPWA  - OUTSIDE */
+
+/* GOTENBURG/LANDVETTER  - ESGG  - OUTSIDE */
+
+/* STOCKHOLM  - ESSA  - OUTSIDE */
+
+/* STOCKHOLM/BROMA  - ESSB  - OUTSIDE */
+
+/* BERLIN - ETBS  - OUTSIDE */
+
+/* ASCENSION  - FHAW  - OUTSIDE */
+
+/* TENERIFE SUR-REINA SOA SOFIA  - GCTS  - OUTSIDE */
+
+/* LAS PALMAS  - GCLP  - OUTSIDE */
+
+/* DAKAR  - GOOY  - OUTSIDE */
+
+/* CAIRO  - HECA  - OUTSIDE */
+
+/* CAMP SPRINGS  - KADW  - INSIDE */
+"( 38 49 N ; 76 52  W is_a_prox_airfield_pt)".
+
+/* ATLANTA  - KATL  - OUTSIDE */
+
+/* BALTIMORE  - KBAL  - INSIDE */
+"( 39 11 N ; 76 40  W is_a_prox_airfield_pt)".
+
+/* BRADLEY INTERNATIONAL  -  KBDL - INSIDE */
+"( 41 56 N ; 72 41 W is_a_prox_airfield_pt)".
+
+/* SEATTLE BOEING FIELD  - KBFI  - OUTSIDE */
+
+/* BANGOR  - KBGR  - INSIDE */
+"( 44 48 N ; 68 50 W is_a_prox_airfield_pt)".
+
+/* BOSTON  - KBOS  - INSIDE */
+"( 41 23 N ; 71 08 W is_a_prox_airfield_pt)".
+
+/* BUFFALO  - KBUF  - INSIDE */
+"( 42 56 N ; 78 44 W is_a_prox_airfield_pt)".
+
+/*  BALTIMORE - KBWI  - INSIDE */
+"( 39 11 N ; 76 40 W is_a_prox_airfield_pt)".
+
+/* CHARLESTON  - KCHS  - OUTSIDE */
+
+/* CLEVELAND  - KCLE  - OUTSIDE */
+
+/* CHARLOTTE/DOUGLAS MUNICIPAL - KCLT  - OUTSIDE */
+
+/* CINCINNATTI/GREATER - KCVG  - OUTSIDE */
+
+/* DALLAS - KDAL  - OUTSIDE */
+
+/* DENVER STAPLETON INTL - KDEN  - OUTSIDE */
+
+/* DALLAS FORTHWORTH - KDFW  - OUTSIDE */
+
+/* DOVER  - KDOV  - INSIDE */
+"( 39 08 N ; 75 28 W is_a_prox_airfield_pt)".
+
+/* DETROIT  - KDTW  - OUTSIDE */
+
+/* NEWARK  - KEWR  - INSIDE */
+"( 40 42 N ;  74 10 W is_a_prox_airfield_pt)".
+
+/* DAYTON/WRIGHT-PATTERSON  - KFFO  - OUTSIDE */
+
+/* FT. LAUDERDALE FLA  - KFLL  - OUTSIDE */
+
+/* WASHINGTON DULLES  - KIAD  - INSIDE */
+"( 38 57 N ;  77 24 W is_a_prox_airfield_pt)".
+
+/* NIAGARA FALLS  - KIAG  - INSIDE */
+"( 43 06 N ;  78 57 W is_a_prox_airfield_pt)".
+
+/* HOUSTON  - KIAH  - OUTSIDE */
+
+/* INDIANAPOLIS  - KIND  - OUTSIDE */
+
+/* JACKSONVILLE FLA  - KJAX  - OUTSIDE */
+
+/* KENNEDY  - KJFK  - INSIDE */
+"( 40 38 N ; 73 46 W is_a_prox_airfield_pt)".
+
+/* LOS ANGELES  - KLAX  - OUTSIDE */
+
+/* LAS VEGAS - KLAS  - OUTSIDE */
+
+/* LORING AFB  - KLIZ  - OUTSIDE */
+
+/* TAMPA  - KMCF  - OUTSIDE */
+
+/* KANSAS CITY  - KMCI  - OUTSIDE */
+
+/* ORLANDO MCCOY AFB FLA  - KMCO  - OUTSIDE */
+
+/* MEMPHIS  - KMEM  - OUTSIDE */
+
+/* MIAMI  - KMIA  - OUTSIDE */
+
+/* MILWAUKEE WIIS - KMKE  - OUTSIDE */
+
+/* MINNEAPOLIS/ST PAUL - KMSP  - OUTSIDE */
+
+/* NEW ORLEANS  - KMSY  - OUTSIDE */
+
+/* NORFOLK NAS  - KNGU  - INSIDE */
+"( 36 56  N ; 76 17 W is_a_prox_airfield_pt)".
+
+/* BRUNSWICK NAS - KNHZ  - INSIDE */
+"( 43 54 N ; 69 57  W is_a_prox_airfield_pt)".
+
+/* OAKLAND  - KOAK  - OUTSIDE */
+
+/* OFFUTT AFB  - KOFF  - OUTSIDE */
+
+/* CHICAGO O'HARE  - KORD  - OUTSIDE */
+
+/* PITTSBURG  - KPIT  - OUTSIDE */
+
+/* PLATTSBURG AFB  - KPBG  - INSIDE */
+"( 44 39 N ; 73 28 W is_a_prox_airfield_pt)".
+
+/* PHILADELPHIA  - KPHL   - INSIDE */
+"( 39 52 N ; 75 15 W is_a_prox_airfield_pt)".
+
+/* PALMDALE  - KPMD  - OUTSIDE */
+
+/* PORTSMOUTH  - KPSM  - INSIDE */
+"( 43 05 N ; 70 49 W is_a_prox_airfield_pt)".
+
+/* PROVIDENCE/THEODORE FRANCIS  - KPVD  - INSIDE */
+"( 41 43 N ; 71 25 W is_a_prox_airfield_pt)".
+
+/* RALEIGH DURHAM  - KRDU  - OUTSIDE */
+
+/* SAVANNAH MUNICIPAL  - KSAV  - OUTSIDE */
+
+/* SEATTLE  - KSEA  - OUTSIDE */
+
+/* SAN FRANCISCO  - KSFO  - OUTSIDE */
+
+/* WICHITA FALLS / SHEPHERD AFB  - KSPS  - OUTSIDE */
+
+/* SUMTER SHAW AFB  - KSSC  - OUTSIDE */
+
+/* ST LOUISE  - KSTL  - OUTSIDE */
+
+/* TETERBORO  - KTEB  - INSIDE */
+"(40 51  N ; 74 04 W is_a_prox_airfield_pt)".
+
+/* OKLAHOMA TINKER   - KTIK  - OUTSIDE */
+
+/* VALPARAISO/ELGIN AFB  - KVPS  - OUTSIDE */
+
+/* WRIGHT TOWN (MACGUIRE)  - KWRI  - INSIDE */
+"( 40 01 N ; 74 36 W is_a_prox_airfield_pt)".
+
+/* BARCELONA  - LEBL  - INSIDE */
+"( 41 18 N ;  02 05 E is_a_prox_airfield_pt)".
+
+/* IBIZA  - LEIB  - INSIDE */
+"( 38 52 N ;  01 21 E is_a_prox_airfield_pt)".
+
+/* MADRID BARAJAS  - LEMD  - INSIDE */
+"( 40 28 N ; 03 33 W is_a_prox_airfield_pt)".
+
+/* MALAGA  - LEMG  - INSIDE */
+"( 36 41 N ;  04 30 W is_a_prox_airfield_pt)".
+
+/* PALMA  - LEPA  - INSIDE */
+"( 39 33 N ;  02 44 E is_a_prox_airfield_pt)".
+
+/* SANTIAGO  - LEST  - INSIDE */
+"( 42 54 N ; 08 25 W is_a_prox_airfield_pt)".
+
+/* MADRID TORREJON  - LETO  - INSIDE */
+"( 40 29 N ; 03 27 W is_a_prox_airfield_pt)".
+
+/* SEVILLE  - LEZL  - INSIDE */
+"( 37 25 N ; 05 54 W is_a_prox_airfield_pt)".
+
+/* BORDEAUX/MERGNAC  - LFBD  - INSIDE (JETPROX) */
+"( 44 52 N ; 00 42 W is_a_prox_airfield_pt)".
+
+/* LYON-SATLOS  -  LFLL  - INSIDE */
+"(45 44 N ; 05 05 E is_a_prox_airfield_pt)".
+
+/* NICE  - LFMN  - INSIDE */
+"( 43 40 N ;  07 13 E is_a_prox_airfield_pt)".
+
+/* PARIS LE BOURGET  - LFPB  - INSIDE */
+"( 48 58 N ; 02 27 E  is_a_prox_airfield_pt)".
+
+/* PARIS ORLY   -  LFPO  - INSIDE */
+"( 48 43 N ;  02 23 E is_a_prox_airfield_pt)".
+
+/* PARIS CHARLES DE GAULLE   - LFPG  - INSIDE */
+"( 49 01 N ;  02 33 E is_a_prox_airfield_pt)".
+
+/* BREST/GUIPAVAS  - LFRB  - INSIDE (JETPROX) */
+"( 48 26 N ;  04 25 W is_a_prox_airfield_pt)".
+
+/* LORIENT  - LFRH  - INSIDE */
+"( 47 46 N ; 03 26  W is_a_prox_airfield_pt)".
+
+/* NANTES/CHATEAU BOUGON  - LFRS  - INSIDE (JETPROX) */
+"(  47 14 N ;  01 36 W is_a_prox_airfield_pt)".
+
+/* LILLE/LESQUIN  - LFQQ  - INSIDE */
+"( 50 33 N ; 03 05 E  is_a_prox_airfield_pt)".
+
+/* BASLE-MULHOUSE  - LFSB  - INSIDE */
+"(  47 35 N ; 07 32 E is_a_prox_airfield_pt)".
+
+/* ATHENS  - LGAT - OUTSIDE */
+
+/* MILAN  - LIMC - INSIDE */
+"(  45 38 N ; 08 44  E is_a_prox_airfield_pt)".
+
+/* TORINO/CASELLE  - LIMF  - INSIDE */
+"(  45 12 N ;   07 39 E is_a_prox_airfield_pt)".
+
+/* GENOVA/SESTRI  - LIMJ - INSIDE */
+"( 44 24 N ;  08 51 E is_a_prox_airfield_pt)".
+
+/* VENICE  - LIPZ - OUTSIDE */
+
+/* ROME CIAMPINO  -  LIRA - OUTSIDE */
+
+/* ROME FIUMICINO  - LIRF - OUTSIDE */
+
+/* NAPLES  - LIRN - OUTSIDE */
+
+/* PRAGUE  - LKPR - OUTSIDE */
+
+/* TEL AVIV  - LLBG - OUTSIDE */
+
+/* SALSBURGH  - LOWS  - OUTSIDE */
+
+/* VIENNA  -  LOWW - OUTSIDE */
+
+/* SANTA MARIA   -  LPAZ - INSIDE */
+"( 36 58  N ; 25 10  W is_a_prox_airfield_pt)".
+
+/* FARO  - LPFR - INSIDE */
+"( 37 00 N ; 07 58  W is_a_prox_airfield_pt)".
+
+/* LAJES  - LPLA  - INSIDE */
+"( 38 46 N ; 27 06  W is_a_prox_airfield_pt)".
+
+/* LISBON  -  LPPT - INSIDE */
+"( 38 46 N ; 09 08  W is_a_prox_airfield_pt)".
+
+/* GENEVA  - LSGG - INSIDE */
+"( 46 16  N ;   06 07 E is_a_prox_airfield_pt)".
+
+/* ZURICH  -  LSZH - INSIDE */
+"( 47 27 N ;  08 33 E is_a_prox_airfield_pt)".
+
+/* GIBRALTAR  -  LXGB - INSIDE */
+"( 36 09 N ; 05 21  W is_a_prox_airfield_pt)".
+
+/* BEOGRAD   -  LYBE - OUTSIDE */
+
+/* LJUBLJANA  - LYLJ - OUTSIDE */
+
+/* ZAGREB  - LYZA  - OUTSIDE */
+
+/* SANTO DOMINGO  - MDSD - OUTSIDE */
+
+/* KINGSTON INTL JAMAICA  - MKJP  - OUTSIDE */
+
+/* MONTEGO BAY  - MJJS  - OUTSIDE */
+
+/* ACAPULCO  - MMAA  - OUTSIDE */
+
+/* CANCUN INTL  - MMUN  - OUTSIDE */
+
+/* MEXICO CITY  -  MMMX - OUTSIDE */
+
+/* HAVANA  - MUHA - OUTSIDE */
+
+/* HOLGUIN  - MUHG - OUTSIDE */
+
+/* NASSAU  - MYNN - OUTSIDE */
+
+/* BAHRAIN  - OBBI  - OUTSIDE */
+
+/* DAHRAN  - OEDR - OUTSIDE */
+
+/* JEDDAH  - OEJN - OUTSIDE */
+
+/* RIYADH  - OERY - OUTSIDE */
+
+/* ANCHORAGE  - PANC - OUTSIDE */
+
+/* PARAMARIBO SURINAME  - SMZY - OUTSIDE */
+
+/* CAYENNE  -SOCA  - OUTSIDE */
+
+/* CARACOS  - SVMI - OUTSIDE */
+
+/* ST JOHN ANTIGUA  - TAPA - OUTSIDE */
+
+/* BRIDGETOWN  - TBPB - OUTSIDE */
+
+/* FORT DE FRANCE   - TFFF - OUTSIDE */
+
+/* POINT O PITRE  - TFFR - OUTSIDE */
+
+/* VIEUX-FORT ST LUCIA  - TLPL - OUTSIDE */
+
+/* ORANJESTAD REINA BEATRIX  - TNCA - OUTSIDE */
+
+/* KRALENDIJK FLAMINGO   - TNCB - OUTSIDE */
+
+/* WILLEMSTAD  - TNCC - OUTSIDE */
+
+/* PHILIPSBURG/PRINSES JULIANA  - TNCM - OUTSIDE */
+
+/* PORT OF SPAIN  - TTPP  - OUTSIDE */
+
+/* SAN JUAN  - TJSJ - OUTSIDE */
+
+/* BERMUDA  - TXKF - OUTSIDE */
+
+/* MOSCOW  - UUEE - OUTSIDE */
+
+
+
